@@ -1,8 +1,10 @@
-**Using Unity**
+# Using Unity
 
+Karmak's Unity platform provides a standard set of APIs, which can be used by
+customers to access their own data, or for integration with approved third
+parties.  This document details the process by which a Unity API call is made.
 
-
-**Obtaining a Bearer Token**
+## Obtaining a Bearer Token
 
 Before making any calls to Unity API's, you must first obtain a Bearer Token,
 which must be passed on each API request.
@@ -103,7 +105,7 @@ Multiple Users 
 
 -   Contact Karmak Partner Support if you are unable to resolve the issue.
 
-**Making the API Request**
+## Making the API Request
 
 The base URL for all Unity API calls is as follows:
 
