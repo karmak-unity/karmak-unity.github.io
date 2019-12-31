@@ -1,3 +1,8 @@
+---
+layout: page
+title: Using Unity
+permalink: /Using/
+---
 # Using Unity
 
 Karmak's Unity platform provides a standard set of APIs, which can be used by
