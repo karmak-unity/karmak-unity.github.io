@@ -1,0 +1,23 @@
+---
+layout: no_sidebar
+---
+
+{% assign sorted-posts = site.posts | where: "type", "data_access" | sort: "title" %}
+{%for post in sorted-posts %}
+ <table class="apis" align="left">
+	<tr>
+		<td class="apititle">
+			<span class="{{ post.icon }} apiicon"></span>
+		</td> 
+		<td class="apititle">
+			<a class="apititle" href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class="apidescription">{{ post.description }}</td>
+	</tr>
+ </table>
+
+{% endfor %}
+</ul>
+

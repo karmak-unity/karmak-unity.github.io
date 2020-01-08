@@ -1,0 +1,16 @@
+---
+layout: doc-sidebar
+---
+
+<div class="well wellmain">
+<h1>Developer Guides</h1>
+
+{% assign sorted-posts = site.posts | where: "type", "usage" | sort: 'title' %}
+{%for post in sorted-posts %}
+<p><a class="howtotitle" href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a> — {{ post.description }}</p>
+{% endfor %}
+<hr>
+
+</div>
+
+
