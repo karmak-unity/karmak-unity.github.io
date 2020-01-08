@@ -68,13 +68,19 @@ body {
 
 .well h2 {
     color: #147890;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .well h3 {
     color: #147890;
+    font-size: 1.2em;
+}
+
+.well h4 {
+    color: #147890;
     font-size: 1.1em;
 }
+
 .catheader {
 	    color: #147890;
 		font-size: 1.3em;

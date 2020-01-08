@@ -1,7 +1,8 @@
 <div class="sidebar well">
 	     <p class= "catheader"> {{ page.category }}</p>
 		{% assign sorted-posts = site.posts | where: "category", {{page.category}} | sort: 'title' %}
-        {% for post in sorted-posts limit:200 %}
+		{% assign filtered-posts = sorted-posts | where: "type", {{page.type}} | sort: 'title' %}
+        {% for post in filtered-posts limit:200 %}
          <h5> <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h5>
         {% endfor %}
 </div>
