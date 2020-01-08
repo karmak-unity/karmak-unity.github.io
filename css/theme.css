@@ -228,3 +228,7 @@ a, a.hover {
 	background-color: #147890;
 	border-color:#FFFFFF;
 }
+
+blockquote {
+ 	font-size: 1em;
+}

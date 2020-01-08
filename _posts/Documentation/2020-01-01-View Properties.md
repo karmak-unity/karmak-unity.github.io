@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "View Properties"
+title: "Data Field Properties"
 icon: "icon-list-alt"
-category: "Documentation"
+category: "Data Access Documentation"
 type: "usage" comments: falsedescription: Data reference documentation for fields, field types, and size
 ------
 
