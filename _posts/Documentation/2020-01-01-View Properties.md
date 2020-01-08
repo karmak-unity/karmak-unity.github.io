@@ -4,44 +4,22 @@ title: "View Properties"
 icon: "icon-list-alt"
 category: "Documentation"
 type: "usage" comments: falsedescription: Data reference documentation for fields, field types, and size
----
+------
 
+| FIELD | DESCRIPTION |
+|---|---|
+| Key | This is the external name which will be used in a Unity API call. |
+| Type | This helps determine what type the underlying functionality is such as "View" for the SQL SSR views. |
+| Command | This is the actual internal name that will be called. |
+| HasReturn | This is a True/False indicator to show if the underlying functionality has return data for example from an RPC call. |
+| ReturnType | This describes the data type of the return data for example from an RPC call. |
+| DefaultSort | This determines the default sorting to use if one is not provided in the Unity call for example the output from calling a SQL SSR view. |
+| DefaultPageSize | This is the number of rows to return if no page size was provided in the Unity call. |
+| MaxPageSize | This is the maximum number of rows that can be returned in the Unity call. |
+| Input | This is a list of the input variables to be used, each entry has a property for the name and data type. |
+| Output | This is a list of the output variables provided, each entry has a property for the name and data type. |
 
-Key - This is the external name which will be used in a Unity API call.
-
-Type - This helps determine what type the underlying functionality is such as
-"View" for the SQL SSR views.
-
-Command - This is the actual internal name that will be called.
-
-HasReturn - This is a True/False indicator to show if the underlying
-functionality has return data for example from an RPC call.
-
-ReturnType - This describes the data type of the return data for example from an
-RPC call.
-
-DefaultSort - This determines the default sorting to use if one is not provided
-in the Unity call for example the output from calling a SQL SSR view.
-
-DefaultPageSize - This is the number of rows to return if no page size was
-provided in the Unity call.
-
-MaxPageSize - This is the maximum number of rows that can be returned in the
-Unity call.
-
-Input - This is a list of the input variables to be used, each entry has a
-property for the name and data type.
-
-Output - This is a list of the output variables provided, each entry has a
-property for the name and data type.
-
-## Accounting GL
-
-
-
----
-
-
+------## Accounting GL
 
 ### AccountAllocation 
 ```sql
@@ -53,12 +31,10 @@ ReturnType:
 DefaultSort: AllocationName,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
-```
+Input: null,```
 
 
-#### Output:
-```sql
+#### Output:```sql
 Name: AccountAllocationID, Type: int  
 Name: AccountingAccountID, Type: int  
 Name: AllocationName, Type: varchar(250)  
@@ -78,13 +54,11 @@ Name: AccountDescription, Type: varchar(100)
 Name: GLBranch, Type: varchar(10)  
 Name: GLDepartment, Type: varchar(10)
 ```
-
----
-
+---
 
 
 ### ChartofAccounts
-
+```sql
 Key: ChartofAccounts,  
 Type: View,  
 Command: vwAC_SSR_ChartofAccounts,  
@@ -93,12 +67,9 @@ ReturnType:
 DefaultSort: Account,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: AccountingAccountID, Type: int  
 Name: AccountingChartID, Type: int  
 Name: AccountAllocationID, Type: int  
@@ -131,14 +102,12 @@ Name: DetailLevel, Type: int
 Name: AccountingCategory, Type: varchar(100)  
 Name: InActive, Type: bit  
 Name: AllocationName, Type: int
-
-
----
-
+```
+---
 
 
 ### GeneralLedgerBalance 
-
+```sql
 Key: GeneralLedgerBalance,  
 Type: View,  
 Command: vwAC_SSR_GeneralLedgerBalance,  
@@ -147,12 +116,9 @@ ReturnType:
 DefaultSort: GLNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: BranchID, Type: int  
 Name: Branch, Type: varchar(10)  
 Name: Department, Type: varchar(10)  
@@ -212,14 +178,12 @@ Name: MTDActivityVariance, Type: decimal
 Name: YTDActivityVariance, Type: decimal  
 Name: MTDBudgetVariance, Type: decimal  
 Name: YTDBudgetVariance, Type: decimal
-
-
----
-
+```
+---
 
 
 ### GeneralLedgerTrans 
-
+```sql
 Key: GeneralLedgerTrans,  
 Type: View,  
 Command: vwAC_SSR_GeneralLedgerTrans,  
@@ -228,12 +192,9 @@ ReturnType:
 DefaultSort: GLAccount,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: AccountingAccountID, Type: int  
 Name: APVendorID, Type: int  
 Name: CustomerID, Type: int  
@@ -275,17 +236,15 @@ Name: AddUser, Type: varchar(20)
 Name: UpdateUser, Type: varchar(20)  
 Name: AccountingPeriodID, Type: int  
 Name: AccountingPeriod, Type: int
+```
 
-## Accounting Payables
+------## Accounting Payables
 
-
-
----
-
+---
 
 
 ### APDetail 
-
+```sql
 Key: APDetail,  
 Type: View,  
 Command: vwAC_SSR_APDetail,  
@@ -294,12 +253,9 @@ ReturnType:
 DefaultSort: APInvoice,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: APInvoiceID, Type: int  
 Name: GLJournalID, Type: int  
 Name: APInvoice, Type: varchar(250)  
@@ -369,14 +325,12 @@ Name: PayeeCountry, Type: varchar(35)
 Name: PayeeCounty, Type: varchar(35)  
 Name: PaymentPostingBranch, Type: varchar(10)  
 Name: IncomeType, Type: varchar(50)
-
-
----
-
+```
+---
 
 
 ### APGLDetail 
-
+```sql
 Key: APGLDetail,  
 Type: View,  
 Command: vwAC_SSR_APGLDetail,  
@@ -385,12 +339,9 @@ ReturnType:
 DefaultSort: APInvoice,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: APInvoice, Type: varchar(250)  
 Name: APInvoiceID, Type: int  
 Name: APInvoiceItemID, Type: int  
@@ -410,14 +361,12 @@ Name: OverridePostingDescription, Type: varchar(250)
 Name: ControlValue, Type: varchar(50)  
 Name: AllocationName, Type: varchar(250)  
 Name: AccountingAccountID, Type: int
-
-
----
-
+```
+---
 
 
 ### APVendor 
-
+```sql
 Key: APVendor,  
 Type: View,  
 Command: vwAC_SSR_APVendor,  
@@ -426,102 +375,98 @@ ReturnType:
 DefaultSort: APVendor,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: APVendorID, Type: int  
-  Name: APVendor, Type: varchar(10)  
-  Name: CompanyName, Type: varchar(100)  
-  Name: QuickLookup, Type: varchar(25)  
-  Name: IsMiscellaneousAccount, Type: bit  
-  Name: EstablishedDate, Type: datetime  
-  Name: PaymentTerms, Type: varchar(50)  
-  Name: APGroup, Type: varchar(50)  
-  Name: CurrencyCode, Type: varchar(10)  
-  Name: TaxpayerIdentificationNumber, Type: varchar(100)  
-  Name: Is1099Required, Type: bit  
-  Name: Inactive, Type: bit  
-  Name: ControlBranchID, Type: int  
-  Name: ControlBranch, Type: varchar(10)  
-  Name: Address1, Type: varchar(100)  
-  Name: Address2, Type: varchar(100)  
-  Name: City, Type: varchar(100)  
-  Name: Region, Type: varchar(6)  
-  Name: PostalCode, Type: varchar(15)  
-  Name: PhysicalCounty, Type: varchar(35)  
-  Name: PhysicalCountry, Type: varchar(35)  
-  Name: OfficePhone, Type: varchar(30)  
-  Name: ShopPhone, Type: varchar(30)  
-  Name: CellPhone, Type: varchar(30)  
-  Name: Fax, Type: varchar(30)  
-  Name: Email, Type: varchar(100)  
-  Name: PhysicalContactName, Type: varchar(201)  
-  Name: RemitToAddress1, Type: varchar(100)  
-  Name: RemitToAddress2, Type: varchar(100)  
-  Name: RemitToCity, Type: varchar(100)  
-  Name: RemitToRegion, Type: varchar(6)  
-  Name: RemitToPostalCode, Type: varchar(15)  
-  Name: RemitToCounty, Type: varchar(35)  
-  Name: RemitToCountry, Type: varchar(35)  
-  Name: RemitToOfficePhone, Type: varchar(30)  
-  Name: RemitToShopPhone, Type: varchar(30)  
-  Name: RemitToCellPhone, Type: varchar(30)  
-  Name: RemitToFax, Type: varchar(30)  
-  Name: RemitToEmail, Type: varchar(100)  
-  Name: RemitToContactName, Type: varchar(201)  
-  Name: RemitToAllowEmail, Type: bit  
-  Name: ShipToAddress1, Type: varchar(100)  
-  Name: ShipToAddress2, Type: varchar(100)  
-  Name: ShipToCity, Type: varchar(100)  
-  Name: ShipToRegion, Type: varchar(6)  
-  Name: ShipToPostalCode, Type: varchar(15)  
-  Name: ShipToCounty, Type: varchar(35)  
-  Name: ShipToCountry, Type: varchar(35)  
-  Name: ShipToOfficePhone, Type: varchar(30)  
-  Name: ShipToShopPhone, Type: varchar(30)  
-  Name: ShipToCellPhone, Type: varchar(30)  
-  Name: ShipToFax, Type: varchar(30)  
-  Name: ShipToEmail, Type: varchar(100)  
-  Name: ShipToContactName, Type: varchar(201)  
-  Name: ShipToAllowEmail, Type: bit  
-  Name: AmountNotDue, Type: decimal  
-  Name: AmountDueNow, Type: decimal  
-  Name: AmountDue30, Type: decimal  
-  Name: AmountDue60, Type: decimal  
-  Name: AmountDue90, Type: decimal  
-  Name: AmountDueOver120, Type: decimal  
-  Name: TotalAmount, Type: decimal  
-  Name: InvoiceDateAmountNotDue, Type: decimal  
-  Name: InvoiceDateAmountDueNow, Type: decimal  
-  Name: InvoiceDateAmountDue30, Type: decimal  
-  Name: InvoiceDateAmountDue60, Type: decimal  
-  Name: InvoiceDateAmountDue90, Type: decimal  
-  Name: InvoiceDateAmountDueOver120, Type: decimal  
-  Name: DateLastPaid, Type: datetime  
-  Name: LastAmountPaid, Type: decimal  
-  Name: PaidYTD, Type: decimal  
-  Name: PurchasesYTD, Type: decimal  
-  Name: PaidPreviousYTD, Type: decimal  
-  Name: PurchasesPreviousYTD, Type: decimal  
-  Name: VendorComment, Type: nvarchar(max)  
-  Name: AddDate, Type: datetime  
-  Name: AddUser, Type: varchar(20)  
-  Name: LastUpdateDate, Type: datetime  
-  Name: LastUpdateUser, Type: varchar(20)  
-  Name: LegalName, Type: varchar(100)  
-  Name: RemitToName, Type: varchar(100)  
-  Name: IncomeType, Type: varchar(50)
-
+Name: APVendor, Type: varchar(10)  
+Name: CompanyName, Type: varchar(100)  
+Name: QuickLookup, Type: varchar(25)  
+Name: IsMiscellaneousAccount, Type: bit  
+Name: EstablishedDate, Type: datetime  
+Name: PaymentTerms, Type: varchar(50)  
+Name: APGroup, Type: varchar(50)  
+Name: CurrencyCode, Type: varchar(10)  
+Name: TaxpayerIdentificationNumber, Type: varchar(100)  
+Name: Is1099Required, Type: bit  
+Name: Inactive, Type: bit  
+Name: ControlBranchID, Type: int  
+Name: ControlBranch, Type: varchar(10)  
+Name: Address1, Type: varchar(100)  
+Name: Address2, Type: varchar(100)  
+Name: City, Type: varchar(100)  
+Name: Region, Type: varchar(6)  
+Name: PostalCode, Type: varchar(15)  
+Name: PhysicalCounty, Type: varchar(35)  
+Name: PhysicalCountry, Type: varchar(35)  
+Name: OfficePhone, Type: varchar(30)  
+Name: ShopPhone, Type: varchar(30)  
+Name: CellPhone, Type: varchar(30)  
+Name: Fax, Type: varchar(30)  
+Name: Email, Type: varchar(100)  
+Name: PhysicalContactName, Type: varchar(201)  
+Name: RemitToAddress1, Type: varchar(100)  
+Name: RemitToAddress2, Type: varchar(100)  
+Name: RemitToCity, Type: varchar(100)  
+Name: RemitToRegion, Type: varchar(6)  
+Name: RemitToPostalCode, Type: varchar(15)  
+Name: RemitToCounty, Type: varchar(35)  
+Name: RemitToCountry, Type: varchar(35)  
+Name: RemitToOfficePhone, Type: varchar(30)  
+Name: RemitToShopPhone, Type: varchar(30)  
+Name: RemitToCellPhone, Type: varchar(30)  
+Name: RemitToFax, Type: varchar(30)  
+Name: RemitToEmail, Type: varchar(100)  
+Name: RemitToContactName, Type: varchar(201)  
+Name: RemitToAllowEmail, Type: bit  
+Name: ShipToAddress1, Type: varchar(100)  
+Name: ShipToAddress2, Type: varchar(100)  
+Name: ShipToCity, Type: varchar(100)  
+Name: ShipToRegion, Type: varchar(6)  
+Name: ShipToPostalCode, Type: varchar(15)  
+Name: ShipToCounty, Type: varchar(35)  
+Name: ShipToCountry, Type: varchar(35)  
+Name: ShipToOfficePhone, Type: varchar(30)  
+Name: ShipToShopPhone, Type: varchar(30)  
+Name: ShipToCellPhone, Type: varchar(30)  
+Name: ShipToFax, Type: varchar(30)  
+Name: ShipToEmail, Type: varchar(100)  
+Name: ShipToContactName, Type: varchar(201)  
+Name: ShipToAllowEmail, Type: bit  
+Name: AmountNotDue, Type: decimal  
+Name: AmountDueNow, Type: decimal  
+Name: AmountDue30, Type: decimal  
+Name: AmountDue60, Type: decimal  
+Name: AmountDue90, Type: decimal  
+Name: AmountDueOver120, Type: decimal  
+Name: TotalAmount, Type: decimal  
+Name: InvoiceDateAmountNotDue, Type: decimal  
+Name: InvoiceDateAmountDueNow, Type: decimal  
+Name: InvoiceDateAmountDue30, Type: decimal  
+Name: InvoiceDateAmountDue60, Type: decimal  
+Name: InvoiceDateAmountDue90, Type: decimal  
+Name: InvoiceDateAmountDueOver120, Type: decimal  
+Name: DateLastPaid, Type: datetime  
+Name: LastAmountPaid, Type: decimal  
+Name: PaidYTD, Type: decimal  
+Name: PurchasesYTD, Type: decimal  
+Name: PaidPreviousYTD, Type: decimal  
+Name: PurchasesPreviousYTD, Type: decimal  
+Name: VendorComment, Type: nvarchar(max)  
+Name: AddDate, Type: datetime  
+Name: AddUser, Type: varchar(20)  
+Name: LastUpdateDate, Type: datetime  
+Name: LastUpdateUser, Type: varchar(20)  
+Name: LegalName, Type: varchar(100)  
+Name: RemitToName, Type: varchar(100)  
+Name: IncomeType, Type: varchar(50)
+```
 
 ---
 
 
-
 ### MiscPODetail 
-
+```sql
 Key: MiscPODetail,  
 Type: View,  
 Command: vwAC_SSR_MiscPODetail,  
@@ -530,12 +475,9 @@ ReturnType:
 DefaultSort: MPOHeaderID,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: MPODetailID, Type: int  
 Name: MPOHeaderID, Type: int  
 Name: Quantity, Type: int  
@@ -585,14 +527,12 @@ Name: ItemExtCostDifference, Type: decimal
 Name: POCode, Type: varchar(10)  
 Name: POCodeDescription, Type: varchar(50)  
 Name: BillableType, Type: varchar(12)
-
-
----
-
+```
+---
 
 
 ### MiscPOHeader 
-
+```sql
 Key: MiscPOHeader,  
 Type: View,  
 Command: vwAC_SSR_MiscPOHeader,  
@@ -601,12 +541,9 @@ ReturnType:
 DefaultSort: PONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: MPOHeaderID, Type: int  
 Name: PONumber, Type: varchar(9)  
 Name: MPOSequence, Type: varchar(2)  
@@ -646,14 +583,13 @@ Name: IsManuallyReferenced, Type: bit
 Name: VoidDate, Type: datetime  
 Name: VoidUser, Type: varchar(20)  
 Name: IsVoided, Type: bit
+```
 
-
----
-
+---
 
 
 ### NotesPayable 
-
+```sql
 Key: NotesPayable,  
 Type: View,  
 Command: vwAC_SSR_NotesPayable,  
@@ -662,12 +598,9 @@ ReturnType:
 DefaultSort: NoteNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: Branch, Type: varchar(10)  
 Name: BranchName, Type: varchar(100)  
 Name: BranchID, Type: int  
@@ -703,14 +636,12 @@ Name: UpdateUser, Type: varchar(20)
 Name: BalloonMethod, Type: varchar(27)  
 Name: DaysinYear, Type: varchar(8)  
 Name: Is1099Required, Type: bit
-
-
----
-
+```
+---
 
 
 ### NotesPayableDetail 
-
+```sql
 Key: NotesPayableDetail,  
 Type: View,  
 Command: vwAC_SSR_NotesPayableDetail,  
@@ -719,12 +650,9 @@ ReturnType:
 DefaultSort: NoteNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: NotesPayableDetailID, Type: int  
 Name: NotesPayableID, Type: int  
 Name: NoteNumber, Type: varchar(50)  
@@ -748,17 +676,16 @@ Name: PaidOff, Type: bit
 Name: LastPaymentDate, Type: datetime  
 Name: LocationBranch, Type: varchar(10)  
 Name: IncomeType, Type: varchar(50)
+```
 
+------
 ## Accounting Receiveables
-
-
 
 ---
 
 
-
 ### ARDetail 
-
+```sql
 Key: ARDetail,  
 Type: View,  
 Command: vwAC_SSR_ARDetail,  
@@ -767,12 +694,9 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: ID, Type: int  
 Name: CustomerKey, Type: varchar(10)  
 Name: CompanyName, Type: varchar(100)  
@@ -815,14 +739,13 @@ Name: DepartmentID, Type: int
 Name: IsDisputeInvoice, Type: bit  
 Name: NumberPayments, Type: int  
 Name: CustomerBaseBranch, Type: varchar(10)
+```
 
-
----
-
+---
 
 
 ### Customer 
-
+```sql
 Key: Customer,  
 Type: View,  
 Command: vwAC_SSR_Customer,  
@@ -831,12 +754,9 @@ ReturnType:
 DefaultSort: CustomerKey,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: CustomerID, Type: int  
 Name: BillToAddressID, Type: int  
 Name: ShipToAddressID, Type: int  
@@ -1004,14 +924,12 @@ Name: IsPastDue, Type: bit
 Name: IsSubjectToPastDue, Type: bit  
 Name: PastDueAmount, Type: decimal  
 Name: TotalCreditReserve, Type: decimal
-
-
----
-
+```
+---
 
 
 ### CustomerMiscPrompt 
-
+```sql
 Key: CustomerMiscPrompt,  
 Type: View,  
 Command: vwAC_SSR_CustomerMiscPrompt,  
@@ -1020,12 +938,9 @@ ReturnType:
 DefaultSort: [Customer Number],  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
-
-
-#### Output:
-
+#### Output:```sql
 Name: Prompt, Type: varchar(20)  
 Name: Description, Type: varchar(50)  
 Name: Value, Type: varchar(50)  
@@ -1034,13 +949,12 @@ Name: Company Name, Type: varchar(100)
 Name: CustomerID, Type: int
 
 
----
-
+```---
 
 
 ### InvoiceSalesSummary 
 
-Key: InvoiceSalesSummary,  
+```sqlKey: InvoiceSalesSummary,  
 Type: View,  
 Command: vwAC_SSR_InvoiceSalesSummary,  
 HasReturn: false,  
@@ -1048,11 +962,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsSalesOrderInvoiceID, Type: int  
 Name: RepairOrderInvoiceID, Type: int  
@@ -1114,13 +1027,12 @@ Name: InvoiceMonth, Type: varchar(2)
 Name: IsLocal, Type: bit
 
 
----
-
+```---
 
 
 ### InvoiceSalesSummaryDetail 
 
-Key: InvoiceSalesSummaryDetail,  
+```sqlKey: InvoiceSalesSummaryDetail,  
 Type: View,  
 Command: vwAC_SSR_InvoiceSalesSummaryDetail,  
 HasReturn: false,  
@@ -1128,11 +1040,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsSalesOrderInvoiceID, Type: int  
 Name: RepairOrderInvoiceID, Type: int  
@@ -1195,18 +1106,15 @@ Name: AverageCostGrossProfit, Type: money
 Name: AverageCostGrossProfitMargin, Type: money  
 Name: ReplacementCostGrossProfit, Type: money  
 Name: ReplacementCostGrossProfitMargin, Type: money
-
-## Accounting Other
-
+```------## Accounting Other
 
 
 ---
 
 
-
 ### Address 
 
-Key: Address,  
+```sqlKey: Address,  
 Type: View,  
 Command: vwAC_SSR_Address,  
 HasReturn: false,  
@@ -1214,11 +1122,10 @@ ReturnType:
 DefaultSort: City,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: AddressID, Type: int  
 Name: AddressTypeID, Type: int  
@@ -1250,13 +1157,12 @@ Name: Salesperson, Type: varchar(20)
 Name: Territory, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### CheckRegister
 
-Key: CheckRegister,  
+```sqlKey: CheckRegister,  
 Type: View,  
 Command: vwAC_SSR_CheckRegister,  
 HasReturn: false,  
@@ -1264,11 +1170,10 @@ ReturnType:
 DefaultSort: CheckNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PostingBranch, Type: varchar(10)  
 Name: BranchID, Type: int  
@@ -1313,13 +1218,12 @@ Name: Is1099Required, Type: bit
 Name: IncomeType, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### Comments 
 
-Key: Comments,  
+```sqlKey: Comments,  
 Type: View,  
 Command: vwAC_SSR_Comments,  
 HasReturn: false,  
@@ -1327,11 +1231,10 @@ ReturnType:
 DefaultSort: AddDate,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CommentID, Type: int  
 Name: EntityID, Type: int  
@@ -1350,13 +1253,12 @@ Name: AddUser, Type: varchar(20)
 Name: UpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### FixedAssets 
 
-Key: FixedAssets,  
+```sqlKey: FixedAssets,  
 Type: View,  
 Command: vwAC_SSR_FixedAssets,  
 HasReturn: false,  
@@ -1364,11 +1266,10 @@ ReturnType:
 DefaultSort: Description,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BookBranch, Type: varchar(10)  
 Name: LocationBranch, Type: varchar(25)  
@@ -1404,13 +1305,12 @@ Name: YTDDepreciation, Type: decimal
 Name: Inactive, Type: bit
 
 
----
-
+```---
 
 
 ### SalesPersonCommission 
 
-Key: SalesPersonCommission,  
+```sqlKey: SalesPersonCommission,  
 Type: View,  
 Command: vwAC_SSR_SalesPersonCommission,  
 HasReturn: false,  
@@ -1418,11 +1318,10 @@ ReturnType:
 DefaultSort: Salesperson,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CommissionTable, Type: varchar(50)  
 Name: Salesperson, Type: varchar(20)  
@@ -1443,18 +1342,15 @@ Name: InvoiceDateandTime, Type: datetime
 Name: InvoiceDate, Type: datetime  
 Name: IsOutsideSalesperson, Type: varchar(3)  
 Name: IsVoided, Type: varchar(3)
-
-## Lease/Rental
-
+```------## Lease/Rental
 
 
----
-
+---
 
 
 ### CustomerInsurance 
 
-Key: CustomerInsurance,  
+```sqlKey: CustomerInsurance,  
 Type: View,  
 Command: vwLR_SSR_CustomerInsurance,  
 HasReturn: false,  
@@ -1462,11 +1358,10 @@ ReturnType:
 DefaultSort: CustomerNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CustomerInsuranceID, Type: int  
 Name: CustomerNumber, Type: varchar(10)  
@@ -1502,13 +1397,12 @@ Name: PhysicalDamageCoverageLimit, Type: decimal
 Name: Inactive, Type: bit
 
 
----
-
+```---
 
 
 ### DriverInfo 
 
-Key: DriverInfo,  
+```sqlKey: DriverInfo,  
 Type: View,  
 Command: vwLR_SSR_DriverInfo,  
 HasReturn: false,  
@@ -1516,11 +1410,10 @@ ReturnType:
 DefaultSort: CustomerKey,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DriverLicenseID, Type: int  
 Name: CustomerID, Type: int  
@@ -1552,13 +1445,12 @@ Name: AddDate, Type: datetime
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### LRBillingGroup 
 
-Key: LRBillingGroup,  
+```sqlKey: LRBillingGroup,  
 Type: View,  
 Command: vwLR_SSR_LRBillingGroup,  
 HasReturn: false,  
@@ -1566,11 +1458,10 @@ ReturnType:
 DefaultSort: NAME,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseRentalBillingGroupID, Type: int  
 Name: NAME, Type: varchar(50)  
@@ -1586,13 +1477,12 @@ Name: DailyBilling, Type: int
 Name: DailyBillingCycle, Type: int
 
 
----
-
+```---
 
 
 ### LRBillingHistoryHeader 
 
-Key: LRBillingHistoryHeader,  
+```sqlKey: LRBillingHistoryHeader,  
 Type: View,  
 Command: vwLR_SSR_LRBillingHistoryHeader,  
 HasReturn: false,  
@@ -1600,11 +1490,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseContractInvoiceID, Type: int  
 Name: CustomerID, Type: int  
@@ -1641,13 +1530,12 @@ Name: VariableChargesPO, Type: varchar(50)
 Name: MiscChargesPO, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### LRBillingHistoryDetail 
 
-Key: LRBillingHistoryDetail,  
+```sqlKey: LRBillingHistoryDetail,  
 Type: View,  
 Command: vwLR_SSR_LRBillingHistoryDetail,  
 HasReturn: false,  
@@ -1655,11 +1543,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseContractUnitID, Type: int  
 Name: Division, Type: varchar(10)  
@@ -1698,13 +1585,12 @@ Name: ContractSalesperson, Type: varchar(50)
 Name: UnitSalesperson, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### LRBillingHistory 
 
-Key: LRBillingHistory,  
+```sqlKey: LRBillingHistory,  
 Type: View,  
 Command: vwLR_SSR_LRBillingHistory,  
 HasReturn: false,  
@@ -1712,11 +1598,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeasceContractID, Type: int  
 Name: LeaseContractInvoiceID, Type: int  
@@ -1766,13 +1651,12 @@ Name: UnitVariableChargesPO, Type: varchar(50)
 Name: UnitMiscChargesPO, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### LRCharges
 
-Key: LRCharges,  
+```sqlKey: LRCharges,  
 Type: View,  
 Command: vwLR_SSR_LRCharges,  
 HasReturn: false,  
@@ -1780,11 +1664,10 @@ ReturnType:
 DefaultSort: Charge,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseRentalChargeID, Type: int  
 Name: Charge, Type: varchar(15)  
@@ -1808,13 +1691,12 @@ Name: AddDate, Type: datetime
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### LRContract 
 
-Key: LRContract,  
+```sqlKey: LRContract,  
 Type: View,  
 Command: vwLR_SSR_LRContract,  
 HasReturn: false,  
@@ -1822,11 +1704,10 @@ ReturnType:
 DefaultSort: ContractNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseContractID, Type: int  
 Name: FixedCharegesBillingID, Type: int  
@@ -1876,13 +1757,12 @@ Name: VariableChargesPO, Type: varchar(50)
 Name: MiscChargesPO, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### LRContractUnit 
 
-Key: LRContractUnit,  
+```sqlKey: LRContractUnit,  
 Type: View,  
 Command: vwLR_SSR_LRContractUnit,  
 HasReturn: false,  
@@ -1890,11 +1770,10 @@ ReturnType:
 DefaultSort: ContractNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseContractID, Type: int  
 Name: CustomerInsuranceID, Type: int  
@@ -1976,13 +1855,12 @@ Name: UnitMiscChargesPO, Type: varchar(50)
 Name: BillingReserve, Type: decimal
 
 
----
-
+```---
 
 
 ### LRContractUnitCharge 
 
-Key: LRContractUnitCharge,  
+```sqlKey: LRContractUnitCharge,  
 Type: View,  
 Command: vwLR_SSR_LRContractUnitCharge,  
 HasReturn: false,  
@@ -1990,11 +1868,10 @@ ReturnType:
 DefaultSort: ContractNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseContractChargeID, Type: int  
 Name: LeaseContractID, Type: int  
@@ -2017,13 +1894,12 @@ Name: AddDate, Type: datetime
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### LRCustomerRateOverrideDetail 
 
-Key: LRCustomerRateOverrideDetail,  
+```sqlKey: LRCustomerRateOverrideDetail,  
 Type: View,  
 Command: vwLR_SSR_LRCustomerRateOverrideDetail,  
 HasReturn: false,  
@@ -2031,11 +1907,10 @@ ReturnType:
 DefaultSort: Customer,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseRentalCustomerRateOverrideID, Type: int  
 Name: RentalRateID, Type: int  
@@ -2064,13 +1939,12 @@ Name: Multiplier, Type: decimal
 Name: OverrideMethod, Type: varchar(10)
 
 
----
-
+```---
 
 
 ### LRCustomerRateOverrideHeader 
 
-Key: LRCustomerRateOverrideHeader,  
+```sqlKey: LRCustomerRateOverrideHeader,  
 Type: View,  
 Command: vwLR_SSR_LRCustomerRateOverrideHeader,  
 HasReturn: false,  
@@ -2078,11 +1952,10 @@ ReturnType:
 DefaultSort: Customer,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LeaseRentalCustomerRateOverrideID, Type: int  
 Name: RentalRateID, Type: int  
@@ -2099,13 +1972,12 @@ Name: AddUser, Type: varchar(20)
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### LRUnits 
 
-Key: LRUnits,  
+```sqlKey: LRUnits,  
 Type: View,  
 Command: vwLR_SSR_LRUnits,  
 HasReturn: false,  
@@ -2113,11 +1985,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: UnitInventoryID, Type: int  
 Name: ProductionYear, Type: datetime  
@@ -2168,13 +2039,12 @@ Name: LRUnitMessageAddUser, Type: varchar(20)
 Name: LRUnitMessageDate, Type: date
 
 
----
-
+```---
 
 
 ### PermitandLicense 
 
-Key: PermitandLicense,  
+```sqlKey: PermitandLicense,  
 Type: View,  
 Command: vwLR_SSR_PermitandLicense,  
 HasReturn: false,  
@@ -2182,11 +2052,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PermitLicenseID, Type: int  
 Name: UnitInventoryID, Type: int  
@@ -2202,18 +2071,15 @@ Name: AddUser, Type: varchar(20)
 Name: AddDate, Type: datetime  
 Name: UpdateUser, Type: varchar(20)  
 Name: LastUpdateDate, Type: datetime
-
-## Sales
-
+```------## Sales
 
 
----
-
+---
 
 
 ### LPO 
 
-Key: LPO,  
+```sqlKey: LPO,  
 Type: View,  
 Command: vwSM_SSR_LPO,  
 HasReturn: false,  
@@ -2221,11 +2087,10 @@ ReturnType:
 DefaultSort: LPO,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: DepartmentID, Type: int  
@@ -2286,13 +2151,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### SalesDealCommission 
 
-Key: SalesDealCommission,  
+```sqlKey: SalesDealCommission,  
 Type: View,  
 Command: vwSM_SSR_SalesDealCommission,  
 HasReturn: false,  
@@ -2300,11 +2164,10 @@ ReturnType:
 DefaultSort: DealNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DealCommissionInvoiceID, Type: int  
 Name: DealPacketInvoiceID, Type: int  
@@ -2364,13 +2227,12 @@ Name: Approved, Type: bit
 Name: Note, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### SalesDealDetail 
 
-Key: SalesDealDetail,  
+```sqlKey: SalesDealDetail,  
 Type: View,  
 Command: vwSM_SSR_SalesDealDetail,  
 HasReturn: false,  
@@ -2378,11 +2240,10 @@ ReturnType:
 DefaultSort: DealHeaderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DealHeaderID, Type: int  
 Name: DealPacketID, Type: int  
@@ -2430,13 +2291,12 @@ Name: ExemptDelivery, Type: decimal
 Name: AmountSubjectToFET, Type: decimal
 
 
----
-
+```---
 
 
 ### SalesDealHeader 
 
-Key: SalesDealHeader,  
+```sqlKey: SalesDealHeader,  
 Type: View,  
 Command: vwSM_SSR_SalesDealHeader,  
 HasReturn: false,  
@@ -2444,11 +2304,10 @@ ReturnType:
 DefaultSort: DealNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DealHeaderID, Type: int  
 Name: BranchID, Type: int  
@@ -2511,13 +2370,12 @@ Name: LastUpdateDate, Type: datetime
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### SalesDealPacket 
 
-Key: SalesDealPacket,  
+```sqlKey: SalesDealPacket,  
 Type: View,  
 Command: vwSM_SSR_SalesDealPacket,  
 HasReturn: false,  
@@ -2525,11 +2383,10 @@ ReturnType:
 DefaultSort: DealNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DealHeaderID, Type: int  
 Name: DealPacketID, Type: int  
@@ -2634,13 +2491,12 @@ Name: JournalCode, Type: int
 Name: TransactionType, Type: int
 
 
----
-
+```---
 
 
 ### SalesUnit 
 
-Key: SalesUnit,  
+```sqlKey: SalesUnit,  
 Type: View,  
 Command: vwSM_SSR_SalesUnit,  
 HasReturn: false,  
@@ -2648,11 +2504,10 @@ ReturnType:
 DefaultSort: SoldInvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: UnitID, Type: int  
 Name: AddUser, Type: varchar(20)  
@@ -2764,13 +2619,12 @@ Name: WarrantyPeriod, Type: int
 Name: WarrantyContract, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### UnitFlooring 
 
-Key: UnitFlooring,  
+```sqlKey: UnitFlooring,  
 Type: View,  
 Command: vwSM_SSR_UnitFlooring,  
 HasReturn: false,  
@@ -2778,11 +2632,10 @@ ReturnType:
 DefaultSort: SerialNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: UnitFlooringInfoID, Type: int  
 Name: UnitInventoryID, Type: int  
@@ -2821,13 +2674,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: LastUpdate, Type: datetime
 
 
----
-
+```---
 
 
 ### UnitPurchaseOrderDetail
 
-Key: UnitPurchaseOrderDetail,  
+```sqlKey: UnitPurchaseOrderDetail,  
 Type: View,  
 Command: vwSM_SSR_UnitPurchaseOrderDetail,  
 HasReturn: false,  
@@ -2835,11 +2687,10 @@ ReturnType:
 DefaultSort: PONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: DepartmentID, Type: int  
@@ -2887,13 +2738,12 @@ Name: LastUpdateDate, Type: datetime
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### UnitPurchaseOrderHeader 
 
-Key: UnitPurchaseOrderHeader,  
+```sqlKey: UnitPurchaseOrderHeader,  
 Type: View,  
 Command: vwSM_SSR_UnitPurchaseOrderHeader,  
 HasReturn: false,  
@@ -2901,11 +2751,10 @@ ReturnType:
 DefaultSort: PONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: DepartmentID, Type: int  
@@ -2959,14 +2808,11 @@ Name: AddDate, Type: datetime
 Name: AddUser, Type: varchar(20)  
 Name: LastUpdateDate, Type: datetime  
 Name: LastUpdateUser, Type: varchar(20)
+```------## Service
 
-## Service
+---   ### DeferredRepairs 
 
-
-
----   ### DeferredRepairs 
-
-Key: DeferredRepairs,  
+```sqlKey: DeferredRepairs,  
 Type: View,  
 Command: vwSR_SSR_DeferredRepairs,  
 HasReturn: false,  
@@ -2974,11 +2820,10 @@ ReturnType:
 DefaultSort: CustomerNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: DeferringBranch, Type: varchar(10)  
 Name: DeferringDepartment, Type: varchar(10)  
@@ -3015,13 +2860,12 @@ Name: AddUser, Type: varchar(20)
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### MeterHistory 
 
-Key: MeterHistory,  
+```sqlKey: MeterHistory,  
 Type: View,  
 Command: vwSR_SSR_MeterHistory,  
 HasReturn: false,  
@@ -3029,11 +2873,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: MeterReadingID, Type: int  
 Name: MeterTypeID, Type: int  
@@ -3064,13 +2907,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### OpenBarcodeTime 
 
-Key: OpenBarcodeTime,  
+```sqlKey: OpenBarcodeTime,  
 Type: View,  
 Command: vwSR_SSR_OpenBarcodeTime,  
 HasReturn: false,  
@@ -3078,11 +2920,10 @@ ReturnType:
 DefaultSort: TechnicianNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: OpenBarcodeTimeID, Type: int  
 Name: RepairOrderID, Type: int  
@@ -3126,13 +2967,12 @@ Name: ApplicationName, Type: varchar(75)
 Name: UpdateApplicationName, Type: varchar(75)
 
 
----
-
+```---
 
 
 ### PreventiveMaintenance 
 
-Key: PreventiveMaintenance,  
+```sqlKey: PreventiveMaintenance,  
 Type: View,  
 Command: vwSR_SSR_PreventiveMaintenance,  
 HasReturn: false,  
@@ -3140,11 +2980,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CustomerID, Type: int  
 Name: AddressID, Type: int  
@@ -3218,13 +3057,12 @@ Name: AddUser, Type: varchar(20)
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### RepairOrderQuoteDetails 
 
-Key: RepairOrderQuoteDetails,  
+```sqlKey: RepairOrderQuoteDetails,  
 Type: View,  
 Command: vwSR_SSR_RepairOrderQuoteDetails,  
 HasReturn: false,  
@@ -3232,11 +3070,10 @@ ReturnType:
 DefaultSort: RepairOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: RepairOrderID, Type: int  
@@ -3321,13 +3158,12 @@ Name: Percentage, Type: decimal
 Name: CalculatedAgainst, Type: varchar(10)
 
 
----
-
+```---
 
 
 ### RepairOrderQuoteHeader 
 
-Key: RepairOrderQuoteHeader,  
+```sqlKey: RepairOrderQuoteHeader,  
 Type: View,  
 Command: vwSR_SSR_RepairOrderQuoteHeader,  
 HasReturn: false,  
@@ -3335,11 +3171,10 @@ ReturnType:
 DefaultSort: RepairOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: OwningCustomerID, Type: int  
@@ -3435,13 +3270,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### RepairOrderQuoteTask 
 
-Key: RepairOrderQuoteTask,  
+```sqlKey: RepairOrderQuoteTask,  
 Type: View,  
 Command: vwSR_SSR_RepairOrderQuoteTask,  
 HasReturn: false,  
@@ -3449,11 +3283,10 @@ ReturnType:
 DefaultSort: RepairOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: RepairTypeID, Type: int  
@@ -3525,13 +3358,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### RepairOrderTask 
 
-Key: RepairOrderTask,  
+```sqlKey: RepairOrderTask,  
 Type: View,  
 Command: vwSR_SSR_RepairOrderTask,  
 HasReturn: false,  
@@ -3539,11 +3371,10 @@ ReturnType:
 DefaultSort: RONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: Branch, Type: varchar(10)  
 Name: BranchID, Type: int  
@@ -3643,13 +3474,12 @@ Name: BillToCompanyName, Type: varchar(100)
 Name: BillToCustomer, Type: varchar(10)
 
 
----
-
+```---
 
 
 ### RepairTypes 
 
-Key: RepairTypes,  
+```sqlKey: RepairTypes,  
 Type: View,  
 Command: vwSR_SSR_RepairTypes,  
 HasReturn: false,  
@@ -3657,11 +3487,10 @@ ReturnType:
 DefaultSort: RepairType,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: RepairType, Type: varchar(12)  
 Name: RepairTypeID, Type: int  
@@ -3704,18 +3533,14 @@ Name: CorrectionComment, Type: varchar(7500)
 Name: VMRSCode, Type: int  
 Name: VMRSCodeDescription, Type: varchar(100)  
 Name: VMRSTask, Type: varchar(50)
+```------## Repair Order
 
-## Repair Order
-
-
-
----
-
+---
 
 
 ### RepairOrderDetails 
 
-Key: RepairOrderDetails,  
+```sqlKey: RepairOrderDetails,  
 Type: View,  
 Command: vwSV_SSR_RepairOrderDetails,  
 HasReturn: false,  
@@ -3723,11 +3548,10 @@ ReturnType:
 DefaultSort: RONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: Branch, Type: varchar(10)  
 Name: BranchID, Type: int  
@@ -3834,13 +3658,12 @@ Name: PartsInventoryDetailID, Type: int
 Name: UnitInventoryID, Type: int
 
 
----
-
+```---
 
 
 ### RepairOrderHeader 
 
-Key: RepairOrderHeader,  
+```sqlKey: RepairOrderHeader,  
 Type: View,  
 Command: vwSV_SSR_RepairOrderHeader,  
 HasReturn: false,  
@@ -3848,11 +3671,10 @@ ReturnType:
 DefaultSort: RONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: CustomerID, Type: int  
@@ -3979,18 +3801,15 @@ Name: DaysFirstPunchToLastPunch, Type: int
 Name: FirstPunchDate, Type: datetime  
 Name: LastPunchDate, Type: datetime  
 Name: RepairOrderStatusID, Type: int
-
+```------
 ## Technician
 
-
-
----
-
+---
 
 
 ### Technician 
 
-Key: Technician,  
+```sqlKey: Technician,  
 Type: View,  
 Command: vwSR_SSR_Technician,  
 HasReturn: false,  
@@ -3998,11 +3817,10 @@ ReturnType:
 DefaultSort: TechnicianNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: TechnicianID, Type: int  
 Name: TechnicianNumber, Type: int  
@@ -4030,13 +3848,12 @@ Name: AddUser, Type: varchar(20)
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### TechnicianCertification 
 
-Key: TechnicianCertification,  
+```sqlKey: TechnicianCertification,  
 Type: View,  
 Command: vwSR_SSR_TechnicianCertification,  
 HasReturn: false,  
@@ -4044,11 +3861,10 @@ ReturnType:
 DefaultSort: [Technician Number],  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: Technician Number, Type: int  
 Name: Technician Name, Type: varchar(203)  
@@ -4067,13 +3883,12 @@ Name: AddDate, Type: datetime
 Name: LastUpdateDate, Type: datetime
 
 
----
-
+```---
 
 
 ### TechnicianPerformance 
 
-Key: TechnicianPerformance,  
+```sqlKey: TechnicianPerformance,  
 Type: View,  
 Command: vwSR_SSR_TechnicianPerformance,  
 HasReturn: false,  
@@ -4081,11 +3896,10 @@ ReturnType:
 DefaultSort: TechnicianNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: DepartmentID, Type: int  
@@ -4119,13 +3933,12 @@ Name: ComebackHours, Type: decimal
 Name: EffectiveLaborRate, Type: decimal
 
 
----
-
+```---
 
 
 ### TechnicianProductivity 
 
-Key: TechnicianProductivity,  
+```sqlKey: TechnicianProductivity,  
 Type: View,  
 Command: vwSR_SSR_TechnicianProductivity,  
 HasReturn: false,  
@@ -4133,11 +3946,10 @@ ReturnType:
 DefaultSort: TechnicianNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: TechnicianID, Type: int  
 Name: TechnicianNumber, Type: int  
@@ -4161,13 +3973,12 @@ Name: EffectiveRate, Type: decimal
 Name: ComebackHours, Type: decimal
 
 
----
-
+```---
 
 
 ### TechnicianTime 
 
-Key: TechnicianTime,  
+```sqlKey: TechnicianTime,  
 Type: View,  
 Command: vwSR_SSR_TechnicianTime,  
 HasReturn: false,  
@@ -4175,11 +3986,10 @@ ReturnType:
 DefaultSort: TechnicianNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: TimeID, Type: int  
 Name: RepairOrderID, Type: int  
@@ -4283,18 +4093,15 @@ Name: IntRepairOrderNumber, Type: int
 Name: OT_IsRate, Type: bit  
 Name: RecordSource, Type: int  
 Name: Team, Type: int
-
+```------
 ## Service Unit
 
-
-
----
-
+---
 
 
 ### Unit
 
-Key: Unit,  
+```sqlKey: Unit,  
 Type: View,  
 Command: vwSR_SSR_Unit,  
 HasReturn: false,  
@@ -4302,11 +4109,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: StockNumber, Type: varchar(20)  
 Name: Year, Type: int  
@@ -4422,13 +4228,12 @@ Name: BillingMeterReading, Type: decimal
 Name: BillingMeterReadingDate, Type: datetime
 
 
----
-
+```---
 
 
 ### UnitComponents 
 
-Key: UnitComponents,  
+```sqlKey: UnitComponents,  
 Type: View,  
 Command: vwSR_SSR_UnitComponents,  
 HasReturn: false,  
@@ -4436,11 +4241,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: ComponentID, Type: int  
 Name: UnitNumber, Type: varchar(20)  
@@ -4482,13 +4286,12 @@ Name: CurrentMeterReadingDate, Type: datetime
 Name: CurrentMeterReading, Type: decimal
 
 
----
-
+```---
 
 
 ### UnitOwningCustomer 
 
-Key: UnitOwningCustomer,  
+```sqlKey: UnitOwningCustomer,  
 Type: View,  
 Command: vwSR_SSR_UnitOwningCustomer,  
 HasReturn: false,  
@@ -4496,11 +4299,10 @@ ReturnType:
 DefaultSort: UnitNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: UnitInventoryID, Type: int  
 Name: CustomerID, Type: int  
@@ -4525,14 +4327,12 @@ Name: AddDate, Type: datetime
 Name: AddUser, Type: varchar(20)  
 Name: LastUpdateDate, Type: datetime  
 Name: LastUpdateUser, Type: varchar(20)
-
+```------
 ## Parts
 
+---   ### CustomerCoreRighttoReturn 
 
-
----   ### CustomerCoreRighttoReturn 
-
-Key: CustomerCoreRighttoReturn,  
+```sqlKey: CustomerCoreRighttoReturn,  
 Type: View,  
 Command: vwIN_SSR_CustomerCoreRighttoReturn,  
 HasReturn: false,  
@@ -4540,11 +4340,10 @@ ReturnType:
 DefaultSort: CustomerNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: RightToReturnID, Type: int  
 Name: CustomerID, Type: int  
@@ -4577,13 +4376,12 @@ Name: UpdateUser, Type: varchar(20)
 Name: LastUpdate, Type: datetime
 
 
----
-
+```---
 
 
 ### CustomerPurchasesandReturns 
 
-Key: CustomerPurchasesandReturns,  
+```sqlKey: CustomerPurchasesandReturns,  
 Type: View,  
 Command: vwIN_SSR_CustomerPurchasesandReturns,  
 HasReturn: false,  
@@ -4591,11 +4389,10 @@ ReturnType:
 DefaultSort: Customer,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CustomerPurchasesReturnsSearchID, Type: int  
 Name: OrderType, Type: varchar(14)  
@@ -4647,13 +4444,12 @@ Name: Department, Type: varchar(10)
 Name: Division, Type: varchar(10)
 
 
----
-
+```---
 
 
 ### FuelInvoiceSummary 
 
-Key: FuelInvoiceSummary,  
+```sqlKey: FuelInvoiceSummary,  
 Type: View,  
 Command: vwIN_SSR_FuelInvoiceSummary,  
 HasReturn: false,  
@@ -4661,11 +4457,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: FuelInvoiceID, Type: int  
 Name: Division, Type: varchar(10)  
@@ -4701,13 +4496,12 @@ Name: FuelTicketCount, Type: int
 Name: DueDate, Type: datetime
 
 
----
-
+```---
 
 
 ### FuelTicket 
 
-Key: FuelTicket,  
+```sqlKey: FuelTicket,  
 Type: View,  
 Command: vwIN_SSR_FuelTicket,  
 HasReturn: false,  
@@ -4715,11 +4509,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: FuelTicketID, Type: int  
 Name: BranchID, Type: int  
@@ -4767,13 +4560,12 @@ Name: IsVoided, Type: int
 Name: IsLRInvoice, Type: int
 
 
----
-
+```---
 
 
 ### FuelTicketDetail 
 
-Key: FuelTicketDetail,  
+```sqlKey: FuelTicketDetail,  
 Type: View,  
 Command: vwIN_SSR_FuelTicketDetail,  
 HasReturn: false,  
@@ -4781,11 +4573,10 @@ ReturnType:
 DefaultSort: TicketNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: FuelTicketDetailsID, Type: int  
 Name: FuelTicketID, Type: int  
@@ -4832,13 +4623,12 @@ Name: FuelInvoiceID, Type: int
 Name: UnitInventoryID, Type: int
 
 
----
-
+```---
 
 
 ### KitAssemblyDetail
 
-Key: KitAssemblyDetail,  
+```sqlKey: KitAssemblyDetail,  
 Type: View,  
 Command: vwIN_SSR_KitAssemblyDetail,  
 HasReturn: false,  
@@ -4846,11 +4636,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: Branch, Type: varchar(10)  
 Name: BranchID, Type: int  
@@ -4890,13 +4679,12 @@ Name: DetailReplacementCost, Type: decimal
 Name: DetailAverageCost, Type: decimal
 
 
----
-
+```---
 
 
 ### LostSales 
 
-Key: LostSales,  
+```sqlKey: LostSales,  
 Type: View,  
 Command: vwIN_SSR_LostSales,  
 HasReturn: false,  
@@ -4904,11 +4692,10 @@ ReturnType:
 DefaultSort: CustomerNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: LostSaleID, Type: int  
 Name: Branch, Type: varchar(10)  
@@ -4936,13 +4723,12 @@ Name: LastUpdateDate, Type: datetime
 Name: LastUpdateUser, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### PartsBackOrders 
 
-Key: PartsBackOrders,  
+```sqlKey: PartsBackOrders,  
 Type: View,  
 Command: vwIN_SSR_PartsBackOrders,  
 HasReturn: false,  
@@ -4950,11 +4736,10 @@ ReturnType:
 DefaultSort: RepairOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: CustomerBackorderID, Type: int  
 Name: BranchID, Type: int  
@@ -5033,13 +4818,12 @@ Name: BackorderAging, Type: varchar(5)
 Name: DaysOld, Type: int
 
 
----
-
+```---
 
 
 ### PartsCommitted 
 
-Key: PartsCommitted,  
+```sqlKey: PartsCommitted,  
 Type: View,  
 Command: vwIN_SSR_PartsCommitted,  
 HasReturn: false,  
@@ -5047,11 +4831,10 @@ ReturnType:
 DefaultSort: OrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartNumber, Type: varchar(50)  
 Name: CustomerID, Type: int  
@@ -5080,13 +4863,12 @@ Name: AssemblyPartNumber, Type: varchar(50)
 Name: IsAssemblyDetail, Type: bit
 
 
----
-
+```---
 
 
 ### PartsMessages 
 
-Key: PartsMessages,  
+```sqlKey: PartsMessages,  
 Type: View,  
 Command: vwIN_SSR_PartsMessages,  
 HasReturn: false,  
@@ -5094,11 +4876,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartMessageID, Type: int  
 Name: PartMessageTypeID, Type: int  
@@ -5122,13 +4903,12 @@ Name: PartsInventoryDetailID, Type: int
 Name: PartDescription, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### PartsOrder 
 
-Key: PartsOrder,  
+```sqlKey: PartsOrder,  
 Type: View,  
 Command: vwIN_SSR_PartsOrder,  
 HasReturn: false,  
@@ -5136,11 +4916,10 @@ ReturnType:
 DefaultSort: PartsOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsSalesOrderID, Type: int  
 Name: BranchID, Type: int  
@@ -5220,13 +4999,12 @@ Name: StaticPaymentMethodID, Type: int
 Name: Territory, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### PartsOrderDetail 
 
-Key: PartsOrderDetail,  
+```sqlKey: PartsOrderDetail,  
 Type: View,  
 Command: vwIN_SSR_PartsOrderDetail,  
 HasReturn: false,  
@@ -5234,11 +5012,10 @@ ReturnType:
 DefaultSort: PartsOrderNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsSalesOrderID, Type: int  
 Name: PartsSalesOrderPartsID, Type: int  
@@ -5299,13 +5076,12 @@ Name: PartsInventoryKitTypeID, Type: int
 Name: IsPOSAssembly, Type: bit
 
 
----
-
+```---
 
 
 ### PartsPO 
 
-Key: PartsPO,  
+```sqlKey: PartsPO,  
 Type: View,  
 Command: vwIN_SSR_PartsPO,  
 HasReturn: false,  
@@ -5313,11 +5089,10 @@ ReturnType:
 DefaultSort: PONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartPurchaseOrderHeaderID, Type: int  
 Name: SupplierID, Type: int  
@@ -5365,13 +5140,12 @@ Name: LastUpdateUser, Type: varchar(20)
 Name: IsAllSupplier, Type: bit
 
 
----
-
+```---
 
 
 ### PartsPODetail 
 
-Key: PartsPODetail,  
+```sqlKey: PartsPODetail,  
 Type: View,  
 Command: vwIN_SSR_PartsPODetail,  
 HasReturn: false,  
@@ -5379,11 +5153,10 @@ ReturnType:
 DefaultSort: PONumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartPurchaseOrderDetailID, Type: int  
 Name: PartPurchaseOrderHeaderID, Type: int  
@@ -5427,13 +5200,12 @@ Name: InterBranchStockOrder, Type: bit
 Name: InterBranchBackorder, Type: int
 
 
----
-
+```---
 
 
 ### PartsTransactions 
 
-Key: PartsTransactions,  
+```sqlKey: PartsTransactions,  
 Type: View,  
 Command: vwIN_SSR_PartsTransactions,  
 HasReturn: false,  
@@ -5441,11 +5213,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartBranch, Type: varchar(10)  
 Name: PartsInventoryID, Type: int  
@@ -5497,13 +5268,12 @@ Name: PreviousInherentReplacementCost, Type: decimal
 Name: PreviousQuantityAvailable, Type: int
 
 
----
-
+```---
 
 
 ### PartsVendorRebates 
 
-Key: PartsVendorRebates,  
+```sqlKey: PartsVendorRebates,  
 Type: View,  
 Command: vwIN_SSR_PartsVendorRebates,  
 HasReturn: false,  
@@ -5511,11 +5281,10 @@ ReturnType:
 DefaultSort: InvoiceNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: VendorRebateHistoricalID, Type: int  
 Name: StockClass, Type: varchar(10)  
@@ -5557,13 +5326,12 @@ Name: ReplacementCost, Type: decimal
 Name: VendorPriceDescription, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### Supplier 
 
-Key: Supplier,  
+```sqlKey: Supplier,  
 Type: View,  
 Command: vwIN_SSR_Supplier,  
 HasReturn: false,  
@@ -5571,11 +5339,10 @@ ReturnType:
 DefaultSort: NAME,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: SupplierID, Type: int  
 Name: SupplierCode, Type: varchar(20)  
@@ -5669,13 +5436,12 @@ Name: MinimumReturnWeight, Type: int
 Name: CharacteristicType, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### SupplierCoreRTR 
 
-Key: SupplierCoreRTR,  
+```sqlKey: SupplierCoreRTR,  
 Type: View,  
 Command: vwIN_SSR_SupplierCoreRTR,  
 HasReturn: false,  
@@ -5683,11 +5449,10 @@ ReturnType:
 DefaultSort: APVendor,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: SupplierCoreRighttoReturnID, Type: int  
 Name: PartsInventoryDetailID, Type: int  
@@ -5719,18 +5484,15 @@ Name: LastUpdateTime, Type: datetime
 Name: CoreSupplier, Type: varchar(20)  
 Name: TotalOwedForPartNumber, Type: int  
 Name: TotalOwedToAPVendorForPartNumber, Type: int
-
+```------
 ## Parts Inventory
 
-
-
----
-
+---
 
 
 ### PartsInventory 
 
-Key: PartsInventory,  
+```sqlKey: PartsInventory,  
 Type: View,  
 Command: vwIN_SSR_PartsInventory,  
 HasReturn: false,  
@@ -5738,11 +5500,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsInventoryDetailID, Type: int  
 Name: PartNumber, Type: varchar(50)  
@@ -5785,13 +5546,12 @@ Name: AlternateBin, Type: nvarchar(max)
 Name: CharacteristicType, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### PartsInventoryExtended 
 
-Key: PartsInventoryExtended,  
+```sqlKey: PartsInventoryExtended,  
 Type: View,  
 Command: vwIN_SSR_PartsInventoryExtended,  
 HasReturn: false,  
@@ -5799,11 +5559,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsInventoryDetailID, Type: int  
 Name: PartNumber, Type: varchar(50)  
@@ -5969,13 +5728,12 @@ Name: Component, Type: nvarchar(256)
 Name: CharacteristicType, Type: varchar(20)
 
 
----
-
+```---
 
 
 ### PartsInventoryUsage 
 
-Key: PartsInventoryUsage,  
+```sqlKey: PartsInventoryUsage,  
 Type: View,  
 Command: vwIN_SSR_PartsInventoryUsage,  
 HasReturn: false,  
@@ -5983,11 +5741,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsInventoryDetailID, Type: int  
 Name: PartsInventoryMonthlyTransactionSummaryID, Type: int  
@@ -6037,13 +5794,12 @@ Name: PYTDPicks, Type: int
 Name: PYTDSales, Type: int
 
 
----
-
+```---
 
 
 ### PartsInventoryUsageTrailing12Months 
 
-Key: PartsInventoryUsageTrailing12Months,  
+```sqlKey: PartsInventoryUsageTrailing12Months,  
 Type: View,  
 Command: vwIN_SSR_PartsInventoryUsageTrailing12Months,  
 HasReturn: false,  
@@ -6051,11 +5807,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: Branch, Type: varchar(10)  
 Name: Supplier, Type: varchar(20)  
@@ -6151,13 +5906,12 @@ Name: Trailing12MonthTotalSales, Type: int
 Name: Trailing12MonthTotalPicks, Type: int
 
 
----
-
+```---
 
 
 ### PartsInventoryYearlyUsage 
 
-Key: PartsInventoryYearlyUsage,  
+```sqlKey: PartsInventoryYearlyUsage,  
 Type: View,  
 Command: vwIN_SSR_PartsInventoryYearlyUsage,  
 HasReturn: false,  
@@ -6165,11 +5919,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PartsInventoryDetailID, Type: int  
 Name: Branch, Type: varchar(10)  
@@ -6267,9 +6020,9 @@ Name: SuggestedOrderMonths, Type: int
 Name: Ignore, Type: int
 
 
----   ### PartsPhysicalInventory 
+```---   ### PartsPhysicalInventory 
 
-Key: PartsPhysicalInventory,  
+```sqlKey: PartsPhysicalInventory,  
 Type: View,  
 Command: vwIN_SSR_PartsPhysicalInventory,  
 HasReturn: false,  
@@ -6277,11 +6030,10 @@ ReturnType:
 DefaultSort: DateCompleted,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: PhysicalInventoryRequestID, Type: int  
 Name: BranchID, Type: int  
@@ -6323,13 +6075,12 @@ Name: AverageCostDifference, Type: decimal
 Name: PrintAlternateBinLocations, Type: bit
 
 
----
-
+```---
 
 
 ### PartsPhysicalInventoryDetail 
 
-Key: PartsPhysicalInventoryDetail,  
+```sqlKey: PartsPhysicalInventoryDetail,  
 Type: View,  
 Command: vwIN_SSR_PartsPhysicalInventoryDetail,  
 HasReturn: false,  
@@ -6337,11 +6088,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BranchID, Type: int  
 Name: PhysicalInventoryRequestDetailID, Type: int  
@@ -6368,13 +6118,12 @@ Name: PartNumber, Type: varchar(50)
 Name: PartDescription, Type: varchar(50)
 
 
----
-
+```---
 
 
 ### PartsAlternateBinLocations
 
-Key: PartsAlternateBinLocations,  
+```sqlKey: PartsAlternateBinLocations,  
 Type: View,  
 Command: vwIN_SSR_PartsAlternateBinLocations,  
 HasReturn: false,  
@@ -6382,11 +6131,10 @@ ReturnType:
 DefaultSort: PartNumber,  
 DefaultPageSize: 100,  
 MaxPageSize: 1000,  
-Input: null,
+Input: null,```
 
 
-
-#### Output:
+#### Output:```sql
 
 Name: BinLocationAlternateID, Type: int  
 Name: Branch, Type: varchar(10)  
