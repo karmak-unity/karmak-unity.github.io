@@ -48,6 +48,7 @@ body {
 .well {
 	table-layout:fixed;
 	padding-top: 0px;
+	background-color: #fafafa;
 }
 
 /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -102,6 +103,10 @@ th {
 	color: #FFF;
 	font-color: #FFF;
 	
+}
+
+td {
+	background-color: #FFF;	
 }
 
 table.apis {
