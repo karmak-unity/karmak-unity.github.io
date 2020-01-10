@@ -243,3 +243,10 @@ a, a.hover {
 blockquote {
  	font-size: 1em;
 }
+.navbar-inverse .navbar-toggle {
+    border-color: #147890;
+}
+
+.navbar-toggle {
+	background-color: #147890;
+}
