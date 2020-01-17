@@ -7,7 +7,7 @@ The Data Access API suite exposes self-service reporting views via Unity APIs. T
 <ol>
 {% assign sorted-posts = site.posts | where: "category", "Data Access Documentation" | sort: 'title' %}
 {% for post in sorted-posts limit:200 %}
- <h5><li> <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a> - {{ post.description }}</h5>
+ <h5><li> <a href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a> - {{ post.description }}</h5>
 {% endfor %}
 </ol>
 <br>
@@ -20,7 +20,7 @@ The Data Access API suite exposes self-service reporting views via Unity APIs. T
 			<span class="{{ post.icon }} apiicon"></span>
 		</td> 
 		<td class="apititle">
-			<a class="apititle" href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+			<a class="apititle" href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a>
 		</td>
 	</tr>
 	<tr>
