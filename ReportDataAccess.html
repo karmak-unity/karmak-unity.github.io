@@ -1,0 +1,33 @@
+---
+layout: no_sidebar
+---
+
+<p class= "catheader">Report Data Access Documentation</p>
+The Data Access API suite exposes self-service reporting views via Unity APIs. These documentation files will provide the parameters to access and use the Unity system to access reporting information successfully. 
+<ol>
+{% assign sorted-posts = site.posts | where: "category", "Data Access Documentation" | sort: 'title' %}
+{% for post in sorted-posts limit:200 %}
+ <h5><li> <a href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a> - {{ post.description }}</h5>
+{% endfor %}
+</ol>
+<br>
+<hr>
+{% assign sorted-posts = site.posts | where: "type", "data_access" | sort: "title" %}
+{%for post in sorted-posts %}
+ <table class="apis" align="left">
+	<tr>
+		<td class="apititle">
+			<span class="{{ post.icon }} apiicon"></span>
+		</td> 
+		<td class="apititle">
+			<a class="apititle" href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class="apidescription">{{ post.description }}</td>
+	</tr>
+ </table>
+
+{% endfor %}
+</ul>
+

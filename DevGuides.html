@@ -1,0 +1,25 @@
+---
+layout: no_sidebar
+---
+
+<div class="well wellmain">
+<h1>Developer Guides</h1>
+{% assign sorted-posts = site.posts | where: "type", "usage" | sort: 'title' %}
+{% assign filtered-posts = site.posts | where: "category", "General Documentation" | sort: 'title' %}
+{%for post in filtered-posts %}
+<p><a class="howtotitle" href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a> — {{ post.description }}</p>
+{% endfor %}
+<br>
+<hr>
+
+<h2>Data Access Documentation</h2>
+
+{% assign sorted-posts = site.posts | where: "type", "usage" | sort: 'title' %}
+{% assign filtered-posts = site.posts | where: "category", "Data Access Documentation" | sort: 'title' %}
+{%for post in filtered-posts %}
+<p><a class="howtotitle" href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a> — {{ post.description }}</p>
+{% endfor %}
+
+
+
+</div>

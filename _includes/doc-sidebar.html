@@ -1,0 +1,9 @@
+<div class="sidebar well">
+	    <p class= "catheader">Documentation</p>
+		{% assign sorted-posts = site.posts | where: "category", "Documentation" | sort: 'title' %}
+        {% for post in sorted-posts limit:200 %}
+         <h5> <a href="{{ site.baseurl}}{{ post.url }}.html">{{ post.title }}</a></h5>
+        {% endfor %}
+	
+</div>
+
