@@ -71,9 +71,9 @@ Filters (WHERE criteria) are specified as querystring parameters.
 
 | Parameter | Description |
 |---|---|
-|filterinvoice_id[EQ]123456 | for results where Invoice ID  123456 |
-|filterinvoice_id[LTE]123456,invoice_status[EQ]open | for results where Invoice ID \< 123456, and Invoice Status  Open|
-|filterinvoice_date[GT]01-01-2019,invoice_status[IN]paid\|posted |for results where Invoice Date \> 01/01/2019, and Invoice Status is either Paid or Posted|
+|filter=invoice_id[EQ]123456 | for results where Invoice ID  123456 |
+|filter=invoice_id[LTE]123456,invoice_status[EQ]open | for results where Invoice ID \< 123456, and Invoice Status  Open|
+|filter=invoice_date[GT]01-01-2019,invoice_status[IN]paid\|posted |for results where Invoice Date \> 01/01/2019, and Invoice Status is either Paid or Posted|
 
 ---
 ---
@@ -90,15 +90,15 @@ commas.
     sign).
 
 ```
-sort{order}{columnname},{order}{columnname}
+sort={order}{columnname},{order}{columnname}
 ```
 
 **Example Parameters**
 
 | Parameter | Description |
 |---|---|
-|sortinvoice_id |to sort results in ASCENDING order by Invoice ID|
-|sort-invoice_status,-invoice_id | to sort results in DESCENDING order by Invoice Status, then DESCENDING order by Invoice ID|
+|sort=invoice_id |to sort results in ASCENDING order by Invoice ID|
+|sort=-invoice_status,-invoice_id | to sort results in DESCENDING order by Invoice Status, then DESCENDING order by Invoice ID|
 
 ---
 ---
@@ -117,12 +117,12 @@ the request.
     when results are returned.
 
 ```
-page{pagenumber}&pagesize{pagesize}
+page={pagenumber}&pagesize{pagesize}
 ```
 
 **Example Parameters**
 
 | Parameter | Description |
 |---|---|
-|page1&pagesize100 | start at page 1 and return 100 results |
-|page12&pagesize500| start at page 12 and return 500 results |
+|page=1&pagesize=100 | start at page 1 and return 100 results |
+|page=12&pagesize=500| start at page 12 and return 500 results |
