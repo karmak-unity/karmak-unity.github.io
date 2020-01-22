@@ -25,13 +25,12 @@ Unity handles all requests through a single endpoint.
 ```
 https://api.karmak.io/api/unity/{version}/unityapi/frw/{viewname}?{*parameters*}
 ```
+### Usage 
+**Version**: API Version; v1 as of June 30, 2019
 
--   Version  API Version; v1 as of June 30, 2019
+**View**: Keys are defined in Unity View Properties document
 
--   View  View Key, as defined in Unity View Properties (attached)
-
--   Parameters  further defined below in sections Filtering, Sorting,
-    Pagination
+**Parameters**: Parameters are further defined below in sections Filtering, Sorting, and Pagination
 
 ---
 ---
