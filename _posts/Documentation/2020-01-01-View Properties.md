@@ -30,7 +30,10 @@ This is the maximum number of rows that can be returned in the Unity call.
 This is a list of the input variables to be used, each entry has a property for the name and data type.
 #### Output
 This is a list of the output variables provided, each entry has a property for the name and data type.
-------
+
+---
+---
+
 <p class= "catheader"> Fusion Version Specific Data Properties</p>
 Click the version(s) below to see version specific properties
 {% assign sorted-posts = site.posts | where: "category", "Fusion Version Data Properties" | sort: 'title' %}
