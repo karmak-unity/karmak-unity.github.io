@@ -3,8 +3,12 @@ layout: post
 title: "Data Field Properties"
 icon: "icon-list-alt"
 category: "Data Access Documentation"
-type: "usage" comments: falsedescription: Data reference documentation for fields, field types, and size
-------
+type: "usage" 
+comments: false
+description: Data reference documentation for fields, field types, and size
+---
+
+---
 The Report DataAccess API suite exposes GET requestss to the Fusion DMS. The properties may vary by version. Control fields are listed at the beginning of each property set. 
 ---
 ### Field Properties
@@ -28,7 +32,10 @@ This is the maximum number of rows that can be returned in the Unity call.
 This is a list of the input variables to be used, each entry has a property for the name and data type.
 #### Output
 This is a list of the output variables provided, each entry has a property for the name and data type.
-------
+
+---
+---
+
 <p class= "catheader"> Fusion Version Specific Data Properties</p>
 Click the version(s) below to see version specific properties
 {% assign sorted-posts = site.posts | where: "category", "Fusion Version Data Properties" | sort: 'title' %}

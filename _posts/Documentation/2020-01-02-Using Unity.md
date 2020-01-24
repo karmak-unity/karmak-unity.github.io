@@ -21,7 +21,6 @@ required. 
 Bearer Tokens (access tokens) are obtained using a properly formatted HTTPS
 request, as detailed here:
 
-
 ---
 
 ### HTTPS METHOD
