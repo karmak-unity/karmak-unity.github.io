@@ -4,8 +4,10 @@ title: "Data Field Properties"
 icon: "icon-list-alt"
 category: "Data Access Documentation"
 type: "usage" comments: falsedescription: Data reference documentation for fields, field types, and size
-------
-The Report DataAccess API suite exposes GET requestss to the Fusion DMS. The properties may vary by version. Control fields are listed at the beginning of each property set. 
+---
+
+---
+The Report DataAccess API suite exposes GET requests to the Fusion DMS. The properties may vary by version. Control fields are listed at the beginning of each property set. 
 ---
 ### Field Properties
 
