@@ -2,7 +2,8 @@
 layout: post
 title: "Using Unity"
 category: "General Documentation"
-type: "usage" comments: false
+type: "usage" 
+comments: false
 description: Details the process by which a user can request an access token, recieve a bearer token, and a Unity API call is sent to the sytem.
 ---
 
