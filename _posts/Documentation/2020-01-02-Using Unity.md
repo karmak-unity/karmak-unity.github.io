@@ -20,17 +20,27 @@ required. 
 Bearer Tokens (access tokens) are obtained using a properly formatted HTTPS
 request, as detailed here:
 
-| **HTTPS REQUEST**           |                                         |
-|---|---|
-| Verb                        | POST |
-
+<BR>
 ---
 
-| **URL**                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                     |
-|---|---|---|
-| **Environment**             | **Notes**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **Access Server URL**                                                                                               |
-| QA                          | Not all customers have QA environments deployed - use only if instructed by Karmak Support                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | <https://qa.karmak.io/auth/connect/token>                                                                           |
-| Production                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | <https://api.karmak.io/auth/connect/token>                                                                          |
+### HTTPS METHOD
+POST
+
+<BR>
+---
+
+### URL
+#### QA
+```
+https://qa.karmak.io/auth/connect/token
+```
+Not all customers have QA environments deployed - use only if instructed by Karmak Support
+
+<BR>
+#### Production
+```
+https://api.karmak.io/auth/connect/token
+```
 
 <BR>
 ---
