@@ -10,7 +10,6 @@ type: "usage" comments: falsedescription: Data reference documentation for fie
 |---|---|
 | Key | This is the external name which will be used in a Unity API call. |
 | Type | This helps determine what type the underlying functionality is such as "View" for the SQL SSR views. |
-| Command | This is the actual internal name that will be called. |
 | HasReturn | This is a True/False indicator to show if the underlying functionality has return data for example from an RPC call. |
 | ReturnType | This describes the data type of the return data for example from an RPC call. |
 | DefaultSort | This determines the default sorting to use if one is not provided in the Unity call for example the output from calling a SQL SSR view. |
@@ -25,7 +24,6 @@ type: "usage" comments: falsedescription: Data reference documentation for fie
 ```sql
 Key: AccountAllocation,  
 Type: View,  
-Command: vwAC_SSR_AccountAllocation,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: AllocationName,  
@@ -61,7 +59,6 @@ Name: GLDepartment, Type: varchar(10)
 ```sql
 Key: ChartofAccounts,  
 Type: View,  
-Command: vwAC_SSR_ChartofAccounts,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Account,  
@@ -110,7 +107,6 @@ Name: AllocationName, Type: int
 ```sql
 Key: GeneralLedgerBalance,  
 Type: View,  
-Command: vwAC_SSR_GeneralLedgerBalance,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: GLNumber,  
@@ -186,7 +182,6 @@ Name: YTDBudgetVariance, Type: decimal
 ```sql
 Key: GeneralLedgerTrans,  
 Type: View,  
-Command: vwAC_SSR_GeneralLedgerTrans,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: GLAccount,  
@@ -247,7 +242,6 @@ Name: AccountingPeriod, Type: int
 ```sql
 Key: APDetail,  
 Type: View,  
-Command: vwAC_SSR_APDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: APInvoice,  
@@ -333,7 +327,6 @@ Name: IncomeType, Type: varchar(50)
 ```sql
 Key: APGLDetail,  
 Type: View,  
-Command: vwAC_SSR_APGLDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: APInvoice,  
@@ -369,7 +362,6 @@ Name: AccountingAccountID, Type: int
 ```sql
 Key: APVendor,  
 Type: View,  
-Command: vwAC_SSR_APVendor,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: APVendor,  
@@ -469,7 +461,6 @@ Name: IncomeType, Type: varchar(50)
 ```sql
 Key: MiscPODetail,  
 Type: View,  
-Command: vwAC_SSR_MiscPODetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: MPOHeaderID,  
@@ -535,7 +526,6 @@ Name: BillableType, Type: varchar(12)
 ```sql
 Key: MiscPOHeader,  
 Type: View,  
-Command: vwAC_SSR_MiscPOHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PONumber,  
@@ -592,7 +582,6 @@ Name: IsVoided, Type: bit
 ```sql
 Key: NotesPayable,  
 Type: View,  
-Command: vwAC_SSR_NotesPayable,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: NoteNumber,  
@@ -644,7 +633,6 @@ Name: Is1099Required, Type: bit
 ```sql
 Key: NotesPayableDetail,  
 Type: View,  
-Command: vwAC_SSR_NotesPayableDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: NoteNumber,  
@@ -688,7 +676,6 @@ Name: IncomeType, Type: varchar(50)
 ```sql
 Key: ARDetail,  
 Type: View,  
-Command: vwAC_SSR_ARDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -748,7 +735,6 @@ Name: CustomerBaseBranch, Type: varchar(10)
 ```sql
 Key: Customer,  
 Type: View,  
-Command: vwAC_SSR_Customer,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerKey,  
@@ -932,7 +918,6 @@ Name: TotalCreditReserve, Type: decimal
 ```sql
 Key: CustomerMiscPrompt,  
 Type: View,  
-Command: vwAC_SSR_CustomerMiscPrompt,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: [Customer Number],  
@@ -956,7 +941,6 @@ Name: CustomerID, Type: int
 
 ```sqlKey: InvoiceSalesSummary,  
 Type: View,  
-Command: vwAC_SSR_InvoiceSalesSummary,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -1034,7 +1018,6 @@ Name: IsLocal, Type: bit
 
 ```sqlKey: InvoiceSalesSummaryDetail,  
 Type: View,  
-Command: vwAC_SSR_InvoiceSalesSummaryDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -1116,7 +1099,6 @@ Name: ReplacementCostGrossProfitMargin, Type: money
 
 ```sqlKey: Address,  
 Type: View,  
-Command: vwAC_SSR_Address,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: City,  
@@ -1164,7 +1146,6 @@ Name: Territory, Type: varchar(50)
 
 ```sqlKey: CheckRegister,  
 Type: View,  
-Command: vwAC_SSR_CheckRegister,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CheckNumber,  
@@ -1225,7 +1206,6 @@ Name: IncomeType, Type: varchar(50)
 
 ```sqlKey: Comments,  
 Type: View,  
-Command: vwAC_SSR_Comments,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: AddDate,  
@@ -1260,7 +1240,6 @@ Name: UpdateUser, Type: varchar(20)
 
 ```sqlKey: FixedAssets,  
 Type: View,  
-Command: vwAC_SSR_FixedAssets,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Description,  
@@ -1312,7 +1291,6 @@ Name: Inactive, Type: bit
 
 ```sqlKey: SalesPersonCommission,  
 Type: View,  
-Command: vwAC_SSR_SalesPersonCommission,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Salesperson,  
@@ -1352,7 +1330,7 @@ Name: IsVoided, Type: varchar(3)
 
 ```sqlKey: CustomerInsurance,  
 Type: View,  
-Command: vwLR_SSR_CustomerInsurance,  
+
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerNumber,  
@@ -1404,7 +1382,6 @@ Name: Inactive, Type: bit
 
 ```sqlKey: DriverInfo,  
 Type: View,  
-Command: vwLR_SSR_DriverInfo,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerKey,  
@@ -1452,7 +1429,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: LRBillingGroup,  
 Type: View,  
-Command: vwLR_SSR_LRBillingGroup,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: NAME,  
@@ -1484,7 +1460,6 @@ Name: DailyBillingCycle, Type: int
 
 ```sqlKey: LRBillingHistoryHeader,  
 Type: View,  
-Command: vwLR_SSR_LRBillingHistoryHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -1537,7 +1512,6 @@ Name: MiscChargesPO, Type: varchar(50)
 
 ```sqlKey: LRBillingHistoryDetail,  
 Type: View,  
-Command: vwLR_SSR_LRBillingHistoryDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -1592,7 +1566,6 @@ Name: UnitSalesperson, Type: varchar(20)
 
 ```sqlKey: LRBillingHistory,  
 Type: View,  
-Command: vwLR_SSR_LRBillingHistory,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -1658,7 +1631,6 @@ Name: UnitMiscChargesPO, Type: varchar(50)
 
 ```sqlKey: LRCharges,  
 Type: View,  
-Command: vwLR_SSR_LRCharges,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Charge,  
@@ -1698,7 +1670,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: LRContract,  
 Type: View,  
-Command: vwLR_SSR_LRContract,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: ContractNumber,  
@@ -1764,7 +1735,6 @@ Name: MiscChargesPO, Type: varchar(50)
 
 ```sqlKey: LRContractUnit,  
 Type: View,  
-Command: vwLR_SSR_LRContractUnit,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: ContractNumber,  
@@ -1862,7 +1832,6 @@ Name: BillingReserve, Type: decimal
 
 ```sqlKey: LRContractUnitCharge,  
 Type: View,  
-Command: vwLR_SSR_LRContractUnitCharge,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: ContractNumber,  
@@ -1901,7 +1870,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: LRCustomerRateOverrideDetail,  
 Type: View,  
-Command: vwLR_SSR_LRCustomerRateOverrideDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Customer,  
@@ -1946,7 +1914,6 @@ Name: OverrideMethod, Type: varchar(10)
 
 ```sqlKey: LRCustomerRateOverrideHeader,  
 Type: View,  
-Command: vwLR_SSR_LRCustomerRateOverrideHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Customer,  
@@ -1979,7 +1946,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: LRUnits,  
 Type: View,  
-Command: vwLR_SSR_LRUnits,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -2046,7 +2012,6 @@ Name: LRUnitMessageDate, Type: date
 
 ```sqlKey: PermitandLicense,  
 Type: View,  
-Command: vwLR_SSR_PermitandLicense,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -2081,7 +2046,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: LPO,  
 Type: View,  
-Command: vwSM_SSR_LPO,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: LPO,  
@@ -2158,7 +2122,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: SalesDealCommission,  
 Type: View,  
-Command: vwSM_SSR_SalesDealCommission,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: DealNumber,  
@@ -2234,7 +2197,6 @@ Name: Note, Type: varchar(50)
 
 ```sqlKey: SalesDealDetail,  
 Type: View,  
-Command: vwSM_SSR_SalesDealDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: DealHeaderNumber,  
@@ -2298,7 +2260,6 @@ Name: AmountSubjectToFET, Type: decimal
 
 ```sqlKey: SalesDealHeader,  
 Type: View,  
-Command: vwSM_SSR_SalesDealHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: DealNumber,  
@@ -2377,7 +2338,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: SalesDealPacket,  
 Type: View,  
-Command: vwSM_SSR_SalesDealPacket,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: DealNumber,  
@@ -2498,7 +2458,6 @@ Name: TransactionType, Type: int
 
 ```sqlKey: SalesUnit,  
 Type: View,  
-Command: vwSM_SSR_SalesUnit,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: SoldInvoiceNumber,  
@@ -2626,7 +2585,6 @@ Name: WarrantyContract, Type: varchar(50)
 
 ```sqlKey: UnitFlooring,  
 Type: View,  
-Command: vwSM_SSR_UnitFlooring,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: SerialNumber,  
@@ -2681,7 +2639,6 @@ Name: LastUpdate, Type: datetime
 
 ```sqlKey: UnitPurchaseOrderDetail,  
 Type: View,  
-Command: vwSM_SSR_UnitPurchaseOrderDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PONumber,  
@@ -2745,7 +2702,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: UnitPurchaseOrderHeader,  
 Type: View,  
-Command: vwSM_SSR_UnitPurchaseOrderHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PONumber,  
@@ -2814,7 +2770,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: DeferredRepairs,  
 Type: View,  
-Command: vwSR_SSR_DeferredRepairs,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerNumber,  
@@ -2867,7 +2822,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: MeterHistory,  
 Type: View,  
-Command: vwSR_SSR_MeterHistory,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -2914,7 +2868,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: OpenBarcodeTime,  
 Type: View,  
-Command: vwSR_SSR_OpenBarcodeTime,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TechnicianNumber,  
@@ -2974,7 +2927,6 @@ Name: UpdateApplicationName, Type: varchar(75)
 
 ```sqlKey: PreventiveMaintenance,  
 Type: View,  
-Command: vwSR_SSR_PreventiveMaintenance,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -3064,7 +3016,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: RepairOrderQuoteDetails,  
 Type: View,  
-Command: vwSR_SSR_RepairOrderQuoteDetails,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RepairOrderNumber,  
@@ -3165,7 +3116,6 @@ Name: CalculatedAgainst, Type: varchar(10)
 
 ```sqlKey: RepairOrderQuoteHeader,  
 Type: View,  
-Command: vwSR_SSR_RepairOrderQuoteHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RepairOrderNumber,  
@@ -3277,7 +3227,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: RepairOrderQuoteTask,  
 Type: View,  
-Command: vwSR_SSR_RepairOrderQuoteTask,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RepairOrderNumber,  
@@ -3365,7 +3314,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: RepairOrderTask,  
 Type: View,  
-Command: vwSR_SSR_RepairOrderTask,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RONumber,  
@@ -3481,7 +3429,6 @@ Name: BillToCustomer, Type: varchar(10)
 
 ```sqlKey: RepairTypes,  
 Type: View,  
-Command: vwSR_SSR_RepairTypes,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RepairType,  
@@ -3542,7 +3489,6 @@ Name: VMRSTask, Type: varchar(50)
 
 ```sqlKey: RepairOrderDetails,  
 Type: View,  
-Command: vwSV_SSR_RepairOrderDetails,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RONumber,  
@@ -3665,7 +3611,6 @@ Name: UnitInventoryID, Type: int
 
 ```sqlKey: RepairOrderHeader,  
 Type: View,  
-Command: vwSV_SSR_RepairOrderHeader,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RONumber,  
@@ -3811,7 +3756,6 @@ Name: RepairOrderStatusID, Type: int
 
 ```sqlKey: Technician,  
 Type: View,  
-Command: vwSR_SSR_Technician,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TechnicianNumber,  
@@ -3855,7 +3799,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: TechnicianCertification,  
 Type: View,  
-Command: vwSR_SSR_TechnicianCertification,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: [Technician Number],  
@@ -3890,7 +3833,6 @@ Name: LastUpdateDate, Type: datetime
 
 ```sqlKey: TechnicianPerformance,  
 Type: View,  
-Command: vwSR_SSR_TechnicianPerformance,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TechnicianNumber,  
@@ -3940,7 +3882,6 @@ Name: EffectiveLaborRate, Type: decimal
 
 ```sqlKey: TechnicianProductivity,  
 Type: View,  
-Command: vwSR_SSR_TechnicianProductivity,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TechnicianNumber,  
@@ -3980,7 +3921,6 @@ Name: ComebackHours, Type: decimal
 
 ```sqlKey: TechnicianTime,  
 Type: View,  
-Command: vwSR_SSR_TechnicianTime,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TechnicianNumber,  
@@ -4103,7 +4043,6 @@ Name: Team, Type: int
 
 ```sqlKey: Unit,  
 Type: View,  
-Command: vwSR_SSR_Unit,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -4235,7 +4174,6 @@ Name: BillingMeterReadingDate, Type: datetime
 
 ```sqlKey: UnitComponents,  
 Type: View,  
-Command: vwSR_SSR_UnitComponents,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -4293,7 +4231,6 @@ Name: CurrentMeterReading, Type: decimal
 
 ```sqlKey: UnitOwningCustomer,  
 Type: View,  
-Command: vwSR_SSR_UnitOwningCustomer,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: UnitNumber,  
@@ -4334,7 +4271,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: CustomerCoreRighttoReturn,  
 Type: View,  
-Command: vwIN_SSR_CustomerCoreRighttoReturn,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerNumber,  
@@ -4383,7 +4319,6 @@ Name: LastUpdate, Type: datetime
 
 ```sqlKey: CustomerPurchasesandReturns,  
 Type: View,  
-Command: vwIN_SSR_CustomerPurchasesandReturns,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: Customer,  
@@ -4451,7 +4386,6 @@ Name: Division, Type: varchar(10)
 
 ```sqlKey: FuelInvoiceSummary,  
 Type: View,  
-Command: vwIN_SSR_FuelInvoiceSummary,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -4503,7 +4437,6 @@ Name: DueDate, Type: datetime
 
 ```sqlKey: FuelTicket,  
 Type: View,  
-Command: vwIN_SSR_FuelTicket,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -4567,7 +4500,6 @@ Name: IsLRInvoice, Type: int
 
 ```sqlKey: FuelTicketDetail,  
 Type: View,  
-Command: vwIN_SSR_FuelTicketDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: TicketNumber,  
@@ -4630,7 +4562,6 @@ Name: UnitInventoryID, Type: int
 
 ```sqlKey: KitAssemblyDetail,  
 Type: View,  
-Command: vwIN_SSR_KitAssemblyDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -4686,7 +4617,6 @@ Name: DetailAverageCost, Type: decimal
 
 ```sqlKey: LostSales,  
 Type: View,  
-Command: vwIN_SSR_LostSales,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: CustomerNumber,  
@@ -4730,7 +4660,6 @@ Name: LastUpdateUser, Type: varchar(20)
 
 ```sqlKey: PartsBackOrders,  
 Type: View,  
-Command: vwIN_SSR_PartsBackOrders,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: RepairOrderNumber,  
@@ -4825,7 +4754,6 @@ Name: DaysOld, Type: int
 
 ```sqlKey: PartsCommitted,  
 Type: View,  
-Command: vwIN_SSR_PartsCommitted,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: OrderNumber,  
@@ -4870,7 +4798,6 @@ Name: IsAssemblyDetail, Type: bit
 
 ```sqlKey: PartsMessages,  
 Type: View,  
-Command: vwIN_SSR_PartsMessages,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -4910,7 +4837,6 @@ Name: PartDescription, Type: varchar(50)
 
 ```sqlKey: PartsOrder,  
 Type: View,  
-Command: vwIN_SSR_PartsOrder,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartsOrderNumber,  
@@ -5006,7 +4932,6 @@ Name: Territory, Type: varchar(50)
 
 ```sqlKey: PartsOrderDetail,  
 Type: View,  
-Command: vwIN_SSR_PartsOrderDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartsOrderNumber,  
@@ -5083,7 +5008,6 @@ Name: IsPOSAssembly, Type: bit
 
 ```sqlKey: PartsPO,  
 Type: View,  
-Command: vwIN_SSR_PartsPO,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PONumber,  
@@ -5147,7 +5071,6 @@ Name: IsAllSupplier, Type: bit
 
 ```sqlKey: PartsPODetail,  
 Type: View,  
-Command: vwIN_SSR_PartsPODetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PONumber,  
@@ -5207,7 +5130,6 @@ Name: InterBranchBackorder, Type: int
 
 ```sqlKey: PartsTransactions,  
 Type: View,  
-Command: vwIN_SSR_PartsTransactions,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -5275,7 +5197,6 @@ Name: PreviousQuantityAvailable, Type: int
 
 ```sqlKey: PartsVendorRebates,  
 Type: View,  
-Command: vwIN_SSR_PartsVendorRebates,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: InvoiceNumber,  
@@ -5333,7 +5254,6 @@ Name: VendorPriceDescription, Type: varchar(50)
 
 ```sqlKey: Supplier,  
 Type: View,  
-Command: vwIN_SSR_Supplier,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: NAME,  
@@ -5443,7 +5363,6 @@ Name: CharacteristicType, Type: varchar(20)
 
 ```sqlKey: SupplierCoreRTR,  
 Type: View,  
-Command: vwIN_SSR_SupplierCoreRTR,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: APVendor,  
@@ -5494,7 +5413,6 @@ Name: TotalOwedToAPVendorForPartNumber, Type: int
 
 ```sqlKey: PartsInventory,  
 Type: View,  
-Command: vwIN_SSR_PartsInventory,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -5553,7 +5471,6 @@ Name: CharacteristicType, Type: varchar(20)
 
 ```sqlKey: PartsInventoryExtended,  
 Type: View,  
-Command: vwIN_SSR_PartsInventoryExtended,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -5735,7 +5652,6 @@ Name: CharacteristicType, Type: varchar(20)
 
 ```sqlKey: PartsInventoryUsage,  
 Type: View,  
-Command: vwIN_SSR_PartsInventoryUsage,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -5801,7 +5717,6 @@ Name: PYTDSales, Type: int
 
 ```sqlKey: PartsInventoryUsageTrailing12Months,  
 Type: View,  
-Command: vwIN_SSR_PartsInventoryUsageTrailing12Months,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -5913,7 +5828,6 @@ Name: Trailing12MonthTotalPicks, Type: int
 
 ```sqlKey: PartsInventoryYearlyUsage,  
 Type: View,  
-Command: vwIN_SSR_PartsInventoryYearlyUsage,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -6024,7 +5938,6 @@ Name: Ignore, Type: int
 
 ```sqlKey: PartsPhysicalInventory,  
 Type: View,  
-Command: vwIN_SSR_PartsPhysicalInventory,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: DateCompleted,  
@@ -6082,7 +5995,6 @@ Name: PrintAlternateBinLocations, Type: bit
 
 ```sqlKey: PartsPhysicalInventoryDetail,  
 Type: View,  
-Command: vwIN_SSR_PartsPhysicalInventoryDetail,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
@@ -6125,7 +6037,6 @@ Name: PartDescription, Type: varchar(50)
 
 ```sqlKey: PartsAlternateBinLocations,  
 Type: View,  
-Command: vwIN_SSR_PartsAlternateBinLocations,  
 HasReturn: false,  
 ReturnType:  
 DefaultSort: PartNumber,  
