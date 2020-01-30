@@ -6,7 +6,7 @@ layout: no_sidebar
 
 {% if sorted-posts.size <1 %}
 
- <table class="apis" align="left">
+ <table class="apis" align="left"> 
 	<tr>
 		<td class="apititle">
 			<span class="{{ post.icon }} apiicon"></span>
@@ -22,7 +22,7 @@ layout: no_sidebar
 {% endif %}
 
 {%for post in sorted-posts %}
- <table class="apis" align="left">
+ <table class="apis" align="left" onclick="location.href = this.getElementsByTagName('a').item(0).getAttribute('href');">
 	<tr>
 		<td class="apititle">
 			<span class="{{ post.icon }} apiicon"></span>
@@ -40,4 +40,3 @@ layout: no_sidebar
 
 
 </ul>
-

@@ -14,7 +14,7 @@ The Data Access API suite exposes self-service reporting views via Unity APIs. T
 <hr>
 {% assign sorted-posts = site.posts | where: "type", "data_access" | sort: "title" %}
 {%for post in sorted-posts %}
- <table class="apis" align="left">
+ <table class="apis" align="left" onclick="location.href = this.getElementsByTagName('a').item(0).getAttribute('href');">
 	<tr>
 		<td class="apititle">
 			<span class="{{ post.icon }} apiicon"></span>
