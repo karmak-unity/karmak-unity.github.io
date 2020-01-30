@@ -18,13 +18,6 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/adjustquantity
 ```
 
 
-|FIELD|DESCRIPTION|
-|---|---|
-|Branch|	Must be a valid Fusion branch.|
-|Part Number|	Must be valid part number, and Status must be Active in Fusion|
-|Supplier|	Must be valid Supplier|
-|Quantity Available (new quantity available)| Must be greater than zero <BR> -   Must be whole number<BR>-   No alpha or special characters<BR>-   Cannot be equal to current quantity|
-
 #### Restrictions
 -   Multiple parts can be updated in a single PUT request
 
@@ -34,12 +27,15 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/adjustquantity
 
 -   The parts transaction reason code will be 'PARTQTYAPI'.
 
+---
+
+
 | **JSON API Map**      | **Description**                                                                        | **Data Type ** | **Required?** | **Field Length/Format**          |
 |-----------------------|----------------------------------------------------------------------------------------|----------------|---------------|----------------------------------|
-|  "Branch"             | Branch where quantity is to be updated                                                 | String         | Required      | Up to 10 alphanumeric characters |
-|  "PartNumber"         | Part number which will be updated                                                      | String         | Required      | Up to 50 alphanumeric characters |
-|  "Supplier"           | Supplier of part number which will be updated                                          | String         | Required      | Up to 20 alphanumeric characters |
-|  "QuantityAvailable"  | New quantity available value to be set in Fusion (cannot be equal to current quantity) | Integer        | Required      | Up to 10 numeric characters      |
+|  "Branch"             | Branch where quantity is to be updatedand must be a valid Fusion branch.                                               | String         | Required      | Up to 10 alphanumeric characters |
+|  "PartNumber"         | Part number which will be updated. Must be valid part number, and Status must be Active in Fusion                                                      | String         | Required      | Up to 50 alphanumeric characters |
+|  "Supplier"           | Valid supplier of part number which will be updated                                          | String         | Required      | Up to 20 alphanumeric characters |
+|  "QuantityAvailable"  | New quantity available value to be set in Fusion (cannot be equal to current quantity)<BR>Must be greater than zero <BR> -   Must be whole number<BR>-   No alpha or special characters<BR>-   Cannot be equal to current quantity | Integer        | Required      | Up to 10 numeric characters      |
 
 ### Sample PUT Request
 ```json	
