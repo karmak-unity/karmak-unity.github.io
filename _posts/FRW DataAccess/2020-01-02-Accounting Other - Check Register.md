@@ -11,8 +11,7 @@ type: "data_access" comments: falsedescription:  Return all checks that have b
 This data object is used to return all checks that have been issued in the
 Fusion Business System.
 
- <!-- SQL VIEW:  **vwAC_SSR_CheckRegister**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

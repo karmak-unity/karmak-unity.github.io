@@ -13,8 +13,7 @@ Fusion business system.
 This information is found within the Fixed Assets File program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_FixedAssets**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

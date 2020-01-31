@@ -16,8 +16,7 @@ This data object is used to display usage of a given parts inventory detail reco
 This information comes from the 12 Month History tab in the Parts Inventory
 application in Fusion.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsInventoryUsage**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -74,8 +73,7 @@ application in Fusion.
 ### Parts Inventory Usage Trailing 12 Months
 ---
 
- <!-- SQL VIEW: **vwIN_SSR_PartsInventoryUsageTrailing12Months**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -189,8 +187,7 @@ year's records, summarizing the past 13 months.
 This information can be found in the Parts Inventory application in Fusion,
 largely on the 12 Month History tab.
 
- <!-- SQL VIEW: **vwIN_SSR_PartsInventoryYearlyUsage**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

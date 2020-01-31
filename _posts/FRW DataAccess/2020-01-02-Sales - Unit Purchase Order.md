@@ -14,8 +14,7 @@ This data object is used to display the unit information on unit purchase orders
 This information can be found in the Sales Purchase Order program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwSM_SSR_UnitPurchaseOrderDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -74,8 +73,7 @@ orders. Join to Unit Purchase Order Detail to view the detail level information.
 This information can be found in the Sales Purchase Order program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwSM_SSR_UnitPurchaseOrderHeader**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

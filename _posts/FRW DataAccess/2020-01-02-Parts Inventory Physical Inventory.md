@@ -11,8 +11,7 @@ type: "data_access" comments: falsedescription:  Access to physical inventory 
 ### Parts Physical Inventory
 ---
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPhysicalInventory**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -61,8 +60,7 @@ type: "data_access" comments: falsedescription:  Access to physical inventory 
 ### Parts Physical Inventory Detail
 ---
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPhysicalInventoryDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -97,8 +95,7 @@ type: "data_access" comments: falsedescription:  Access to physical inventory 
 This data object displays the alternate bin associated with a part record, if
 one exists.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsAlternateBinLocations**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

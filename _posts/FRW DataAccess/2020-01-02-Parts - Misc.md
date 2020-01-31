@@ -16,8 +16,7 @@ This data object is used to show a listing of all kits and assemblies and their 
 This information is located in the Parts Inventory program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_KitAssemblyDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -60,8 +59,7 @@ business system.
 This information can be found within the Parts Lost Sales program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_LostSales**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -100,8 +98,7 @@ or repair order.
 This information can be found in the Parts Order and Repair Order programs
 within the Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsBackOrders**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -164,8 +161,7 @@ within the Fusion business system.
 This data object is used to display all parts that have been committed on parts
 order, repair orders, and inter-branch orders.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsCommitted**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -203,8 +199,7 @@ This data object is used to show a list of all parts messages set up.
 This information can be located within the Parts Messages program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsMessages**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -237,8 +232,7 @@ see the changes by referencing the price level and previous price level fields.
 This information can be found in the Parts Transactions program within the
 Fusion business system. 
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsTransactions**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -298,8 +292,7 @@ This data object is used to display all vendor rebate information.
 This information can be found in the Vendor Rebate program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsVendorRebates**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -355,8 +348,7 @@ business system.
 This information can be found within the Supplier record in the Fusion business
 system.
 
- <!-- SQL VIEW:  **vwIN_SSR_Supplier**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -446,8 +438,7 @@ This data object is used to show all supplier core right to return records.
 This information is located in the Supplier Core Right to Return program in the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_SupplierCoreRTR**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

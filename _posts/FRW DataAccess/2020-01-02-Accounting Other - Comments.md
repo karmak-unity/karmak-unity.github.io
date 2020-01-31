@@ -15,8 +15,7 @@ the Source Data Object and the Comment Data Object.  At this time this Data
 Object will only display Comments from the Customer Record until Fusion Report
 Writer is updated to have more joins from other forms that store comments.
 
- <!-- SQL VIEW:  **vwAC_SSR_Comments**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

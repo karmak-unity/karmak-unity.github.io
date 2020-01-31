@@ -17,8 +17,7 @@ records.
 This information is pulled from the Customer Core Right to Return program within
 the Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_CustomerCoreRighttoReturn**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -57,8 +56,7 @@ customer.
 This information is from the Customer Purchases/Returns program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_CustomerPurchasesandReturns**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

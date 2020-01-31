@@ -16,8 +16,7 @@ This data object is used to display all parts order header records.
 This information is located within the Parts Order program in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsOrder**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -97,8 +96,7 @@ and/or voided parts orders.
 This information is located in the Parts Order application in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsOrderDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -165,8 +163,7 @@ This data object is used to display the header information and overall totals fo
 This information can be found in the Parts Purchase Order program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPO**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -216,8 +213,7 @@ This data object is used to display all parts purchase order detail records.
 This information is located within the Parts Purchase Order program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPODetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

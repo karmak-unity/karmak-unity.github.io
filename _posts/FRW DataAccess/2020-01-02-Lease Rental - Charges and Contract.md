@@ -17,8 +17,7 @@ Fusion business system.
 This information is pulled from the Lease Rental Miscellaneous, Fixed, and
 Variable Charge programs within the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRCharges**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -56,8 +55,7 @@ Contract program from within the Fusion business system.
 This is found within the Lease Rental Contract program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRContract**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -111,8 +109,7 @@ rental contract from within the Fusion business system.
 This is found within the Lease Rental Contract Unit program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRContractUnit**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -195,8 +192,7 @@ maintenance contracts. 
 
 This can be found in the L/R Contract program in the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRContractUnitCharge**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

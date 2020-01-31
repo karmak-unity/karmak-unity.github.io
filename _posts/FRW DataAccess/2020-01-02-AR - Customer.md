@@ -16,8 +16,7 @@ This data object is used to return all customer information within the Customer 
 This information is found within the Accounts Receivable Customer program within
 the Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_Customer**
-
+ <!-- 
  -->  <hr>Field Details...
 
 | **SQL Field Name**                 | **Column Description**                                                                                                                                                                                                                                                              |
@@ -164,8 +163,7 @@ This data object displays the miscellaneous prompts and values that have been
 assigned to customers as seen on the Miscellaneous Info tab of the Customer
 application in Fusion.
 
- <!-- SQL VIEW:  **vwAC_SSR_CustomerMiscPrompt**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
