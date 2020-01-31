@@ -18,8 +18,7 @@ and/or department associated with that link.
 This information comes from the Account Allocation and the Chart of Accounts
 programs within the Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_AccountAllocation**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -52,8 +51,7 @@ accounts and their sub category structure down to 6 levels.
 This information is found within the Chart of Accounts program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_ChartofAccounts**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -93,8 +91,7 @@ business system.
 This data object currently only pulls in the current year and the previous 2
 years and next 2 years for a max total of 5 years of data.
 
- <!-- SQL VIEW:  **vwAC_SSR_GeneralLedgerBalance**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -169,8 +166,7 @@ business system.
 This information is found within the Accounting General Ledger Transaction
 program within the Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_GeneralLedgerTrans**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

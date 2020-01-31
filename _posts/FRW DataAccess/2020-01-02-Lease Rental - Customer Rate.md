@@ -17,8 +17,7 @@ overrides that have been setup in the Fusion business system.
 This is found within the Lease Rental Customer Rate Override program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRCustomerRateOverrideDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -54,8 +53,7 @@ overrides that have been setup in the Fusion business system.
 This is found within the Lease Rental Customer Rate Override program within the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRCustomerRateOverrideHeader**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

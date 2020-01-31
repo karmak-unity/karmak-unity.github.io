@@ -17,8 +17,7 @@ This data object is used to display all unit master detail information.
 This information can be found in the Unit program within the Fusion business
 system.
 
- <!-- SQL VIEW:  **vwSR_SSR_Unit**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -148,8 +147,7 @@ Component information are returned.
 This information can be found on the Component tab of Unit Maintenance within
 the Fusion Business System. 
 
-<!-- SQL VIEW:  **vwSR_SSR_UnitComponents**
-
+<!-- 
 
 
   -->  <hr>Field Details...
@@ -196,8 +194,7 @@ and for units with dual ownership, the Service Unit Customer Maintenance
 application, which can be opened by clicking the Service Unit Customer Legacy
 Links hyperlink on the Service tab.
 
-<!-- SQL VIEW:  **vwSR_SSR_UnitOwningCustomer**
-
+<!-- 
 
 
   -->  <hr>Field Details...

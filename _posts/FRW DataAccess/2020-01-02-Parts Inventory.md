@@ -16,8 +16,7 @@ This data object is used to display a concise view of all branch specific parts 
 This information comes from the Parts Inventory application in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsInventory**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -66,8 +65,7 @@ Fusion.
 This information comes from the Parts Inventory application in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsInventoryExtended**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -218,8 +216,7 @@ Parts Inventory Usage.
 This information comes from the 12 Month History tab in the Parts Inventory
 application in Fusion.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsInventoryUsage**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -277,8 +274,7 @@ application in Fusion.
 ### Parts Inventory Usage Trailing 12 Months
 ---
 
- <!-- SQL VIEW: **vwIN_SSR_PartsInventoryUsageTrailing12Months**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -393,8 +389,7 @@ year's records, summarizing the past 13 months.
 This information can be found in the Parts Inventory application in Fusion,
 largely on the 12 Month History tab.
 
- <!-- SQL VIEW: **vwIN_SSR_PartsInventoryYearlyUsage**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -499,8 +494,7 @@ largely on the 12 Month History tab.
 ### Parts Physical Inventory
 ---
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPhysicalInventory**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -550,8 +544,7 @@ largely on the 12 Month History tab.
 ### Parts Physical Inventory Detail
 ---
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsPhysicalInventoryDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -587,8 +580,7 @@ largely on the 12 Month History tab.
 This data object displays the alternate bin associated with a part record, if
 one exists.
 
- <!-- SQL VIEW:  **vwIN_SSR_PartsAlternateBinLocations**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

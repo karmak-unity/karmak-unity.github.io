@@ -17,8 +17,7 @@ the lease rental billing groups in the Fusion business system.
 This information is found in the Lease Rental Billing Group application in the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRBillingGroup**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -46,8 +45,7 @@ for each unit on a given LR invoice from the Fusion business system.
 This is found within the Lease Rental Billing History program in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRBillingHistory**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -100,8 +98,7 @@ given unit on an LR invoice from the Fusion business system.
 This is found within the Lease Rental Billing History program in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRBillingHistoryDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -149,8 +146,7 @@ given LR invoice.
 This information can be found in the LR Billing History application in the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRBillingHistoryHeader**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

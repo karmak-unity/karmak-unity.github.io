@@ -14,8 +14,7 @@ business system.
 This information is found within the Accounting General Ledger Transaction
 program within the Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_GeneralLedgerTrans**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

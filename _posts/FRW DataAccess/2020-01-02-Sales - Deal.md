@@ -17,8 +17,7 @@ and stock number for a given deal packet invoice.
 This information can be found by clicking the Commission Worksheet hyperlink in
 the Accounting Review application in the Fusion business system.
 
- <!-- SQL VIEW:  **vwSM_SSR_SalesDealCommission**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -87,8 +86,7 @@ This data object is used to display all detail items on all unit sales deals.
 This information can be found by clicking the detail hyperlinks in the Deal
 application in the Fusion business system.
 
- <!-- SQL VIEW:  **vwSM_SSR_SalesDealDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -149,8 +147,7 @@ display all detail items on the given deal and on its corresponding deal
 packets. To view cumulative totals for the deal packets on the given deal, join
 to Deal Packet.
 
- <!-- SQL VIEW:  **vwSM_SSR_SalesDealHeader**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -226,8 +223,7 @@ invoiced. To see detail information line by line, join to Sales Deal Detail.
 This information can be found in the Deal Packet program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwSM_SSR_SalesDealPacket**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

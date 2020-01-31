@@ -15,8 +15,7 @@ This data object is used to show all service technician information.
 
 This information can be found in the Technician program within the Fusion business system.
 
- <!-- SQL VIEW:  **vwSR_SSR_Technician**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -54,8 +53,7 @@ This data object is used to display all technician certificate information.
 This information can be found in the Technician and Technician Certification
 Type programs within the Fusion business system.
 
- <!-- SQL VIEW:  **vwSR_SSR_TechnicianCertification**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -86,8 +84,7 @@ This data object is used to display technician performance by repair group.
 This information can be found in the Technician application within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwSR_SSR_TechnicianPerformance**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -131,8 +128,7 @@ summarized by month.
 This information can be found in the Technician program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwSR_SSR_TechnicianProductivity**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -169,8 +165,7 @@ This data object is used to display all completed technician time records.
 This information can be found in the Technician Time Search and the Time Entry
 Search applications in the Fusion business system.
 
- <!-- SQL VIEW:  **vwSR_SSR_TechnicianTime**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

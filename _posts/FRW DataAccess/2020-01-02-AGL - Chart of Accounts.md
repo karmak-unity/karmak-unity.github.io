@@ -14,8 +14,7 @@ accounts and their sub category structure down to 6 levels.
 This information is found within the Chart of Accounts program within the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_ChartofAccounts**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

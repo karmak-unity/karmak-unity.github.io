@@ -15,8 +15,7 @@ This data object is used to return all customer insurance information from the F
 
 This is found within the Lease Rental Customer Insurance program within the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_CustomerInsurance**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -61,8 +60,7 @@ This is found within the Lease Rental Customer Insurance program within the Fusi
 This data object displays the Driver information as seen in the Driver
 Information application in Fusion.
 
- <!-- SQL VIEW:  **vwLR_SSR_DriverInfo**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -105,8 +103,7 @@ Fusion business system.
 This information is pulled from the Lease Rental Miscellaneous, Fixed, and
 Variable Charge programs within the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRCharges**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

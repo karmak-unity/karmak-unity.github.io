@@ -19,8 +19,7 @@ system.
 Note - Fuel tickets that were invoiced on a lease/rental invoice will not show
 up here.
 
- <!-- SQL VIEW:  **vwIN_SSR_FuelInvoiceSummary**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -66,8 +65,7 @@ invoices.
 This information comes from the Fuel Ticket Entry, Fuel Ticket Billing, and LR
 Billing programs in the Fusion business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_FuelTicket**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -114,8 +112,7 @@ in the Fusion business system.
 This information can be found in the Fuel Ticket Entry program in the Fusion
 business system.
 
- <!-- SQL VIEW:  **vwIN_SSR_FuelTicketDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

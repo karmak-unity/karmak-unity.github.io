@@ -18,8 +18,7 @@ invoices, regardless of whether they have been paid in full.
 This information can be found in the respective invoicing applications in the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_InvoiceSalesSummary**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
@@ -81,8 +80,7 @@ adjustment invoices, regardless of whether they have been paid in full.
 This information can be found in the respective invoicing applications in the
 Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_InvoiceSalesSummaryDetail**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

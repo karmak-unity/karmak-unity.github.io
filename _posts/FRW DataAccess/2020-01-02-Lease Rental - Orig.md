@@ -14,8 +14,7 @@ of the lease rental permits or licenses in the Fusion business system.
 This information is found in the Lease Rental Permit and License application in
 the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_PermitandLicense**
-
+ <!-- 
 
 
  -->  <hr>Field Details...

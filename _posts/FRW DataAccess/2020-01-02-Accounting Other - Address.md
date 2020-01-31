@@ -10,8 +10,7 @@ type: "data_access" comments: falsedescription: Access all addresses stored wi
 
 This data object is used to display all addresses stored within the Fusion business system.
 
- <!-- SQL VIEW:  **vwAC_SSR_Address**
-
+ <!-- 
 
 
  -->  <hr>Field Details...
