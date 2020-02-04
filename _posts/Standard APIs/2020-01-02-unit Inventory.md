@@ -14,10 +14,14 @@ The Unit API currently supports the PUT method to update existing Units in Fusio
 **requires FUSION v3.59.0.0 or higher**
 
 ### PUT Method
+To update a single unit:
 ```
 https://api.karmak.io/api/unity/{version}/unityapi/unitinventory/unit
 ```
-
+To update multiple units:
+```
+https://api.karmak.io/api/unity/{version}/unityapi/unitinventory/units
+```
 
 #### Usage and Limitations
 -   The Unit API will allow updates to both the Unit record and the Unit Inventory record.
@@ -47,10 +51,9 @@ https://api.karmak.io/api/unity/{version}/unityapi/unitinventory/unit
 ---
 ---
 
-**PROPERTIES**
+**REQUEST PROPERTIES**
 
-After a valid Identifier has been passed, the following properties can be
-updated on the specified Unit/Unit Inventory Record.
+After a valid Identifier has been passed, the following properties can be updated on the specified Unit/Unit Inventory Record.
 
 |Name|DataType|Validation Rules/Comments|
 |-----------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -67,17 +70,200 @@ updated on the specified Unit/Unit Inventory Record.
 | ActualCashValue       | decimal | The API will ensure the value is greater than or equal to zero and if so it will apply the update, if not an Exception is thrown and the update request is not completed.                                                                                                                                                                                                                                |
 | UnitType              | string  | The API will lookup the UnitType and if found it will apply the update, if not an Exception is thrown and the update request is not completed.                                                                                                                                                                                                                                                           |
 
- 
+ **RESPONSE PROPERTIES**
+
+The response will include the Identifier information specified in the request, as well as a Status field and a message to indicate the outcome of the update request.
+
+|Name|DataType|
+|CustomerKey|string|
+|CustomerBranchCode|string|
+|UnitNumber|string|
+|UnitID|string|
+|UnitInventoryID|string|
+|Status|string|
+|Message|string|
 
 ---
 ---
 
-### Sample PUT Request
+### Sample PUT Request (Single Unit)
 ```json	
-
+{
+	"Identifier":
+	{
+		"UnitId": "19052"
+	},
+	"Vin": "1122180419",
+	"ProductionYear": "2020",
+	"Model": "Edge",
+	"Make":"Ford",
+	"Manufacturer":"Ford",
+	"MeterType":"Miles",
+	"LotLocation": "East Side",
+	"LotLocationBranchCode": "01",
+	"CharacteristicType":"White Truck",
+	"PurchaseCost":"2.00",
+	"ActualCashValue":"10.00",
+	"UnitType":"SUV"
+}
 ```
 
-### Response Code (200 OK)
+### Response Code (200 OK) (Single Unit)
 ```json
+{
+	"CustomerKey": null,
+	"CustomerBranchCode": null,
+	"UnitNumber": null,
+	"UnitId": "19052",
+	"UnitInventoryId": null,
+	"Status": "Success",
+	"Message": "All good here"
+}
+```
 
+---
+---
+### Sample PUT Request (Single Unit - Specific Fields)
+```json	
+[
+	{
+		"Identifier":
+		{
+			"UnitID": "9422"
+		},
+		"LotLocation": "East",
+		"LotLocationBranchCode": "01"
+	}
+]
+```
+
+### Response Code (200 OK) (Single Unit)
+```json
+[
+	{
+		"CustomerKey": null,
+		"CustomerBranchCode": null,
+		"UnitNumber": null,
+		"UnitID": "9422",
+		"UnitInventoryID": null,
+		"Status": "Success"
+		"Message": "All good here"
+	}
+]
+```
+---
+---
+
+### Sample PUT Request (Multiple Units)
+```json	
+[
+	{
+		"Identifier":
+		{
+			"UnitId": "19052"
+		},
+		"Vin": "1122180419",
+		"ProductionYear": "2020",
+		"Model": "Edge",
+		"Make":"Ford",
+		"Manufacturer":"Ford",
+		"MeterType":"Miles",
+		"LotLocation": "East Side",
+		"LotLocationBranchCode": "01",
+		"CharacteristicType":"White Truck",
+		"PurchaseCost":"2.00",
+		"ActualCashValue":"10.00",
+		"UnitType":"SUV"
+	},
+	{
+		"Identifier":
+		{
+			"UnitId": "19072"
+		},
+		"Vin": "1122180420",
+		"ProductionYear": "2020",
+		"Model": "Edge",
+		"Make":"Ford",
+		"Manufacturer":"Ford",
+		"MeterType":"Miles",
+		"LotLocation": "West Side",
+		"LotLocationBranchCode": "01",
+		"CharacteristicType":"White Truck",
+		"PurchaseCost":"2.00",
+		"ActualCashValue":"20.00",
+		"UnitType":"SUV"
+	}
+]
+```
+
+### Response Code (200 OK) (Multiple Units)
+```json
+[
+    {
+		"CustomerKey": null,
+		"CustomerBranchCode": null,
+		"UnitNumber": null,
+		"UnitId": "19052",
+		"UnitInventoryId": null,
+		"Status": "Success",
+		"Message": "All good here"
+    },
+	{
+		"CustomerKey": null,
+		"CustomerBranchCode": null,
+		"UnitNumber": null,
+		"UnitId": "19072",
+		"UnitInventoryId": null,
+		"Status": "Success",
+		"Message": "All good here"
+    }
+]
+```
+
+---
+---
+### Sample PUT Request (Multiple Units - Specific Fields)
+```json	
+[
+	{
+		"Identifier":
+		{
+			"UnitId": "9422"
+		},
+		"LotLocation": "East",
+		"LotLocationBranchCode": "01"
+	},
+	{
+		"Identifier":
+		{
+			"UnitId": "9433"
+		},
+		"LotLocation": "West",
+		"LotLocationBranchCode": "01"
+	}
+]
+```
+
+### Response Code (200 OK) (Multiple Units)
+```json
+[
+	{
+		"CustomerKey": null,
+		"CustomerBranchCode": null,
+		"UnitNumber": null,
+		"UnitId": "9422",
+		"UnitInventoryId": null,
+		"Status": "Success",
+		"Message": "All good here"
+	},
+	{
+		"CustomerKey": null,
+		"CustomerBranchCode": null,
+		"UnitNumber": null,
+		"UnitId": "9433",
+		"UnitInventoryId": null,
+		"Status": "Success",
+		"Message": "All good here"
+	}
+]
 ```
