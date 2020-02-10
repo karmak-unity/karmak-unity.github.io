@@ -251,3 +251,8 @@ blockquote {
 .navbar-toggle {
 	background-color: #147890;
 }
+
+.logo {
+	position: relative;
+	top: -5px;
+}
