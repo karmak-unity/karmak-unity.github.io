@@ -5,7 +5,7 @@ category: "Parts"
 icon: "icon-gear"
 type: "api" 
 comments: false
-description:  update available quantity on an active Fusion part
+description:  Update available quantity on an active Fusion part
 ---
 
 ---

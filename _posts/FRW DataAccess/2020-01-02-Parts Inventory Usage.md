@@ -3,7 +3,7 @@ layout: post
 title: "Parts Inventory Usage"
 category: "Parts" 
 icon: "icon-gear"
-type: "data_access" comments: falsedescription:  Accedd to usage of a given parts inventory detail record.
+type: "data_access" comments: falsedescription:  Access to usage of a given parts inventory detail record.
 ---
 
 ---

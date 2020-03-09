@@ -3,7 +3,7 @@ layout: post
 title: "Lease - Rental Customer Rate"
 category: "Lease / Rental" 
 icon: "icon-user-plus1"
-type: "data_access" comments: falsedescription: detail information for lease rental rate overrides that have been setup in the Fusion business system
+type: "data_access" comments: falsedescription: Detail information for lease rental rate overrides that have been setup in the Fusion business system
 ---
 
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Accounting Comments"
 category: "Accounting Other" 
 icon: "icon-credit-card1"
-type: "data_access" comments: falsedescription: access the comments from the Comments Tabs located on multiple forms within Fusion
+type: "data_access" comments: falsedescription: Access the comments from the Comments Tabs located on multiple forms within Fusion
 ---
 
 

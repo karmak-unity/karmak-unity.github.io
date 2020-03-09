@@ -3,7 +3,7 @@ layout: post
 title: "Lease - Rental Permit and License"
 category: "Lease / Rental" 
 icon: "icon-user-plus1"
-type: "data_access" comments: falsedescription: permit and license information for each of the lease rental permits or licenses in the DMS
+type: "data_access" comments: falsedescription: Permit and license information for each of the lease rental permits or licenses in the DMS
 ---
 
 ---
