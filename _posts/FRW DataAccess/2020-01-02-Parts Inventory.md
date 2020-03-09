@@ -3,7 +3,7 @@ layout: post
 title: "Branch Inventory"
 category: "Parts" 
 icon: "icon-gear"
-type: "data_access" comments: falsedescription:  Accedd to a concise view of all branch specific parts inventory records
+type: "data_access" comments: falsedescription:  Access to a concise view of all branch specific parts inventory records
 ---
 
 ---

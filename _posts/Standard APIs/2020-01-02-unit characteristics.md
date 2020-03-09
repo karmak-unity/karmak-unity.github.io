@@ -5,7 +5,7 @@ category: "Inventory"
 icon: "icon-truck"
 type: "api" 
 comments: false
-description:   allows users to update Unit Characteristics values on active units in Fusion
+description:   Allows users to update Unit Characteristics values on active units in Fusion
 ---
 
 The Unit Characteristics API will be used to update Unit Characteristics values on active units in Fusion.

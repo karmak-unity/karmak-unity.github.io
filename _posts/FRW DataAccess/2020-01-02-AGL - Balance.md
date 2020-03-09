@@ -3,7 +3,7 @@ layout: post
 title: "General Ledger Balance"
 category: "Accounting General Ledger" 
 icon: "icon-money"
-type: "data_access" comments: falsedescription: display the allocation tables specified in Fusion, along with the allocation breakdown for each by Branch/Department and the list of breakdown accounts specified in the setup form of the Allocation Table
+type: "data_access" comments: falsedescription: Display the allocation tables specified in Fusion, along with the allocation breakdown for each by Branch/Department and the list of breakdown accounts specified in the setup form of the Allocation Table
 ---
 
 ---

@@ -5,7 +5,7 @@ category: "Inventory"
 icon: "icon-truck"
 type: "api" 
 comments: false
-description:   allows users to update the inventory units within Fusion
+description:   Allows users to update the inventory units within Fusion
 ---
 
 ---

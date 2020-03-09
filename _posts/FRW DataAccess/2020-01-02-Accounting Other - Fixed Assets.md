@@ -3,7 +3,7 @@ layout: post
 title: "Fixed Assets"
 category: "Accounting Other" 
 icon: "icon-credit-card1"
-type: "data_access" comments: falsedescription:  used to display all fixed asset file information from the Fusion business system
+type: "data_access" comments: falsedescription: Display all fixed asset file information from the Fusion business system
 ---
 
 ---

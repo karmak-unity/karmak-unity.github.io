@@ -5,7 +5,7 @@ category: "Service"
 icon: "icon-wrench"
 type: "api" 
 comments: false
-description:  supports a single request to update the repair type to active
+description:  Supports a single request to update the repair type to active
 ---
 
 ---
