@@ -27,7 +27,9 @@ https://api.karmak.io/api/unity/{version}/unityapi/frw/{viewname}?{*parameters*}
 
 ### Usage 
 **Version**: API Version; v1 as of June 30, 2019
-**View**: Keys are defined in Unity View Properties document
+
+**Viewname**: the viewname field is identified by the "Key" property in Data Field Properties file (version specific).
+
 **Parameters**: Parameters are further defined below in sections Filtering, Sorting, and Pagination
 
 ---
