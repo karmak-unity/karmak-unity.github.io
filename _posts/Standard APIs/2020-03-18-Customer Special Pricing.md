@@ -51,7 +51,6 @@ When Pricing Target and Pricing Strategy have been defined, a specific dataset m
 ### Customer Price Type
 
 To create or update a customer special pricing record by Customer Price Type:
-
 -   Pass in the Customer Price Type to which the record applies
     -   A list of valid Customer Price Types can be obtained using the Quick List data access API
 

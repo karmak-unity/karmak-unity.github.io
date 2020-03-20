@@ -7,6 +7,7 @@ type: "data_access" comments: falsedescription: Provides detailed information 
 ---
 
 ---
+
 ---
 
 This data object is used to provides detailed information related to parts received against a purchase order.

@@ -59,8 +59,7 @@ https://api.karmak.io/api/unity/v1/unityapi/meterreading/update
  
 ### Request Properties
 
-After a valid Identifier has been passed, the following Meter properties can be
-updated on the specified Unit/Unit Inventory record.
+After a valid Identifier has been passed, the following Meter properties can be updated on the specified Unit/Unit Inventory record.
 
 | Data Type | Definition | Validation Rules/Comments |
 |----------------------|-------------|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
