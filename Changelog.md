@@ -10,8 +10,9 @@ title: "Changelog"
 ### What's New
 
 #### Added Unity workflow APIs
-* Added documentation to Meter Reading
-* Added documentation for Customer Special pricing
+* Meter Reading
+* Customer Special pricing
+* Quick Lists (Helper APIs)
 
 #### Added documentation for data reporting services (read only)
 * Parts Inventory Receiving Detail

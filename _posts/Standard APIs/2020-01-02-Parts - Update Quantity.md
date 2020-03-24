@@ -35,7 +35,7 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/adjustquantity
 |  "Branch"             | Branch where quantity is to be updatedand must be a valid Fusion branch.                                               | String         | Required      | Up to 10 alphanumeric characters |
 |  "PartNumber"         | Part number which will be updated. Must be valid part number, and Status must be Active in Fusion                                                      | String         | Required      | Up to 50 alphanumeric characters |
 |  "Supplier"           | Valid supplier of part number which will be updated                                          | String         | Required      | Up to 20 alphanumeric characters |
-|  "QuantityAvailable"  | New quantity available value to be set in Fusion (cannot be equal to current quantity)<BR>Must be greater than zero <BR> -   Must be whole number<BR>-   No alpha or special characters<BR>-   Cannot be equal to current quantity | Integer        | Required      | Up to 10 numeric characters      |
+|  "QuantityAvailable"  | New quantity available value to be set in Fusion (cannot be equal to current quantity)<BR>Must not be less than zero <BR> -   Must be whole number<BR>-   No alpha or special characters<BR>-   Cannot be equal to current quantity | Integer        | Required      | Up to 10 numeric characters      |
 
 ### Sample PUT Request
 ```json	
