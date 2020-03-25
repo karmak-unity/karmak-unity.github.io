@@ -16,6 +16,10 @@ title: "Changelog"
 
 #### Added documentation for data reporting services (read only)
 * Parts Inventory Receiving Detail
+* Posting Reference Status (for A/P)
+* Branch / Department Helper APIs
+* Accounting Period (for A/P)
+* Velocity Codes (Helper) for Customer Special Pricing
 
 ---
 ---
