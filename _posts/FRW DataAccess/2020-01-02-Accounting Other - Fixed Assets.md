@@ -13,10 +13,12 @@ Fusion business system.
 This information is found within the Fixed Assets File program within the Fusion
 business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ 
+#### URL
+```
+/frw/FixedAssets
+```
+  <hr>Field Details...
 
 | **SQL Field Name**      | **Column Description**                                                             |
 |---|---|

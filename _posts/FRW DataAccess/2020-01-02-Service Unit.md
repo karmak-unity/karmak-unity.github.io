@@ -1,26 +1,23 @@
 ---
 layout: post
-title: "Service Unit"
+title: "Service Unit Master Detail"
 category: "Service"
 icon: "icon-truck"
-type: "data_access" comments: falsedescription: Access all unit detail information
+type: "data_access" comments: falsedescription: Access to all unit master detail information.
 ---
 
-
 ---
----
-### Master Detail Information
 ---
 
 This data object is used to display all unit master detail information.
 
-This information can be found in the Unit program within the Fusion business
-system.
+This information can be found in the Unit program within the Fusion business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ #### URL 
+```
+/frw/Unit
+``` 
+<hr>Field Details...
 
 | **SQL Field Name**                | **Column Description**                                                                                                                                                                                                                                    |
 |---|---|
@@ -134,88 +131,3 @@ system.
 | WarrantyMeter                     | This field displays the Meter Reading for the Unit's Warranty.                                                                                                                                                                                            |
 | WarrantyPeriod                    | This field displays the Warranty Period for the Unit's Warranty.                                                                                                                                                                                          |
 | Year                              | This field displays the model year of the unit.                                                                                                                                                                                                           |
-
----
----
-### Components
----
-
-This data object is used to display all Unit Component information for a given
-unit.  By default, both Active and Inactive Unit Occurrences that contain
-Component information are returned.
-
-This information can be found on the Component tab of Unit Maintenance within
-the Fusion Business System. 
-
-<!-- 
-
-
-  -->  <hr>Field Details...
-
-| **SQL Field Name**      | **Column Description**                                                                                            |
-|---|---|
-| IsActiveUnit            | This displays whether or not the given unit number is the active occurence for the unit.                          |
-| AddDate                 | This field displays the user that added the component.                                                            |
-| AddUser                 | This field displays the date that the component was added.                                                        |
-| ComponentDeactivateDate | This field displays the De-activation date of the component.                                                      |
-| ComponentManufacturer   | This field displays the manufacturer of the component.                                                            |
-| ComponentModel          | This field displays the model of the component.                                                                   |
-| ComponentName           | This field displays the name of the component.                                                                    |
-| Description             | This field displays the Description of the Component.                                                             |
-| CurrentMeterReading     | This field displays the current meter reading for the unit.                                                       |
-| CurrentMeterReadingDate | This field displays the date associated with the current meter reading.                                           |
-| Deductible              | This field contains the dollar amount that must be met before the warranty is in effect.                          |
-| InServiceDate           | This field displays the in service date of the unit.                                                              |
-| LastUpdate              | This field displays the date that the component was updated.                                                      |
-| UpdateUser              | This field displays the user that last updated the component.                                                     |
-| MeterType               | This displays the meter type of the component.                                                                    |
-| PartNumber              | This field displays the part number of the component (if applicable).                                             |
-| SerialNumber            | This field displays the serial number of the component.                                                           |
-| UnitIndicator           | This field displays the Unit Indicator of the unit the component is associated with.                              |
-| UnitNumber              | This field displays the Unit number the component is attached to.                                                 |
-| WarrantyContract        | This field displays the document number identifying the warranty agreement between the manufacturer and customer. |
-| WarrantyLaborPercentage | This field displays the percentage of labor that is covered by warranty.                                          |
-| WarrantyMeter           | This field should contain the number of miles for which the unit is under warranty.                               |
-| WarrantyPartPercentage  | This field displays the percentage of parts that are covered by the warranty.                                     |
-| WarrantyPeriod          | This field contains the time that the component is covered under warranty.                                        |
-| WarrantyPeriodType      | This field defines what the warranty period is for the unit.                                                      |
-
----
----
-### Owning Customer
----
-
-This data object is used to display the owning customer(s) of all Service units.
-In the case of units with dual ownership, a record will be returned for each
-customer corresponding to that unit.
-
-This information comes from the Service tab in the Unit application in Fusion,
-and for units with dual ownership, the Service Unit Customer Maintenance
-application, which can be opened by clicking the Service Unit Customer Legacy
-Links hyperlink on the Service tab.
-
-<!-- 
-
-
-  -->  <hr>Field Details...
-
-| **SQL Field Name**        | **Column Description**                                                                                           |
-|---|---|
-| AddDate                   | This field displays the date on which the given owning customer was added to the given unit.                     |
-| AddUser                   | This field displays the username of the user who added the given owning customer to the given unit.              |
-| CharacteristicType        | This field displays the characteristic type of the given unit.                                                   |
-| CompanyName               | This field displays the company name of the given owning customer of the given unit.                             |
-| CustomerBaseBranch        | This field displays the base branch associated with the given owning customer of the given unit.                 |
-| CustomerNumber            | This field displays the customer number of the given owning customer of the given unit.                          |
-| Inactive                  | This field displays whether the given unit is marked as inactive in Fusion.                                      |
-| IndustryType              | This field displays the industry type of the given owning customer of the given unit.                            |
-| LastUpdateDate            | This field displays the date on which the given owning customer was last updated on the given unit.              |
-| LastUpdateUser            | This field displays the username of the user who last updated the given owning customer on the given unit.       |
-| Make                      | This field displays the make of the given unit.                                                                  |
-| Manufacturer              | This field displays the manufacturer of the given unit.                                                          |
-| Model                     | This field displays the model of the given unit.                                                                 |
-| OutsidePartsSalesperson   | This field displays the outside parts salesperson associated with the given owning customer of the given unit.   |
-| OutsideServiceSalesperson | This field displays the outside service salesperson associated with the given owning customer of the given unit. |
-| UnitNumber                | This field displays the unit number of the given unit that is owned by the given customer.                       |
-| VIN                       | This field displays the vehicle identification number of the given unit.                                         |
-| Year                      | This field displays the model year of the given unit.                                                            |

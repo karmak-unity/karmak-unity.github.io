@@ -7,14 +7,18 @@ type: "data_access" comments: falsedescription: Provides detailed information 
 ---
 
 ---
-
 ---
 
 This data object is used to provides detailed information related to parts received against a purchase order.
 
+#### URL
+```
+/frw/PartsInventoryReceivingDetail
+```
+
 <hr>### Field Details...
 
-| Field                            |  Definition                                                                                                             |
+| Field                            |  Definition                                                                                                   |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------|
 | BranchID                         | ID of the branch associated with the receiving record                                                         |
 | ReceiveInventoryDetailID         | ID assigned to the individual receiving records.                                                              |

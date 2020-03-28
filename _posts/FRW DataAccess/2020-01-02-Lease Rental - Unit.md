@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lease - Rental Unit"
+title: "Lease - Rental Units"
 category: "Lease / Rental" 
 icon: "icon-user-plus1"
 type: "data_access" comments: falsedescription: Access all all lease or rental unit information
@@ -10,14 +10,13 @@ type: "data_access" comments: falsedescription: Access all all lease or rental
 
 This data object is used to return all lease or rental unit information.
 
-This information is found within the Unit program within the Fusion business
-system.
+This information is found within the Unit program within the Fusion business system.
 
- <!-- SQL VIEW:  **vwLR_SSR_LRUnits**
-
-
-
- -->  <hr>Field Details...
+ #### URL
+```
+/frw/LRUnits
+```
+<hr>Field Details...
 
 | **SQL Field Name**          | **Column Description**                                                                                                                                   |
 |---|---|

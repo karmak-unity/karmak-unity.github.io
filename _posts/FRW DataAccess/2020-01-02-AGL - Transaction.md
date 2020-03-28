@@ -3,21 +3,26 @@ layout: post
 title: "General Ledger Transaction"
 category: "Accounting General Ledger" 
 icon: "icon-money"
-type: "data_access" comments: falsedescription: Display the allocation tables specified in Fusion, along with the allocation breakdown for each by Branch/Department and the list of breakdown accounts specified in the setup form of the Allocation Table
+type: "data_access" 
+comments: false
+description: Display all GL detail transactions in the Fusion business system.
 ---
-## Accounting General Ledger Transaction
+
 ---
 
-This data object is used to show all GL detail transactions in the Fusion
-business system.
 
-This information is found within the Accounting General Ledger Transaction
-program within the Fusion business system.
+This data object is used to show all GL detail transactions in the Fusion business system.
 
- <!-- 
+This information is found within the Accounting General Ledger Transaction program within the Fusion business system.
 
+ 
+### URL
+```
+/frw/GeneralLedgerTrans
+``` 
 
- -->  <hr>Field Details...
+<hr>
+Field Details...
 
 | **SQL Field Name**         | **Column Description**                                                                                                                                 |
 |---|---|

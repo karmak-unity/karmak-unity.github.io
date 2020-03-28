@@ -8,16 +8,15 @@ type: "data_access" comments: falsedescription: Permit and license information
 
 ---
 
-This data object is used to display the permit and license information for each
-of the lease rental permits or licenses in the Fusion business system.
+This data object is used to display the permit and license information for each of the lease rental permits or licenses in the Fusion business system.
 
-This information is found in the Lease Rental Permit and License application in
-the Fusion business system.
+This information is found in the Lease Rental Permit and License application in the Fusion business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ #### URL 
+```
+/frw/PermitandLicense
+``` 
+<hr>Field Details...
 
 | **SQL Field Name**  | **Column Description**                                                                                    |
 |---|---|
