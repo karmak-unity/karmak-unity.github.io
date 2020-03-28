@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Branch Inventory"
+title: "Parts Inventory"
 category: "Parts" 
 icon: "icon-gear"
 type: "data_access" comments: falsedescription:  Access to a concise view of all branch specific parts inventory records
@@ -16,10 +16,11 @@ This data object is used to display a concise view of all branch specific parts 
 This information comes from the Parts Inventory application in the Fusion
 business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+#### URL
+```
+/frw/PartsInventory
+```
+ <hr>Field Details...
 
 | **SQL Field Name**      | **Column Description**                                                                                                                                                              |
 |---|---|
@@ -65,10 +66,10 @@ Fusion.
 This information comes from the Parts Inventory application in the Fusion
 business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ #### URL 
+```
+/frw/PartsInventoryExtended
+```  <hr>Field Details...
 
 | **SQL Field Name**                    | **Column Description**                                                                                                                                                                                   |
 |---|---|
@@ -199,399 +200,3 @@ business system.
 | UpdateFromPriceFile                   | This field displays whether the pricing of the given part is updated via price file.                                                                                                                     |
 | VelocityCode                          | This field displays the velocity code associated with the given part.                                                                                                                                    |
 | Weight                                | This field displays the weight of the given part.                                                                                                                                                        |
-
----
----
-### Branch Inventory Usage
----
-
-This data object is used to display usage of a given parts inventory detail
-record. A record will be displayed for each month/year combination in which the
-given part had greater than zero picks or greater than zero sales. Please note
-that no records will be displayed for a part that has never had any picks or
-sales. To get a listing of all parts inventory records with their corresponding
-usage records, start in Parts Inventory or Parts Inventory Extended and join to
-Parts Inventory Usage.
-
-This information comes from the 12 Month History tab in the Parts Inventory
-application in Fusion.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**            | **Column Description**                                                                                                                                                             |
-|---|---|
-| AverageCost                   | This field displays the average cost of the given part.                                                                                                                            |
-| BarCode                       | This field displays the bar code for the given parts inventory detail record.                                                                                                      |
-| BinLocation                   | This field displays the bin location for the given parts inventory detail record.                                                                                                  |
-| Branch                        | This field displays the branch associated with the given parts inventory detail record.                                                                                            |
-| DateAdded                     | This field displays the date on which the given part was added to inventory, from the Dates group box on the Purchase Control tab in the parts inventory record.                   |
-| DaysSinceLastSale             | This field displays the number of days between the last sold date and the current date.                                                                                            |
-| Description                   | This field displays the description of the given part.                                                                                                                             |
-| Ignore                        | This field displays whether the automatically recorded picks and usage for the given month were marked to be ignored for reporting and ordering purposes.                          |
-| Inactive                      | This field displays whether the given parts inventory detail record has been marked as inactive.                                                                                   |
-| LastCountDate                 | This field displays the date on which the given part was last counted, from the Dates group box on the Purchase Control tab in the parts inventory record.                         |
-| LastOrderedDate               | This field displays the date on which the given part was last ordered, from the Dates group box on the Purchase Control tab in the parts inventory record.                         |
-| LastOutOfStockDate            | This field displays the date on which the given part last went out of stock, from the Dates group box on the Purchase Control tab in the parts inventory record.                   |
-| LastPriceChangeDate           | This field displays the date on which the price of the given part was last changed, from the Dates group box on the Purchase Control tab in the parts inventory record.            |
-| LastPriceFileUpdate           | This field displays the date on which the price file for the given part was last updated, from the Dates group box on the Purchase Control tab in the parts inventory record.      |
-| LastReceivedDate              | This field displays the date on which the given part was last received, from the Dates group box on the Purchase Control tab in the parts inventory record.                        |
-| LastReplacementCostChangeDate | This field displays the date on which the replacement cost of the given part was last changed, from the Dates group box on the Purchase Control tab in the parts inventory record. |
-| LastSoldDate                  | This field displays the date on which the given part was last sold, from the Dates group box on the Purchase Control tab in the parts inventory record.                            |
-| LIFODate                      | This field displays the LIFO date for the given part, from the Dates group box on the Purchase Control tab in the parts inventory record.                                          |
-| LostSales                     | This field displays the number of lost sales that were recorded for the given part in the given month and year.                                                                    |
-| ManualPicks                   | This field displays the number of picks that were manually recorded on the 12 Month History tab for the given part and the given month and year.                                   |
-| ManualSales                   | This field displays the number of sales that were manually recorded on the 12 Month History tab for the given part and the given month and year.                                   |
-| Month                         | This field displays the month in which the picks and usage displayed in the given record occurred.                                                                                 |
-| PartNumber                    | This field displays the part number of the given part.                                                                                                                             |
-| PartType                      | This field displays the part type of the given part.                                                                                                                               |
-| Picks                         | This field displays the number of picks that were recorded by the application for the given part in the given month and year.                                                      |
-| PYPicks                       | This field displays the total number of picks for the given part in the year prior to the given year.                                                                              |
-| PYSales                       | This field displays the total number of sales for the given part in the year prior to the given year.                                                                              |
-| PYTDPicks                     | This field displays the number of picks for the given part through the given month in the year prior to the given year.                                                            |
-| PYTDSales                     | This field displays the number of sales for the given part through the given month in the year prior to the given year.                                                            |
-| QuantityAvailable             | This field displays the quantity available of the given part at the given branch.                                                                                                  |
-| QuantityCommitted             | This field displays the quantity of the given part at the given branch that is committed to open orders.                                                                           |
-| QuantityOnBackorder           | This field displays the quantity of the given part at the given branch that is on backorder from invoiced orders.                                                                  |
-| QuantityOnOrder               | This field displays the quantity of the given part at the given branch that is expected from open purchase orders.                                                                 |
-| ReplacementCost               | This field displays the replacement cost of the given part.                                                                                                                        |
-| Sales                         | This field displays the number of sales that were recorded by the application for the given part in the given month and year.                                                      |
-| StockClass                    | This field displays the stock class of the given part.                                                                                                                             |
-| StockStatus                   | This field displays the stock status for the given parts inventory detail record.                                                                                                  |
-| Supplier                      | This field displays the supplier associated with the given part.                                                                                                                   |
-| TotalLostSales                | This field displays the total lost sales for the given part in the given month and year, from the Total Lost column on the 12 Month History tab.                                   |
-| TotalPicks                    | This field displays the total picks (Picks + Manual Picks) for the given part and the given month and year.                                                                        |
-| TotalSales                    | This field displays the total sales (Sales + Manual Sales) for the given part and the given month and year.                                                                        |
-| Year                          | This field displays the year in which the picks and usage displayed in the given record occurred.                                                                                  |
-| YTDPicks                      | This field displays the number of picks for the given part through the given month in the given year.                                                                              |
-| YTDSales                      | This field displays the number of sales for the given part through the given month in the given year.                                                                              |
-
-
----
----
-### Parts Inventory Usage Trailing 12 Months
----
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**         | **Column Description** |
-|---|---|
-| AprManualPicks             |                        |
-| AprManualSales             |                        |
-| AprPicks                   |                        |
-| AprSales                   |                        |
-| AprTotalPicks              |                        |
-| AprTotalSales              |                        |
-| AugManualPicks             |                        |
-| AugManualSales             |                        |
-| AugPicks                   |                        |
-| AugSales                   |                        |
-| AugTotalPicks              |                        |
-| AugTotalSales              |                        |
-| Branch                     |                        |
-| CurrentMonth               |                        |
-| CurrentMonthManualPicks    |                        |
-| CurrentMonthManualSales    |                        |
-| CurrentMonthPicks          |                        |
-| CurrentMonthSales          |                        |
-| CurrentMonthTotalPicks     |                        |
-| CurrentMonthTotalSales     |                        |
-| CurrentYear                |                        |
-| DateAdded                  |                        |
-| DecManualPicks             |                        |
-| DecManualSales             |                        |
-| DecPicks                   |                        |
-| DecSales                   |                        |
-| DecTotalPicks              |                        |
-| DecTotalSales              |                        |
-| FebManualPicks             |                        |
-| FebManualSales             |                        |
-| FebPicks                   |                        |
-| FebSales                   |                        |
-| FebTotalPicks              |                        |
-| FebTotalSales              |                        |
-| JanManualPicks             |                        |
-| JanManualSales             |                        |
-| JanPicks                   |                        |
-| JanSales                   |                        |
-| JanTotalPicks              |                        |
-| JanTotalSales              |                        |
-| JulManualPicks             |                        |
-| JulManualSales             |                        |
-| JulPicks                   |                        |
-| JulSales                   |                        |
-| JulTotalPicks              |                        |
-| JulTotalSales              |                        |
-| JunManualPicks             |                        |
-| JunManualSales             |                        |
-| JunPicks                   |                        |
-| JunSales                   |                        |
-| JunTotalPicks              |                        |
-| JunTotalSales              |                        |
-| MarManualPicks             |                        |
-| MarManualSales             |                        |
-| MarPicks                   |                        |
-| MarSales                   |                        |
-| MarTotalPicks              |                        |
-| MarTotalSales              |                        |
-| MayManualPicks             |                        |
-| MayManualSales             |                        |
-| MayPicks                   |                        |
-| MaySales                   |                        |
-| MayTotalPicks              |                        |
-| MayTotalSales              |                        |
-| NovManualPicks             |                        |
-| NovManualSales             |                        |
-| NovPicks                   |                        |
-| NovSales                   |                        |
-| NovTotalPicks              |                        |
-| NovTotalSales              |                        |
-| OctManualPicks             |                        |
-| OctManualSales             |                        |
-| OctPicks                   |                        |
-| OctSales                   |                        |
-| OctTotalPicks              |                        |
-| OctTotalSales              |                        |
-| PartNumber                 |                        |
-| SepManualPicks             |                        |
-| SepManualSales             |                        |
-| SepPicks                   |                        |
-| SepSales                   |                        |
-| SepTotalPicks              |                        |
-| SepTotalSales              |                        |
-| SuggestedOrderMonths       |                        |
-| Supplier                   |                        |
-| Trailing12MonthManualPicks |                        |
-| Trailing12MonthManualSales |                        |
-| Trailing12MonthPicks       |                        |
-| Trailing12MonthSales       |                        |
-| Trailing12MonthTotalPicks  |                        |
-| Trailing12MonthTotalSales  |                        |
-
-
----
----
-### Parts Inventory Yearly Usage
----
-
-This data object is used to display parts inventory picks and sales by month for
-each year in which the given part has had picks or sales. Please note that if
-there were no picks or sales in a given year, there will be no record for that
-year. The data is displayed with a row for each year and a column for each
-month. Please note that the 13 Month fields only contain data for the current
-year's records, summarizing the past 13 months.
-
-This information can be found in the Parts Inventory application in Fusion,
-largely on the 12 Month History tab.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**   | **Column Description**                                                                                                                                                                                                                                                                                               |
-|---|---|
-| 13MonthLostSales     | This field displays, for the current year records, the lost sales for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                                        |
-| 13MonthManualPicks   | This field displays, for the current year records, the manual picks for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                                      |
-| 13MonthManualSales   | This field displays, for the current year records, the manual sales for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                                      |
-| 13MonthPicks         | This field displays, for the current year records, the picks for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                                             |
-| 13MonthSales         | This field displays, for the current year records, the sales for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                                             |
-| 13MonthTotalPicks    | This field displays, for the current year records, the total picks (picks + manual picks) for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                |
-| 13MonthTotalSales    | This field displays, for the current year records, the total sales (sales + manual sales) for the given part for the past 13 months (current month + last 12 months).                                                                                                                                                |
-| AprManualPicks       | This field displays the quantity of picks manually recorded for the given part for April of the given year.                                                                                                                                                                                                          |
-| AprManualSales       | This field displays the quantity of sales manually recorded for the given part for April of the given year.                                                                                                                                                                                                          |
-| AprPicks             | This field displays quantity of picks for the given part in the month of April in the given year.                                                                                                                                                                                                                    |
-| AprSales             | This field displays quantity of sales for the given part in the month of April in the given year.                                                                                                                                                                                                                    |
-| AprTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for April of the given year.                                                                                                                                                                                                           |
-| AprTotalSales        | This field displays the total sales (sales + manual sales) for the given part for April of the given year.                                                                                                                                                                                                           |
-| AugManualPicks       | This field displays the quantity of picks manually recorded for the given part for August of the given year.                                                                                                                                                                                                         |
-| AugManualSales       | This field displays the quantity of sales manually recorded for the given part for August of the given year.                                                                                                                                                                                                         |
-| AugPicks             | This field displays quantity of picks for the given part in the month of August in the given year.                                                                                                                                                                                                                   |
-| AugSales             | This field displays quantity of sales for the given part in the month of August in the given year.                                                                                                                                                                                                                   |
-| AugTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for August of the given year.                                                                                                                                                                                                          |
-| AugTotalSales        | This field displays the total sales (sales + manual sales) for the given part for August of the given year.                                                                                                                                                                                                          |
-| BarCode              | This field displays the barcode associated with the given part.                                                                                                                                                                                                                                                      |
-| BinLocation          | This field displays the bin location associated with the given part.                                                                                                                                                                                                                                                 |
-| Branch               | This field displays the branch that the given part record is associated with.                                                                                                                                                                                                                                        |
-| DateAdded            | This field displays the date on which the given part was added to inventory, from the Purchase Control tab in the Parts Inventory application. Please note that this date can be manually updated in Fusion, so it could differ from the system generated add date on the bottom of the Parts Inventory application. |
-| DecManualPicks       | This field displays the quantity of picks manually recorded for the given part for December of the given year.                                                                                                                                                                                                       |
-| DecManualSales       | This field displays the quantity of sales manually recorded for the given part for December of the given year.                                                                                                                                                                                                       |
-| DecPicks             | This field displays quantity of picks for the given part in the month of December in the given year.                                                                                                                                                                                                                 |
-| DecSales             | This field displays quantity of sales for the given part in the month of December in the given year.                                                                                                                                                                                                                 |
-| DecTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for December of the given year.                                                                                                                                                                                                        |
-| DecTotalSales        | This field displays the total sales (sales + manual sales) for the given part for December of the given year.                                                                                                                                                                                                        |
-| Description          | This field displays the description associated with the given part number.                                                                                                                                                                                                                                           |
-| FebManualPicks       | This field displays the quantity of picks manually recorded for the given part for February of the given year.                                                                                                                                                                                                       |
-| FebManualSales       | This field displays the quantity of sales manually recorded for the given part for February of the given year.                                                                                                                                                                                                       |
-| FebPicks             | This field displays quantity of picks for the given part in the month of February in the given year.                                                                                                                                                                                                                 |
-| FebSales             | This field displays quantity of sales for the given part in the month of February in the given year.                                                                                                                                                                                                                 |
-| FebTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for February of the given year.                                                                                                                                                                                                        |
-| FebTotalSales        | This field displays the total sales (sales + manual sales) for the given part for February of the given year.                                                                                                                                                                                                        |
-| Inactive             | This field displays whether the given part has been set to inactive.                                                                                                                                                                                                                                                 |
-| JanManualPicks       | This field displays the quantity of picks manually recorded for the given part for January of the given year.                                                                                                                                                                                                        |
-| JanManualSales       | This field displays the quantity of sales manually recorded for the given part for January of the given year.                                                                                                                                                                                                        |
-| JanPicks             | This field displays quantity of picks for the given part in the month of January in the given year.                                                                                                                                                                                                                  |
-| JanSales             | This field displays quantity of sales for the given part in the month of January in the given year.                                                                                                                                                                                                                  |
-| JanTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for January of the given year.                                                                                                                                                                                                         |
-| JanTotalSales        | This field displays the total sales (sales + manual sales) for the given part for January of the given year.                                                                                                                                                                                                         |
-| JulManualPicks       | This field displays the quantity of picks manually recorded for the given part for July of the given year.                                                                                                                                                                                                           |
-| JulManualSales       | This field displays the quantity of sales manually recorded for the given part for July of the given year.                                                                                                                                                                                                           |
-| JulPicks             | This field displays quantity of picks for the given part in the month of July in the given year.                                                                                                                                                                                                                     |
-| JulSales             | This field displays quantity of sales for the given part in the month of July in the given year.                                                                                                                                                                                                                     |
-| JulTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for July of the given year.                                                                                                                                                                                                            |
-| JulTotalSales        | This field displays the total sales (sales + manual sales) for the given part for July of the given year.                                                                                                                                                                                                            |
-| JunManualPicks       | This field displays the quantity of picks manually recorded for the given part for June of the given year.                                                                                                                                                                                                           |
-| JunManualSales       | This field displays the quantity of sales manually recorded for the given part for June of the given year.                                                                                                                                                                                                           |
-| JunPicks             | This field displays quantity of picks for the given part in the month of June in the given year.                                                                                                                                                                                                                     |
-| JunSales             | This field displays quantity of sales for the given part in the month of June in the given year.                                                                                                                                                                                                                     |
-| JunTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for June of the given year.                                                                                                                                                                                                            |
-| JunTotalSales        | This field displays the total sales (sales + manual sales) for the given part for June of the given year.                                                                                                                                                                                                            |
-| MarManualPicks       | This field displays the quantity of picks manually recorded for the given part for March of the given year.                                                                                                                                                                                                          |
-| MarManualSales       | This field displays the quantity of sales manually recorded for the given part for March of the given year.                                                                                                                                                                                                          |
-| MarPicks             | This field displays quantity of picks for the given part in the month of March in the given year.                                                                                                                                                                                                                    |
-| MarSales             | This field displays quantity of sales for the given part in the month of March in the given year.                                                                                                                                                                                                                    |
-| MarTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for March of the given year.                                                                                                                                                                                                           |
-| MarTotalSales        | This field displays the total sales (sales + manual sales) for the given part for March of the given year.                                                                                                                                                                                                           |
-| MayManualPicks       | This field displays the quantity of picks manually recorded for the given part for May of the given year.                                                                                                                                                                                                            |
-| MayManualSales       | This field displays the quantity of sales manually recorded for the given part for May of the given year.                                                                                                                                                                                                            |
-| MayPicks             | This field displays quantity of picks for the given part in the month of May in the given year.                                                                                                                                                                                                                      |
-| MaySales             | This field displays quantity of sales for the given part in the month of May in the given year.                                                                                                                                                                                                                      |
-| MayTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for May of the given year.                                                                                                                                                                                                             |
-| MayTotalSales        | This field displays the total sales (sales + manual sales) for the given part for May of the given year.                                                                                                                                                                                                             |
-| NovManualPicks       | This field displays the quantity of picks manually recorded for the given part for November of the given year.                                                                                                                                                                                                       |
-| NovManualSales       | This field displays the quantity of sales manually recorded for the given part for November of the given year.                                                                                                                                                                                                       |
-| NovPicks             | This field displays quantity of picks for the given part in the month of November in the given year.                                                                                                                                                                                                                 |
-| NovSales             | This field displays quantity of sales for the given part in the month of November in the given year.                                                                                                                                                                                                                 |
-| NovTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for November of the given year.                                                                                                                                                                                                        |
-| NovTotalSales        | This field displays the total sales (sales + manual sales) for the given part for November of the given year.                                                                                                                                                                                                        |
-| OctManualPicks       | This field displays the quantity of picks manually recorded for the given part for October of the given year.                                                                                                                                                                                                        |
-| OctManualSales       | This field displays the quantity of sales manually recorded for the given part for October of the given year.                                                                                                                                                                                                        |
-| OctPicks             | This field displays quantity of picks for the given part in the month of October in the given year.                                                                                                                                                                                                                  |
-| OctSales             | This field displays quantity of sales for the given part in the month of October in the given year.                                                                                                                                                                                                                  |
-| OctTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for October of the given year.                                                                                                                                                                                                         |
-| OctTotalSales        | This field displays the total sales (sales + manual sales) for the given part for October of the given year.                                                                                                                                                                                                         |
-| PartNumber           | This field displays the part number of the given part record.                                                                                                                                                                                                                                                        |
-| PartType             | This field displays the part type (Part, Exchange, or Core) of the given part.                                                                                                                                                                                                                                       |
-| SepManualPicks       | This field displays the quantity of picks manually recorded for the given part for September of the given year.                                                                                                                                                                                                      |
-| SepManualSales       | This field displays the quantity of sales manually recorded for the given part for September of the given year.                                                                                                                                                                                                      |
-| SepPicks             | This field displays quantity of picks for the given part in the month of September in the given year.                                                                                                                                                                                                                |
-| SepSales             | This field displays quantity of sales for the given part in the month of September in the given year.                                                                                                                                                                                                                |
-| SepTotalPicks        | This field displays the total picks (picks + manual picks) for the given part for September of the given year.                                                                                                                                                                                                       |
-| SepTotalSales        | This field displays the total sales (sales + manual sales) for the given part for September of the given year.                                                                                                                                                                                                       |
-| StockStatus          | This field displays the stock status of the given part.                                                                                                                                                                                                                                                              |
-| SuggestedOrderMonths | This field displays the months of sales history that should be considered when making decisions about purchasing for the given part.                                                                                                                                                                                 |
-| Supplier             | This field displays the supplier of the given parts inventory record.                                                                                                                                                                                                                                                |
-| Year                 | This field displays the year in which the given part usage was recorded.                                                                                                                                                                                                                                             |
-
-
----
----
-### Parts Physical Inventory
----
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**                   | **Column Description**                                                                                                                                                                                                                                                                     |
-|---|---|
-| AddDate                              | This field will be the date the Physical Inventory or Cycle Count was created via Request Physical Inventory.                                                                                                                                                                              |
-| AddUser                              | This field will be the Fusion username who created the Physical Inventory or Cycle Count via Request Physical Inventory.                                                                                                                                                                   |
-| AverageCostDifference                | This field is a dollar value that represents the extended dollar amount difference between the new and old quantity of all parts on the Physical Inventory or Cycle Count. This is represented based on the Average Cost and when the Average Cost is blank Replacement Cost will be used. |
-| Branch                               | This field is the Branch Code that the Physical Inventory or Cycle Count was done in.                                                                                                                                                                                                      |
-| IsCompleted                          | This field identifies whether the Cycle Count has been completed or not. Valid options will be Yes or No and this will be set to completed when the Physical Inventory or Cycle Count has been finalized in Physical Inventory Update                                                      |
-| CoreOptions                          | This field will display what the Cores Group Box was set to at the time the Physical Inventory or Cycle Count was created via Request Physical Inventory. Valid options will be Include, Exclude or Cores Only.                                                                            |
-| DateCompleted                        | This field will identify the date that the Physical Inventory or Cycle Count was completed. This value will be the same as the Last Update Date when the Is Completed value is set to Yes.                                                                                                 |
-| EndingBinLocation                    | This field identifies the Ending Bin Location that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                            |
-| EndingLastCountedDate                | This field identifies the Ending Last Counted Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                                  |
-| EndingLastReceivedDate               | This field identifies the Ending Last Received Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                                 |
-| EndingLastSoldDate                   | This field identifies the Ending Last Sold Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                                     |
-| EndingPartNumber                     | This field identifies the Ending Part Number that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                             |
-| EndingSupplier                       | This field identifies the Ending Supplier that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                                |
-| ExcludeItemsWithZeroAvailable        | This field identifies whether the Exclude Items with Zero Available option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                             |
-| IsFullInventory                      | This field identifies whether the Is Full Inventory option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                                             |
-| LastUpdateDate                       | This field will be the date the Physical Inventory or Cycle Count was last updated via Request Physical Inventory.                                                                                                                                                                         |
-| LastUpdateUser                       | This field will be the Fusion username who last updated the Physical Inventory or Cycle Count via Request Physical Inventory.                                                                                                                                                              |
-| NumberOfWriteInLinesPerPage          | This field is the number of write in lines per page that were used at the time the Physical Inventory or Cycle Count was created.                                                                                                                                                          |
-| PageBreak                            | This field identifies the Page Break of the Physical Inventory or Cycle Count. Valid options are None or Bin Location.                                                                                                                                                                     |
-| PageBreakPosition                    | This field identifies the Page Break Position of the Physical Inventory or Cycle Count                                                                                                                                                                                                     |
-| PartCount                            | This field is a count of all parts that were on the Physical Inventory or Cycle Count. This will include Write In Parts.                                                                                                                                                                   |
-| PrintAlternateBinLocations           | This field identifies whether the Print Alternate Bin Locations option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                                 |
-| PrintDetailOfQuantityCommitted       | This field identifies whether the Print Detail of Quantity Committed option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                            |
-| PrintQuantityAvailable               | This field identifies whether the Print Quantity Available option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                                      |
-| PrintQuantityCommitted               | This field identifies whether the Print Quantity Committed option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                                      |
-| PrintSequence                        | This field identifies the Print Sequence of the Physical Inventory or Cycle Count. Valid options are Bin Location or Supplier/Part Number.                                                                                                                                                 |
-| ReplacementCostDifference            | This field is a dollar value that represents the extended dollar amount difference between the new and old quantity of all parts on the Physical Inventory or Cycle Count. This is represented based on the Replacement Cost.                                                              |
-| RequireMaintenanceUpdateOnAllRecords | This field identifies whether the Require Maintenance Update on All Records option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                     |
-| SetCountQuantitytoZero               | This field identifies whether the Set Count Quantity to Zero option was set to Yes or No at the time the Physical Inventory or Cycle Count was created.                                                                                                                                    |
-| StartingBinLocation                  | This field identifies the Starting Bin Location that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                          |
-| StartingLastCountedDate              | This field identifies the Starting Last Counted Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                                |
-| StartingLastReceivedDate             | This field identifies the Starting Last Received Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                               |
-| StartingLastSoldDate                 | This field identifies the Starting Last Sold Date from the Part Inventory Detail record that was used to filter results at the time the Physical Inventory or Cycle Count was requested.                                                                                                   |
-| StartingPartNumber                   | This field identifies the Starting Part Number that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                           |
-| StartingSupplier                     | This field identifies the Starting Supplier that was entered at the time the Physical Inventory or Cycle Count was requested.                                                                                                                                                              |
-| WriteInCount                         | This field is a count of all Write In Parts that were on the Physical Inventory or Cycle Count.                                                                                                                                                                                            |
-
-
----
----
-### Parts Physical Inventory Detail
----
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**          | **Column Description**                                                                                                                                                                                                                                                |
-|---|---|
-| AddDate                     | This field will be the date the Physical Inventory or Cycle Count request was created. If the detail part is a write in line, it will be date the write in line was added.                                                                                            |
-| AddUser                     | This field will be the user who created the Physical Inventory or Cycle Count request. If the detail part is a write in line, it will be the user who added the write in line.                                                                                        |
-| AverageCost                 | This field is the Average cost of the detail part record on the Physical Inventory or Cycle Count request. If this part is an Exchange Part, it will be the cost of the Exchange Part + Inherent Core. If the Average Cost is blank this will be the Replacement Cost |
-| AverageCostDifference       | This field is the difference in average cost between the extended replacement cost of the new and old quantities of the detail part record on the Physical Inventory or Cycle Count request. If the average cost is blank the replacement cost will be used.          |
-| InherentCoreAverageCost     | This file is the Average Cost of the Inherent Core of the detail part record on the Physical Inventory or Cycle Count request. If the Average Cost is blank this will be the replacement cost.                                                                        |
-| InherentCoreReplacementCost | This file is the Replacement Cost of the Inherent Core of the detail part record on the Physical Inventory or Cycle Count request.                                                                                                                                    |
-| LastUpdateDate              | This field will be the date the specific detail part was last updated on the Physical Inventory or Cycle Count request was created.                                                                                                                                   |
-| LastUpdateUser              | This field will be the user who last updated the specific detail part record on the Physical Inventory or Cycle Count request.                                                                                                                                        |
-| NewQuantity                 | This field is the quantity that was entered for the part detail record at the time the specific Physical Inventory or Cycle Count was finalized.                                                                                                                      |
-| OldQuantity                 | This field is the Quantity Available of the part detail record at the time the specific Physical Inventory or Cycle Count was requested.                                                                                                                              |
-| PartDescription             | This field displays the description of the given part record.                                                                                                                                                                                                         |
-| PartNumber                  | This field displays the part number for the specific Physical Inventory or Cycle Count requested record.                                                                                                                                                              |
-| IsProcessed                 | This field will indicate whether the part detail record has been processed on the specific Physical Inventory or Cycle Count request. The valid values are Yes or No.                                                                                                 |
-| QuantityDifference          | This field is the difference between the New Quantity and Old Quantity of the detail part record on the Physical Inventory or Cycle Count request.                                                                                                                    |
-| ReplacementCost             | This field is the Replacement cost of the detail part record on the Physical Inventory or Cycle Count request. If this part is an Exchange Part, it will be the cost of the Exchange Part + Inherent Core.                                                            |
-| ReplacementCostDifference   | This field is the difference in replacement cost between the extended replacement cost of the new and old quantities of the detail part record on the Physical Inventory or Cycle Count request.                                                                      |
-| Sequence                    | This field is the sequence number of the part detail record for the specific Physical Inventory or Cycle Count request.                                                                                                                                               |
-| Supplier                    | This field identifies the supplier associated with the given part record.                                                                                                                                                                                             |
-| IsWriteIn                   | This field will indicate whether the part detail record that is entered on the specific Physical Inventory or Cycle Count request was a write in line or not. The valid values are Yes or No.                                                                         |
-
-
----
----
-### Parts Alternate Bin Locations
----
-
-This data object displays the alternate bin associated with a part record, if
-one exists.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**   | **Column Description**                                                                     |
-|---|---|
-| AddDate              | This field displays the date on which the bin location was added to the part.              |
-| AddUser              | This field displays the user name that added the record.                                   |
-| AlternateBinLocation | This field displays the alternate bin location of the part.                                |
-| Branch               | This field displays the branch associated with the part number.                            |
-| LastUpdate           | This field displays the date on which an A/P invoice was last updated.                     |
-| UpdateUser           | This field displays the user name of the individual who made the update.                   |
-| PartNumber           | This field displays the part number of a part on a miscellaneous purchase order.           |
-| Sequence             | This field displays the order in which the alternate bins for a given part number display. |

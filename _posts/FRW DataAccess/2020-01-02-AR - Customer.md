@@ -8,16 +8,17 @@ type: "data_access" comments: falsedescription: Access to all customer informa
 
 ---
 ---
-### Accounting Customer
----
+
 
 This data object is used to return all customer information within the Customer program in the Fusion business system.
 
-This information is found within the Accounts Receivable Customer program within
-the Fusion business system.
+This information is found within the Accounts Receivable Customer program within the Fusion business system.
 
- <!-- 
- -->  <hr>Field Details...
+ #### URL
+```
+/frw/Customer
+```
+<hr>Field Details...
 
 | **SQL Field Name**                 | **Column Description**                                                                                                                                                                                                                                                              |
 |---|---|
@@ -153,25 +154,3 @@ the Fusion business system.
 | TotalBalanceDue                    | This field displays the total balance due for a given customer.                                                                                                                                                                                                                     |
 | Unapplied Cash                     | This field displays the total amount of unapplied cash on the customer's account.                                                                                                                                                                                                   |
 | WarrantyAccount                    | This field displays whether or not a customer account is a warranty account.                                                                                                                                                                                                        |
-
----
----
-### Accounting Customer Misc Prompt
----
-
-This data object displays the miscellaneous prompts and values that have been
-assigned to customers as seen on the Miscellaneous Info tab of the Customer
-application in Fusion.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name** | **Column Description**                                                                               |
-|---|---|
-| Company Name       | This Field Displays the Company Name of the Customer the Miscellaneous Prompt is associated with.    |
-| Customer Number    | This Field Displays the Customer Number of the Customer the Miscellaneous Prompt is associated with. |
-| Description        | This Field Displays the Description of the Miscellaneous Prompt.                                     |
-| Prompt             | This field Displays the name of the Miscellaneous Prompt.                                            |
-| Value              | This Field Displays the Value of the Prompt assigned to the Customer.                                |

@@ -3,21 +3,19 @@ layout: post
 title: "Chart of Accounts"
 category: "Accounting General Ledger" 
 icon: "icon-money"
-type: "data_access" comments: falsedescription: Display the allocation tables specified in Fusion, along with the allocation breakdown for each by Branch/Department and the list of breakdown accounts specified in the setup form of the Allocation Table
+type: "data_access" comments: falsedescription: Display a listing of all general ledger chart of accounts and their sub category structure down to 6 levels.
 ---
-## Accounting Chart of Accounts
 ---
 
-This data object is used to show a listing of all general ledger chart of
-accounts and their sub category structure down to 6 levels.
+This data object is used to show a listing of all general ledger chart of accounts and their sub category structure down to 6 levels.
 
-This information is found within the Chart of Accounts program within the Fusion
-business system.
+This information is found within the Chart of Accounts program within the Fusion business system.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ #### URL 
+```
+/frw/ChartofAccounts
+```
+ <hr>Field Details...
 
 | **SQL Field Name**   | **Column Description**                                                                                                                                                                                                                                                                                                                                                                                                   |
 |---|---|

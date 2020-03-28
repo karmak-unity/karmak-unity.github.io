@@ -11,10 +11,12 @@ type: "data_access" comments: falsedescription:  Return all checks that have b
 This data object is used to return all checks that have been issued in the
 Fusion Business System.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+ 
+#### URL
+```
+/frw/CheckRegister
+```
+ <hr>Field Details...
 
 | **SQL Field Name**  | **Column Description**                                                                                                                 |
 |---|---|

@@ -26,7 +26,7 @@ https://api.karmak.io/api/unity/{version}/unityapi/CustomerSpecialPricing/Create
 ```
 
 ### Update
-#### POST
+#### PUT
 ```
 https://api.karmak.io/api/unity/{version}/unityapi/CustomerSpecialPricing/Update
 ````

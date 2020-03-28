@@ -15,10 +15,12 @@ the Source Data Object and the Comment Data Object.  At this time this Data
 Object will only display Comments from the Customer Record until Fusion Report
 Writer is updated to have more joins from other forms that store comments.
 
- <!-- 
-
-
- -->  <hr>Field Details...
+  
+#### URL
+```
+/frw/Comments
+```
+ <hr>Field Details...
 
 | **SQL Field Name**      | **Column Description**                                                                                                                                           |
 |---|---|

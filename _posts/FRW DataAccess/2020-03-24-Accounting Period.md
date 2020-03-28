@@ -16,6 +16,11 @@ A GET API to query the status of an accounting posting period.
 
 To query closed Posting Periods, set IsOpen = NO and IsFuture = NO.
 
+#### URL
+```
+/frw/AccountingPeriod
+```
+
 | Field | Definition | Type |
 |---|---|---|
 | “AccountingPeriodID” | Accounting Period Unique ID                 | int         |

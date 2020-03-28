@@ -1,95 +1,29 @@
 ---
 layout: post
-title: "Deal"
+title: "Deal Detail"
 category: "Sales"
 icon: "icon-tag"
 type: "data_access"
-comments: falsedescription: Access all local purchase orders and their associated unit information
+comments: false
+description: Access all detail items on all unit sales deals.
 ---
 ---
----
-### Deal Comission
----
 
-This data object is used to display the commission information by salesperson
-and stock number for a given deal packet invoice.
-
-This information can be found by clicking the Commission Worksheet hyperlink in
-the Accounting Review application in the Fusion business system.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**                  | **Column Description**                                                                                                                                                                                                                                                                                                                                                                                       |
-|---|---|
-| Approved                            | This field displays whether the commission for the given deal has been approved to be paid.                                                                                                                                                                                                                                                                                                                  |
-| BaseCost                            | This field displays the base cost of the unit that was sold.                                                                                                                                                                                                                                                                                                                                                 |
-| Branch                              | This field displays the branch associated with the given deal.                                                                                                                                                                                                                                                                                                                                               |
-| Commission                          | This field displays the commission amount for the salesperson of the given unit on the deal.                                                                                                                                                                                                                                                                                                                 |
-| CommissionDate                      | This field displays the date that the commission was prepared and approved (defaults to the date that it was added to the system, but can be manually changed in Fusion).                                                                                                                                                                                                                                    |
-| CommissionPercentage                | This field displays the percentage of the unit on the deal that is calculated as commission.                                                                                                                                                                                                                                                                                                                 |
-| IsCommissionPercentageAgainstProfit | This field displays whether the commission for the salesperson of the given unit on the deal will be calculated against profit, rather than the gross amount of the deal.                                                                                                                                                                                                                                    |
-| Cost                                | This field displays the cost of the given unit.                                                                                                                                                                                                                                                                                                                                                              |
-| DealNumber                          | This field displays the deal number of the deal that the unit was sold on.                                                                                                                                                                                                                                                                                                                                   |
-| Department                          | This field displays the department associated with the given deal.                                                                                                                                                                                                                                                                                                                                           |
-| FinanceCommission                   | This field displays the cost of the finance commission unit addon on the given deal packet.                                                                                                                                                                                                                                                                                                                  |
-| FinanceLender                       | This field displays the finance lender associated with the given deal packet.                                                                                                                                                                                                                                                                                                                                |
-| FinanceReserve                      | This field displays the reserve amount from the given deal packet invoice.                                                                                                                                                                                                                                                                                                                                   |
-| FlatAmount                          | This field displays the amount that the salesperson of the given unit on the deal will receive as commission.                                                                                                                                                                                                                                                                                                |
-| Held                                | This field displays whether the commission is being held from being paid.                                                                                                                                                                                                                                                                                                                                    |
-| HeldDate                            | This field displays the date as of which the commission is being held.                                                                                                                                                                                                                                                                                                                                       |
-| HeldReason                          | This field displays the reason that the commission is being held.                                                                                                                                                                                                                                                                                                                                            |
-| IncludeFinanceReserveInTotalProfit  | This field displays whether the finance reserve should be included in the total profit for the commission for the sale of the given unit.                                                                                                                                                                                                                                                                    |
-| IncludeInsuranceIncomeInTotalProfit | This field displays whether the insurance income should be included in the total profit for the commission for the sale of the given unit.                                                                                                                                                                                                                                                                   |
-| InsuranceCommission                 | This field displays the cost of the insurance commission unit addon on the given deal packet.                                                                                                                                                                                                                                                                                                                |
-| InsuranceIncome                     | This field displays the cost of the insurance income unit addon on the given deal packet.                                                                                                                                                                                                                                                                                                                    |
-| InventoryType                       | This field displays the inventory type of the unit that was sold and that commission will be paid on.                                                                                                                                                                                                                                                                                                        |
-| InvoiceDate                         | This field displays the invoice date of the deal that the unit was sold on.                                                                                                                                                                                                                                                                                                                                  |
-| Make                                | This field displays the make of the unit that was sold and that commission will be paid on.                                                                                                                                                                                                                                                                                                                  |
-| MinimumCommission                   | This field displays the minimum amount that the salesperson of the given unit on the deal would receive as commission.                                                                                                                                                                                                                                                                                       |
-| MinimumProfit                       | This field displays the minimum profit of the unit on the deal that is considered subject to commission.                                                                                                                                                                                                                                                                                                     |
-| MinimumProfitPercentage             | This field displays the minimum profit percentage of the unit on the deal that is considered subject to commission.                                                                                                                                                                                                                                                                                          |
-| Misc1                               | This field displays the description of the first miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                              |
-| Misc1Cost                           | This field displays the cost of the first miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                                     |
-| Misc1Price                          | This field displays the price of the first miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                                    |
-| Misc1Profit                         | This field displays the profit (price - cost) of the first miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                    |
-| Misc2                               | This field displays the description of the second miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                             |
-| Misc2Cost                           | This field displays the cost of the second miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                                    |
-| Misc2Price                          | This field displays the price of the second miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                                   |
-| Misc2Profit                         | This field displays the profit (price - cost) of the second miscellaneous item to be considered in calculating commission.                                                                                                                                                                                                                                                                                   |
-| Model                               | This field displays the model of the unit that was sold and that commission will be paid on.                                                                                                                                                                                                                                                                                                                 |
-| Note                                | This field displays the note entered regarding the given commission.                                                                                                                                                                                                                                                                                                                                         |
-| OpenLPOs                            | This field displays the total expected amount of all open LPOs for the given unit.                                                                                                                                                                                                                                                                                                                           |
-| PacketNumber                        | This field displays the packet number of the deal packet that the unit was sold on.                                                                                                                                                                                                                                                                                                                          |
-| Price                               | This field displays the price of the given unit.                                                                                                                                                                                                                                                                                                                                                             |
-| Profit                              | This field displays the profit (price - cost) for the given unit.                                                                                                                                                                                                                                                                                                                                            |
-| ProratedOverUnderAllowance          | This field displays the over/under allowance for the given unit on the given deal.                                                                                                                                                                                                                                                                                                                           |
-| Salesperson                         | This field displays the salesperson who will be receiving commission for the sale of the given unit.                                                                                                                                                                                                                                                                                                         |
-| SoldStockNumber                     | This field displays the stock number of the unit that was sold and that commission will be paid on.                                                                                                                                                                                                                                                                                                          |
-| TotalAddonCost                      | This field displays the total cost of all addons subject to commission on the given deal.                                                                                                                                                                                                                                                                                                                    |
-| TotalAddonPrice                     | This field displays the total price of all addons subject to commission on the given deal.                                                                                                                                                                                                                                                                                                                   |
-| TotalAddonProfit                    | This field displays the total profit (total price - total cost) of all addons subject to commission on the given deal.                                                                                                                                                                                                                                                                                       |
-| TotalCost                           | This field displays the total cost (Cost + Total Addon Cost + Misc 1 Cost + Misc 2 Cost) of the given unit on the deal.                                                                                                                                                                                                                                                                                      |
-| TotalPrice                          | This field displays the total price (Price + Total Addon Price + Misc 1 Price + Misc 2 Price) of the given unit on the deal.                                                                                                                                                                                                                                                                                 |
-| TotalProfit                         | This field displays the total profit (Profit + Total Addon Profit + Misc 1 Profit + Misc 2 Profit - Prorated Over Under Allowance) of the given unit on the deal. Note that if Include Finance Reserve In Total Profit and/or Include Insurance Income In Total Profit is checked, Finance Reserve will be added to Total Profit and/or Insurance Income will be subtracted from Total Profit, respectively. |
-| Year                                | This field displays the year of the unit that was sold and that commission will be paid on.                                                                                                                                                                                                                                                                                                                  |
-
----
----
 ### Deal Detail
 ---
 
 This data object is used to display all detail items on all unit sales deals.
 
-This information can be found by clicking the detail hyperlinks in the Deal
-application in the Fusion business system.
+This information can be found by clicking the detail hyperlinks in the Deal application in the Fusion business system.
 
- <!-- 
+ 
+#### URL
+```
 
+```
 
- -->  <hr>Field Details...
+<hr>
+Field Details...
 
 | **SQL Field Name**        | **Column Description**                                                                                                                                                                                                                                                                 |
 |---|---|
@@ -130,197 +64,3 @@ application in the Fusion business system.
 | TradeInActualCashValue    | This field displays, for the given trade unit on the deal, the amount that the trade unit is actually worth.                                                                                                                                                                           |
 | TradeInAllowance          | This field displays, for the given trade unit on the deal, the total allowance given to the customer for the trade unit.                                                                                                                                                               |
 | TradeInOverUnderAllowance | This field displays, for the given trade unit on the deal, the over/under allowance (Trade In Allowance - Trade In Actual Cash Value) for the trade unit.                                                                                                                              |
-
----
----
-### Deal Header
----
-
-This data object is used to display the header information and cumulative totals
-for all deals, open or invoiced, in the Fusion business system.
-
-This information can be found in the Deal program in Fusion.
-
-Note that exactly one record will be displayed for every deal record in Fusion.
-To view the corresponding detail information, join to Deal Detail. This will
-display all detail items on the given deal and on its corresponding deal
-packets. To view cumulative totals for the deal packets on the given deal, join
-to Deal Packet.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**           | **Column Description**                                                                                                                       |
-|---|---|
-| AddDate                      | This field displays the date on which the given deal was added to the system.                                                                |
-| AddUser                      | This field displays the username of the user who added the given deal to the system.                                                         |
-| Branch                       | This field displays the branch associated with the given deal.                                                                               |
-| Commission                   | This field displays the total amount of commission paid out to the salesperson associated with the given deal.                               |
-| CompanyName                  | This field displays the company name for the customer on the given deal.                                                                     |
-| CustomerNumber               | This field displays the identifying code for the customer on the given deal.                                                                 |
-| IsCustomerPickup             | This field displays whether the customer will pick up the units associated with the given deal, rendering delivery unnecessary.              |
-| CustomerPO                   | This field displays the purchase order number associated with the customer on the given deal.                                                |
-| DealNumber                   | This field displays the deal number of the given deal.                                                                                       |
-| DealStatus                   | This field displays the status of the given deal.                                                                                            |
-| DeliveryDate                 | This field displays the date on which the units associated with the given deal will be delivered.                                            |
-| Department                   | This field displays the department associated with the given deal.                                                                           |
-| ExpirationDate               | This field displays the date on which the quote for the given deal will expire.                                                              |
-| IsFinancingApproved          | This field displays whether the customer has been approved for financing for the given deal.                                                 |
-| IsFinancingRequired          | This field displays whether financing is required for the given deal.                                                                        |
-| LastUpdateDate               | This field displays the date on which the given deal was last updated in the system.                                                         |
-| LastUpdateUser               | This field displays the username of the user who last updated the given deal in the system.                                                  |
-| PaidDate                     | This field displays the date on which the balance for the given deal will be paid.                                                           |
-| PaymentMethod                | This field displays the payment method associated with the given deal.                                                                       |
-| QuoteDate                    | This field displays the date on which the quote for the given deal was created.                                                              |
-| SaleType                     | This field displays the sale type of the given deal.                                                                                         |
-| Salesperson                  | This field displays the username of the salesperson associated with the given deal.                                                          |
-| SalespersonName              | This field displays the first and last name of the salesperson associated with the given deal.                                               |
-| SignDate                     | This field displays the date on which the documents for the given deal were signed by the customer.                                          |
-| TaxBasis                     | This field displays whether the tax on the given deal should be calculated based on the local tax region or the tax region for the customer. |
-| TaxBody                      | This field displays the tax body associated with the given deal.                                                                             |
-| TaxRegion                    | This field displays the tax region associated with the given deal.                                                                           |
-| TaxStatus                    | This field displays the tax status associated with the given deal.                                                                           |
-| TotalDealAddOnCost           | This field displays the total cost of all deal add ons remaining on the deal.                                                                |
-| TotalDealAddOnPrice          | This field displays the total price of all deal add ons remaining on the deal.                                                               |
-| TotalDeposits                | This field displays the total of all deposits remaining on the deal.                                                                         |
-| TotalDownPayments            | This field displays the total of all down payments remaining on the deal.                                                                    |
-| TotalFET                     | This field displays the total FET associated with all units remaining on the deal.                                                           |
-| TotalFinanceReserve          | This field displays the total of the finance reserves from the financing remaining on the deal.                                              |
-| TotalFinanced                | This field displays the total amount of financing remaining on the deal.                                                                     |
-| TotalNonProfitDealAddOnCost  | This field displays the total cost of all deal add ons remaining on the deal, which are not included in the profit calculation.              |
-| TotalNonProfitDealAddOnPrice | This field displays the total price of all deal add ons remaining on the deal, which are not included in the profit calculation.             |
-| TotalNonProfitUnitAddOnCost  | This field displays the total cost of all unit add ons remaining on the deal, which are not included in the profit calculation.              |
-| TotalNonProfitUnitAddOnPrice | This field displays the total price of all unit add ons remaining on the deal, which are not included in the profit calculation.             |
-| TotalPayoffs                 | This field displays the total of all payoffs associated with trade in units remaining on the deal.                                           |
-| TotalProfit                  | This field displays the total profit from the units and add ons remaining on the deal.                                                       |
-| TotalProfitDealAddOnCost     | This field displays the total cost of all deal add ons remaining on the deal, which are included in the profit calculation.                  |
-| TotalProfitDealAddOnPrice    | This field displays the total price of all deal add ons remaining on the deal, which are included in the profit calculation.                 |
-| TotalProfitPercent           | This field displays the percentage of the total price of the units and add ons remaining on the deal that is considered profit.              |
-| TotalProfitUnitAddOnCost     | This field displays the total cost of all unit add ons remaining on the deal, which are included in the profit calculation.                  |
-| TotalProfitUnitAddOnPrice    | This field displays the total price of all unit add ons remaining on the deal, which are included in the profit calculation.                 |
-| TotalSalesTax                | This field displays the total sales tax remaining on the deal.                                                                               |
-| TotalTradeInActualCashValue  | This field displays the total actual cash value for all trade in units remaining on the deal.                                                |
-| TotalTradeInAllowance        | This field displays the total allowance for all trade in units remaining on the deal.                                                        |
-| TotalUnitAddOnCost           | This field displays the total cost of all unit add ons remaining on the deal.                                                                |
-| TotalUnitAddOnPrice          | This field displays the total price of all unit add ons remaining on the deal.                                                               |
-| TotalUnitCost                | This field displays the total cost of all units remaining on the deal.                                                                       |
-| TotalUnitFinanceReserve      | This field displays the total of the finance reserves from the financing associated with particular units remaining on the deal.             |
-| TotalUnitFinanced            | This field displays the total amount of financing associated with particular units remaining on the deal.                                    |
-| TotalUnitPrice               | This field displays the total price of all units remaining on the deal.                                                                      |
-| IsWorksheet                  | This field displays whether the given deal is marked as a worksheet in Fusion.                                                               |
-
----
----
-### Deal Packet
----
-
-This data object is used to display all deal packet summary information. There
-is exactly one record returned for every deal packet in Fusion, open or
-invoiced. To see detail information line by line, join to Sales Deal Detail.
-
-This information can be found in the Deal Packet program within the Fusion
-business system.
-
- <!-- 
-
-
- -->  <hr>Field Details...
-
-| **SQL Field Name**           | **Column Description**                                                                                                                                                                             |
-|---|---|
-| AddDate                      | This field displays the date on which the given deal packet was added to the system (for invoiced deal packets, displays the date on which the original open deal packet was added to the system). |
-| AddUser                      | This field displays the username of the user who added the given deal packet to the system (for invoiced deal packets, displays the username of the user who added the original open deal packet). |
-| BillToAddress1               | This field displays the first line of the bill to address for the given deal packet.                                                                                                               |
-| BillToAddress2               | This field displays the second line of the bill to address for the given deal packet.                                                                                                              |
-| BillToCity                   | This field displays the city of the bill to address for the given deal packet.                                                                                                                     |
-| BillToCountry                | This field displays the country of the bill to address for the given deal packet.                                                                                                                  |
-| BillToCounty                 | This field displays the county of the bill to address for the given deal packet.                                                                                                                   |
-| BillToPostalCode             | This field displays the postal code of the bill to address for the given deal packet.                                                                                                              |
-| BillToRegion                 | This field displays the region of the bill to address for the given deal packet.                                                                                                                   |
-| BillToTaxBody                | This field displays the tax body that the bill to address for the given deal packet is located within.                                                                                             |
-| Branch                       | This field displays the branch associated with the given deal packet.                                                                                                                              |
-| Commission                   | This field displays the total commission amount that the salesperson associated with the sale earned from the given deal packet.                                                                   |
-| CommissionPostDate           | This field displays the date on which the commission for the given deal packet was posted to accounting.                                                                                           |
-| CommissionPostJournal        | This field displays the journal which the commission for the given deal packet is posted against.                                                                                                  |
-| CommissionPostMonth          | This field displays the month and year in which the commission for the given deal packet was posted to accounting.                                                                                 |
-| CompanyName                  | This field displays the company name of the customer associated with the given deal packet.                                                                                                        |
-| ContactAddress1              | This field displays the first line of the address for the contact associated with the given deal packet.                                                                                           |
-| ContactAddress2              | This field displays the second line of the address for the contact associated with the given deal packet.                                                                                          |
-| ContactCity                  | This field displays the city of the address for the contact associated with the given deal packet.                                                                                                 |
-| ContactCountry               | This field displays the country of the address for the contact associated with the given deal packet.                                                                                              |
-| ContactCounty                | This field displays the county of the address for the contact associated with the given deal packet.                                                                                               |
-| ContactPostalCode            | This field displays the postal code of the address for the contact associated with the given deal packet.                                                                                          |
-| ContactRegion                | This field displays the region of the address for the contact associated with the given deal packet.                                                                                               |
-| ContactTaxBody               | This field displays the tax body that the address for the contact associated with the given deal packet is located within.                                                                         |
-| CurrencyCode                 | This field displays the currency code associated with the GL transaction for the given invoiced deal packet.                                                                                       |
-| CustomerNumber               | This field displays the customer number of the customer associated with the given deal packet.                                                                                                     |
-| CustomerPO                   | This field displays the purchase order number associated with the customer on the given deal packet.                                                                                               |
-| DealContractDate             | This field displays the contract date of the deal that the given deal packet is associated with.                                                                                                   |
-| DealNumber                   | This field displays the deal number of the deal that the given deal packet is associated with.                                                                                                     |
-| DealPacketStatus             | This field displays the status of the given deal packet.                                                                                                                                           |
-| DeliveryDate                 | This field displays the date on which the unit(s) associated with the given deal packet came into the possession of the customer.                                                                  |
-| Department                   | This field displays the department associated with the given deal packet.                                                                                                                          |
-| FinanceAmount                | This field displays the total amount of financing applied to particular units on the given deal packet.                                                                                            |
-| FinanceCommission            | This field displays the total amount of finance commission on the given deal packet.                                                                                                               |
-| FinanceReserve               | This field displays the total finance reserve amount associated with particular units on the given deal packet.                                                                                    |
-| InsuranceCommission          | This field displays the total amount of insurance commission on the given deal packet.                                                                                                             |
-| InsuranceIncome              | This field displays the total amount of insurance income on the given deal packet.                                                                                                                 |
-| InvoiceDate                  | This field displays the date on which the given deal packet was invoiced.                                                                                                                          |
-| InvoiceName1                 | This field displays the first name entered on the deal packet which should be printed on the invoice for the given deal packet.                                                                    |
-| InvoiceName2                 | This field displays the second name entered on the deal packet which should be printed on the invoice for the given deal packet.                                                                   |
-| InvoiceNumber                | This field displays the invoice number of the given invoiced deal packet.                                                                                                                          |
-| InvoiceUser                  | This field displays the username of the user who invoiced the given invoiced deal packet.                                                                                                          |
-| Journal                      | This field displays the journal which the GL transaction for the given deal packet is posted against.                                                                                              |
-| JournalBranch                | This field displays the branch in which the journal entry for the GL transaction for the given deal packet was posted.                                                                             |
-| JournalReference             | This field displays the reference number associated with the journal entry for the GL transaction for the given deal packet.                                                                       |
-| LastUpdate                   | This field displays the date on which the given deal packet was last updated in the system.                                                                                                        |
-| LastUpdateUser               | This field displays the username of the user who last updated the given deal packet in the system.                                                                                                 |
-| OverrideExchangeRate         | This field displays the override exchange rate entered at the time of the GL transaction for the given deal packet.                                                                                |
-| PacketNumber                 | This field displays the packet number of the given deal packet.                                                                                                                                    |
-| PaymentMethod                | This field displays the payment method used by the customer on the given deal packet.                                                                                                              |
-| PostDate                     | This field displays the date on which the GL transaction for the given deal packet was posted.                                                                                                     |
-| PostPeriod                   | This field displays the month and year in which the GL transaction for the given deal packet was posted.                                                                                           |
-| PostedAfterSalesCommission   | This field displays the total commission amount that was entered after the given deal packet was closed and posted to accounting.                                                                  |
-| PostedAfterSalesExpense      | This field displays the total amount of expenses that were entered after the given deal packet was closed and posted to accounting.                                                                |
-| SalesType                    | This field displays the sale type of the given deal packet.                                                                                                                                        |
-| Salesperson                  | This field displays the username of the unit salesperson associated with the customer on the given deal packet.                                                                                    |
-| ShipToAddress1               | This field displays the first line of the ship to address for the given deal packet.                                                                                                               |
-| ShipToAddress2               | This field displays the second line of the ship to address for the given deal packet.                                                                                                              |
-| ShipToCity                   | This field displays the city of the ship to address for the given deal packet.                                                                                                                     |
-| ShipToCountry                | This field displays the country of the ship to address for the given deal packet.                                                                                                                  |
-| ShipToCounty                 | This field displays the county of the ship to address for the given deal packet.                                                                                                                   |
-| ShipToPostalCode             | This field displays the postal code of the ship to address for the given deal packet.                                                                                                              |
-| ShipToRegion                 | This field displays the region of the ship to address for the given deal packet.                                                                                                                   |
-| ShipToTaxBody                | This field displays the tax body that the ship to address for the given deal packet is located within.                                                                                             |
-| SignDate                     | This field displays the date on which all of the documents for the given deal packet were signed by the customer.                                                                                  |
-| TaxBasis                     | This field displays whether the sales tax on the given deal packet will be charged based on the local tax body or the tax body of the customer.                                                    |
-| TaxBody                      | This field displays the overruling tax body of the given deal packet, from the Tax Information tab.                                                                                                |
-| TaxRegion                    | This field displays the region associated with the tax body of the given deal packet.                                                                                                              |
-| TaxStatus                    | This field displays the tax status of the given deal packet.                                                                                                                                       |
-| TotalActualCashValue         | This field displays the total actual cash value of all trade in units on the given deal packet.                                                                                                    |
-| TotalDealAddOnCost           | This field displays the total cost of all deal add ons on the given deal packet.                                                                                                                   |
-| TotalDealAddOnPrice          | This field displays the total price of all deal add ons on the given deal packet.                                                                                                                  |
-| TotalDeposits                | This field displays the total amount of all deposits on the given deal packet.                                                                                                                     |
-| TotalDownPayments            | This field displays the total amount of all down payments on the given deal packet.                                                                                                                |
-| TotalFET                     | This field displays the total amount of all FET charges on the given deal packet.                                                                                                                  |
-| TotalFinanceReserve          | This field displays the total finance reserve amount on the given deal packet.                                                                                                                     |
-| TotalFinanced                | This field displays the total amount of financing on the given deal packet.                                                                                                                        |
-| TotalNonProfitDealAddOnCost  | This field displays the total cost of all deal add ons on the given deal packet that are not included in the profit calculation for the deal packet.                                               |
-| TotalNonProfitDealAddOnPrice | This field displays the total price of all deal add ons on the given deal packet that are not included in the profit calculation for the deal packet.                                              |
-| TotalNonProfitUnitAddOnCost  | This field displays the total cost of all unit add ons on the given deal packet that are not included in the profit calculation for the deal packet.                                               |
-| TotalNonProfitUnitAddOnPrice | This field displays the total price of all unit add ons on the given deal packet that are not included in the profit calculation for the deal packet.                                              |
-| TotalPayoff                  | This field displays the total amount of all payoffs on the given deal packet.                                                                                                                      |
-| TotalProfit                  | This field displays the amount of the total price of the deal packet that is profit (price - cost).                                                                                                |
-| TotalProfitDealAddOnCost     | This field displays the total cost of all deal add ons on the given deal packet that are included in the profit calculation for the deal packet.                                                   |
-| TotalProfitDealAddOnPrice    | This field displays the total price of all deal add ons on the given deal packet that are included in the profit calculation for the deal packet.                                                  |
-| TotalProfitPercent           | This field displays the percentage of the total price of the deal packet that is profit.                                                                                                           |
-| TotalProfitUnitAddOnCost     | This field displays the total cost of all unit add ons on the given deal packet that are included in the profit calculation for the deal packet.                                                   |
-| TotalProfitUnitAddOnPrice    | This field displays the total price of all unit add ons on the given deal packet that are included in the profit calculation for the deal packet.                                                  |
-| TotalSalesTax                | This field displays the total amount of sales tax on the given deal packet.                                                                                                                        |
-| TotalTradeInAllowance        | This field displays the total allowance given on all trade in units on the given deal packet.                                                                                                      |
-| TotalUnitAddOnCost           | This field displays the total cost of all unit add ons on the given deal packet.                                                                                                                   |
-| TotalUnitAddOnPrice          | This field displays the total price of all unit add ons on the given deal packet.                                                                                                                  |
-| TotalUnitCost                | This field displays the total cost of all units on the given deal packet.                                                                                                                          |
-| TotalUnitPrice               | This field displays the total price of all units on the given deal packet.                                                                                                                         |

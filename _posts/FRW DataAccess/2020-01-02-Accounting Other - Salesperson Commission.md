@@ -11,10 +11,12 @@ type: "data_access" comments: falsedescription: Access to the parts and servic
 This data object displays parts and service salesperson commission records as
 seen in the Salesperson Commission Display application in Fusion.
 
- <!-- 
+ #### URL
+```
+/frw/SalesPersonCommission
+```
 
-
- -->  <hr>Field Details...
+<hr>Field Details...
 
 | **SQL Field Name**   | **Column Description**                                                                                                             |
 |---|---|
