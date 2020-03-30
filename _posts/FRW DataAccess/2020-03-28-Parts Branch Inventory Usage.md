@@ -5,12 +5,10 @@ category: "Parts"
 icon: "icon-gear"
 type: "data_access" 
 comments: false
-description:  
+description:  Display usage of a given parts inventory detail record
 ---
 
 ---
----
-Branch Inventory Usage
 ---
 
 This data object is used to display usage of a given parts inventory detail record. A record will be displayed for each month/year combination in which the given part had greater than zero picks or greater than zero sales. Please note that no records will be displayed for a part that has never had any picks or sales. To get a listing of all parts inventory records with their corresponding usage records, start in Parts Inventory or Parts Inventory Extended and join to Parts Inventory Usage.
@@ -21,9 +19,10 @@ This information comes from the 12 Month History tab in the Parts Inventory appl
 #### URL 
 ```
 /frw/PartsInventoryUsage
-``` 
- <hr>
-Field Details...
+```
+
+<hr>
+#### Field Details...
 
 | **SQL Field Name**            | **Column Description**                                                                                                                                                             |
 |---|---|
