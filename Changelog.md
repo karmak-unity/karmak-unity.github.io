@@ -13,6 +13,10 @@ title: "Changelog"
 * Meter Reading
 * Customer Special pricing
 * Quick Lists (Helper APIs)
+* Parts Supersession (Create / Update / Delete)
+* Parts Cross Reference (Create / Update / Delete)
+* Parts Inventory (Create / Update) 
+* Parts Supplier (Create / Update)
 
 #### Added documentation for data reporting services (read only)
 * Parts Inventory Receiving Detail
