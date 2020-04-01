@@ -22,7 +22,7 @@ To view the corresponding detail information, join to Deal Detail. This will dis
 
 #### URL
 ```
-
+/frw/SalesDealHeader
 ```
 
 <hr>
