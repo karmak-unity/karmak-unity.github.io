@@ -19,7 +19,7 @@ This information can be found by clicking the detail hyperlinks in the Deal appl
  
 #### URL
 ```
-
+/frw/SalesDealDetail
 ```
 
 <hr>
