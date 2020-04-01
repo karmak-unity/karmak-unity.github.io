@@ -34,10 +34,6 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/UpdateCrossRef
 https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/DeleteCrossReference
 ```
 
-### GET Request
-- Retrieving Supplier records in Fusion via Unity can be handled by performing a GET against the Supplier Data Object in the Reports DataAccess section of the Unity Documentation located here; [Parts Supplier](https://unity.karmak.io/Parts-Supplier.html)
-
-
 #### Specifications
 --------------
 
@@ -73,6 +69,7 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/DeleteCrossRef
      -   From Part Number, From Supplier, To Part Number, To Supplier (Substitution)
      -   Linkage Text, To Part Number, To Supplier (Cross Reference)
 -    A response will be provided with a message section that will outline a success or any issues that prevented the Cross Reference or Substitution from being updated.
+
 
 ### POST/PUT Request Fields
 
