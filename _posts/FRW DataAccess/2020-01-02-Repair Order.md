@@ -17,7 +17,7 @@ This information can be found in the Repair Order application within the Fusion 
 
 #### URL
 ```
-/frw/RepairOrderQuoteDetails
+/frw/RepairOrderDetails
 ```
  
 <hr>
