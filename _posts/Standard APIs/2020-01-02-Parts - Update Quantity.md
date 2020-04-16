@@ -21,9 +21,7 @@ https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/adjustquantity
 #### Restrictions
 -   Multiple parts can be updated in a single PUT request
 
--   If part is sent in multiple times in a single request, an error will be
-    returned stating that the same part is not allowed to be updated multiple
-    times in a single request.
+-   If part is sent in multiple times in a single request, an error will be returned stating that the same part is not allowed to be updated multiple times in a single request.
 
 -   The parts transaction reason code will be 'PARTQTYAPI'.
 
