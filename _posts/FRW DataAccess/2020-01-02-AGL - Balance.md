@@ -13,7 +13,7 @@ This data object currently only pulls in the current year and the previous 2 yea
 
 #### URL
 ```
-/frw/APGLDetail
+/frw/GeneralLedgerBalance
 ```
  <hr>Field Details...
 
