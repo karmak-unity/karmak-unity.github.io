@@ -5,6 +5,10 @@ title: "Changelog"
 
 ---
 ---
+## 2020-APR
+### What's New
+* Field aliasing capabilities for Data Access Views
+
 
 ## 2020-MAR
 ### What's New

@@ -145,3 +145,50 @@ page={pagenumber}&pagesize{pagesize}
 |---|---|
 |page=1&pagesize=100 | start at page 1 and return 100 results |
 |page=12&pagesize=500| start at page 12 and return 500 results |
+
+
+
+---
+---
+
+### Aliasing
+
+---
+
+Aliasing can be used to rename the columns received from Unity. Simply select a column and provide a new name in the following format:
+ select={columnname}:{newname}
+
+It is possible to use more than one alias at a time:
+
+select={columnname}:{newname},{columnname}:{newname},{columnname}:{newname}
+
+
+**Examples**
+
+select=UserName  and with alias: select=UserName:User
+```json
+[
+	{ "UserName": "MyUser"},
+    { "UserName": "MyUser2"}
+]
+
+[
+	{ "User": "MyUser"},
+	{ "User": "MyUser2"}
+]
+```
+select=UserName:User,UserNumber:Id,DOB:Birthday
+```json
+[
+	{ 
+        "User": "MyUser"
+        "ID": "1"
+        "Birthday": "03-02-1973"
+    },
+    {
+    	"User": "MyUser2"
+        "ID": "2"
+        "Birthday": "01-21-1985"
+    }
+]
+```
