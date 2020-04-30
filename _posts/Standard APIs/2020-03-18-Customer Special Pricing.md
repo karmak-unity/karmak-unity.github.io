@@ -17,38 +17,38 @@ Customer Special Pricing API allows users to create or update customer special p
 
 Customer Special Pricing API supports the PUT and the POST method.
 
-### Create
-#### POST and PUT
+## Create
+### POST and PUT
 - Note: The PUT method will overwrite an existing record
 
 ```
 https://api.karmak.io/api/unity/{version}/unityapi/CustomerSpecialPricing/Create
 ```
 
-### Update
-#### PUT
+## Update
+### PUT
 ```
 https://api.karmak.io/api/unity/{version}/unityapi/CustomerSpecialPricing/Update
 ````
 
-### BUSINESS RULES
+## BUSINESS RULES
 ---
 
 Customer Special Pricing records created via an API **must** define a Pricing Target and a Pricing Strategy.
--   Pricing Target - the target to which the record will apply, either a Customer Price Type, or Customer.
-    -   Customer Price Type
-    -   Customer
--   Pricing Strategy - the type of pricing for which the record is created
-    -   Cost Matrix
-    -   Velocity
-    -   Price Data
+
 -   Only one Pricing Target can be passed in the request.
 -   Only one Pricing Strategy can be passed in the request.
 -   Both a Pricing Target and a Pricing Strategy must be passed.
 
-When Pricing Target and Pricing Strategy have been defined, a specific dataset must be passed in the payload to create the customer special pricing record.
+ 
 
-### Customer Price Type
+---
+
+### Pricing Target 
+The target to which the record will apply, either a Customer Price Type, or Customer.
+
+
+#### Customer Price Type
 
 To create or update a customer special pricing record by Customer Price Type:
 -   Pass in the Customer Price Type to which the record applies
@@ -59,277 +59,219 @@ To create or update a customer special pricing record by Customer:
 -   Pass in the Customer Key and Customer base branch code to which the record applies
     -   A valid list of customers can be obtained using the Customer data access API
 
+
+
+---
+
+
+### Pricing Strategy
+The type of pricing for which the record is created (Cost Matrix, Velocity, Part Criteria)
+
+
+
 #### Cost Matrix
 To create or update a customer special pricing record for Cost Matrix Code:
--   Pass in the Cost Matrix Code to which the record applies
-    -   A list of valid Cost Matrix Codes can be obtained using the Quick List data access API
--   When Pricing Strategy = Cost Matrix Code, the following fields can be passed, but are not required:
-    -   Expiration Date
-    -   Internal Note
+-   Pass in the Cost Matrix Code to which the record applies.
+    -   A list of valid Cost Matrix Codes can be obtained using the Quick List data access API.
+
 
 #### Velocity
 To create or update a customer special pricing record by Velocity Type Code:
--   Pass in the Velocity Code Type to which the record applies
-    -   A valid list of Velocity Type Codes can be obtained using the VelocityCodeTypes data access API
+-   Pass in the Velocity Code Type to which the record applies.
+    -   A valid list of Velocity Type Codes can be obtained using the VelocityCodeTypes data access API.
 	
--   When Pricing Strategy = Velocity Type Code, the following fields can be passed, but are not required:
-    -   Expiration date
-    -   Internal Note
 
-### **Price Data**
+#### Part Criteria
 To create or update a customer special pricing record by Price Data:
--   There are multiple pricing paths in the Price Data strategy, and the payload part criteria are specific to each.
-
-
-To create or update **Price Level** pricing
--   A price level MUST be passed
-
-
-| **Data Element** | **Appearance** | **Business Rules** |
-|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------|
-| Price Level                | Required | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
-| Service Uses Parts Pricing | Optional |                                                                                                                     |
-| Service Level              | Optional | Passed only when Service Uses Parts Pricing = False                                                                 |
-| Additional Multiplier      | Optional | If passed, must be greater than 0.                                                                                  |
-| Supplier(s)                | Optional | If Supplier is passed, Price Group must not be present.                                                             |
-| Price Group(s)             | Optional | If Price Group is passed, Supplier must not be present.                                                             |
-| Part Type                  | Optional | Must be one of the following: Part, Exchange, Core                                                                  |
-| Stock Class                | Optional | Must not exceed 10 characters.                                                                                      |
-| Code 1                     | Optional | Must not exceed 10 characters.                                                                                      |
-| Code 2                     | Optional | Must not exceed 10 characters.                                                                                      |
-| Expiration Date            | Optional |                                                                                                                     |
-| Internal Note              | Optional | Must not exceed 100 characters.                                                                                     |
+-   There are multiple pricing paths in the part criteria strategy.
+	- Note: in order to create or update Part Number pricing, you must also pass a price level or a Contract Price
 
 ---
-
 ---
 
-To create or update **Supplier** pricing
--   A Supplier or Suppliers must be passed
--   A Price Level must be passed
-
-| **Data Element** | **Appearance** | **Business Rules** |
-|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------|
-| Price Level                | Required                             | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
-| Service Uses Parts Pricing | Optional                             |                                                                                                                     |
-| Service Level              | Optional                             | Passed only when Service Uses Parts Pricing = False                                                                 |
-| Additional Multiplier      | Optional                             | If passed, must be greater than 0.                                                                                  |
-| Supplier(s)                | Required to set pricing for Supplier | If Supplier is passed, Price Group must not be present.                                                             |
-| Part Type                  | Optional                             | Must be one of the following: Part, Exchange, Core                                                                  |
-| Stock Class                | Optional                             | Must not exceed 10 characters.                                                                                      |
-| Code 1                     | Optional                             | Must not exceed 10 characters.                                                                                      |
-| Code 2                     | Optional                             | Must not exceed 10 characters.                                                                                      |
-| Expiration Date            | Optional                             |                                                                                                                     |
-| Internal Note              | Optional                             | Must not exceed 100 characters.                                                                                     |
-
----
-
----
-
-To create or update **Price Group** pricing
--   A Price Group or Price Groups must be passed
--   A Price Level must be passed
-
-
-| Price Level                | Required                               | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
-|----------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Service Uses Parts Pricing | Optional                               |                                                                                                                     |
-| Service Level              | Optional                               | Passed only when Service Uses Parts Pricing = False                                                                 |
-| Additional Multiplier      | Optional                               | If passed, must be greater than 0.                                                                                  |
-| Price Group(s)             | Required to set pricing by Price Group | If Price Group is passed, Supplier must not be present.                                                             |
-| Part Type                  | Optional                               | Must be one of the following: Part, Exchange, Core                                                                  |
-| Stock Class                | Optional                               | Must not exceed 10 characters.                                                                                      |
-| Code 1                     | Optional                               | Must not exceed 10 characters.                                                                                      |
-| Code 2                     | Optional                               | Must not exceed 10 characters.                                                                                      |
-| Expiration Date            | Optional                               |                                                                                                                     |
-| Internal Note              | Optional                               | Must not exceed 100 characters.                                                                                     |
+| **Data Element** | **Business Rules** |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------|
+| PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
+| ServiceUsesPartsPricing 	|                                                                                                                     |
+| ServiceLevel              | Passed only when Service Uses Parts Pricing = False                                                                 |
+| Multiplier      			| If passed, must be greater than 0.                                                                                  |
+| SupplierCode                | If Supplier is passed, Price Group must not be present.                                                             |
+| PriceGroup          		| If Price Group is passed, Supplier must not be present.                                                             |
+| PartType                  | Must be one of the following: Part, Exchange, Core                                                                  |
+| StockClass                | Must not exceed 10 characters.                                                                                      |
+| Code1                     | Must not exceed 10 characters.                                                                                      |
+| Code2                     | Must not exceed 10 characters.                                                                                      |
+| ExpirationDate            |                                                                                                                     |
+| PartNumber                | Must be valid Fusion part.                                                                                          |
+| Price             		| If Price Level is passed, Contract Price must not be present.                                                       |
+| InternalNote              | Must not exceed 100 characters.                                                                                     |
+| PricingTarget				|	|
+| CustomerKey				|	|
+| CustomerBaseBranchCode	|	|
+| CustomerPriceType			|	|
+| CostMatrixCode			|	|
+| VelocityCode				|	|
 
 ---
-
 ---
 
-To create or update **Part Number** pricing
--   A Part Number must be passed
--   A Price Level must be passed *or* a Contract Price must be passed
 
 
-| **Data Element** | **Appearance** | **Business Rules** |
-|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------|
-| Price Level                | Conditional | If Contract Price is passed, Price Level must not be present. If no Contract Price is passed, Price Level is required. |
-| Service Uses Parts Pricing | Optional    |                                                                                                                        |
-| Service Level              | Optional    | Passed only when Service Uses Parts Pricing = False                                                                    |
-| Additional Multiplier      | Optional    | If passed, must be greater than 0.                                                                                     |
-| Part Number                | Required    | Must be valid Fusion part.                                                                                             |
-| Contract Price             | Optional    | If Price Level is passed, Contract Price must not be present.                                                          |
-| Always Use Contract Price  | Optional    | May only be present if Contract Price is passed.                                                                       |
-| Expiration Date            | Optional    |                                                                                                                        |
-| Internal Note              | Optional    | Must not exceed 100 characters.                                                                                        |
-
- 
-
-### Request Samples
+## Request Samples
 --------------------
--   Pricing Target - Customer Price Type
--   Pricing Strategy - Price Data, for Cost Matrix pricing
 
+If you call the POST method, an existing record is NOT overridden, if you call PUT method then override occurs
+
+The general structure of the payload is as follows:
 ```json
 [
     {
-        "ExpirationDate": "2020-3-24",
-        "PricingTarget": {
-        	"customerPriceType" : "Cash"
-        },
-        "PricingStrategy" : {
-        	"CostMatrixCode" : "A"
-        },
-        "InternalNote": "test note"
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {  },
+        "PricingStrategy": {  },
+        "InternalNote": "This is my note."
     }
 ]
 ```
 
----
+First determine what type of Pricing Target you are going to use, either Customer or Customer Price Type.
 
----
 
--   Pricing Target - Customer Price Type
--   Pricing Strategy - Price Data, for Velocity pricing
+**PricingTarget for a Customer:**
 
+```json
+{
+    "CustomerKey": "12345",
+    "CustomerBaseBranchCode": "15"
+}
+```
+
+
+**PricingTarget for a CustomerPriceType:**
+
+```json
+{
+    "CustomerPriceType": "234abc"
+}
+```
+
+Then you need to determine which Strategy you are going to use, Cost Matrix Code, Velocity Code, or Part Criteria.
+
+
+**PricingStrategy for Cost Matrix Code:**
+
+```json
+{
+    "CostMatrixCode": "25abc"
+}
+```
+
+
+**PricingStrategy for Velocity Code:**
+
+```json
+{
+    "VelocityCode": "01adb"
+}
+```
+
+For Part Criteria you have a few more choices to make, the Price Info and the Part Criteria to which it should apply.
+  
+You will need to determine which PriceInfo you are going to specify for this record, Contract Price, Parts Price Level, or Service Price Level.
+
+Also, the PartCriteria does NOT have to be fully populated, this is as restrictive as needed to establish the scenario(s) this pricing record should cover.
+
+
+**PricingStrategy for Part Criteria:**
+
+```json
+{
+    "PriceData": {
+        "ServiceUsesPartsPricing": "false",
+        "PriceInfo": {}
+    },
+    "PartCriteria": {
+        "Suppliers": [  //Only Supplier OR PriceGroup can be used not both
+            {
+                "SupplierCode": "bc23"
+            }
+        ],
+        "PriceGroups": [ //Only Supplier OR PriceGroup can be used not both
+            {
+                "PriceGroup": "87asdf"
+            }
+        ],
+        "PartType": "part",
+        "StockClass": "123abc",
+        "Code1": "456def",
+        "Code2": "ghj789",
+        "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+    }
+}
+```
+
+
+**PriceInfo for Contract Price:**
+
+```json
+{
+    "Price": "1.00"
+}
+```
+
+
+**PriceInfo for Parts Price Level**
+
+```json
+{
+    "PartsLevel": "Price 1",
+    "Multiplier": "1.5"
+}
+```
+
+
+**PriceInfo for Service Level**
+
+```json
+{
+    "ServiceLevel": "Price 1",
+    "Multiplier": "1.5"
+}
+```
+
+
+**Pricing Target is Customer, Pricing Strategy is Velocity Code example:**
 
 ```json
 [
     {
-        "ExpirationDate": "2020-1-24",
+        "ExpirationDate": "04/30/2020",
         "PricingTarget": {
-        	"customerPriceType" : "General Accounts"
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
         },
-        "PricingStrategy" : {
-        	"VelocityCode" : "Zebra"
+        "PricingStrategy": {
+            "VelocityCode": "01adb"
         },
-        "InternalNote": "test note"
+        "InternalNote": "This is my note."
     }
 ]
 ```
 
----
 
----
-
--   Pricing Target - Customer Price Type
--   Pricing Strategy - Price Data
-    -   Price Level set to Price 5
-    -   Multiple Suppliers are passed
-    -   Part Type = Part
-
+**Pricing Target is Customer Price Type, Pricing Strategy is Velocity Code example:**
 
 ```json
 [
     {
-        "ExpirationDate": "2020-3-24",
+        "ExpirationDate": "04/30/2020",
         "PricingTarget": {
-            "customerPriceType" : "Pinnacle Accounts"
+            "CustomerPriceType": "234abc"
         },
-        "PricingStrategy" : {
-            "priceData" : {
-                "ServiceUsesPartsPricing" : "false",
-                "priceInfo" : {
-                    "PartsLevel" : "Price 5"
-                }
-            },
-            "partCriteria" : {
-                "suppliers" : [
-                        {
-                            "SupplierCode" : "00OP1"
-                        },
-                        {
-                            "SupplierCode" : "00OP2"
-                        }
-                    ],
-                "PartType" : "Part"
-            }
+        "PricingStrategy": {
+            "VelocityCode": "01adb"
         },
-        "InternalNote": "test note"
-}
-
-]
-```
-
----
-
----
-
--   Pricing Target - Customer
--   Pricing Strategy - Price Data
-    -   Parts Level set to List
-
-```json
-[
-    {
-        "ExpirationDate": "2020-1-24",
-        "PricingTarget": {
-            "CustomerKey": "1061",
-            "CustomerBaseBranchCode": "01"
-        },
-        "PricingStrategy" : {
-            "priceData" : {
-                "ServiceUsesPartsPricing" : "false",
-                "priceInfo" : {
-                    "PartsLevel" : "List"
-                }
-            },
-            "partCriteria" : {
-                "suppliers" : [
-                        {
-                            "SupplierCode" : "00OP1"
-                        }
-                        
-                    ]
-                
-            }
-        },
-        "InternalNote": "test note"
-}
-
-]
-```
-
----
-
----
-
--   Pricing Target - Customer Price Type
--   Pricing Strategy - Price Data
-    -   Expiration Date Passed
-    -   Multiple Suppliers are passed
-    -   Part Type = Part
-    -   Service Price Level set to Price 5
-
-```json
-[
-    {
-        "ExpirationDate": "2020-3-24",
-        "PricingTarget": {
-            "customerPriceType" : "Pinnacle Accounts"
-        },
-        "PricingStrategy" : {
-            "priceData" : {
-                "ServiceUsesPartsPricing" : "false",
-                "priceInfo" : {
-                    "ServiceLevel" : "Price 5"
-                }
-            },
-            "partCriteria" : {
-                "suppliers" : [
-                        {
-                            "SupplierCode" : "00OP1"
-                        },
-                        {
-                            "SupplierCode" : "00OP2"
-                        }
-                    ],
-                "PartType" : "Part"
-            }
-        },
-        "InternalNote": "test note"
-}
+        "InternalNote": "This is my note."
+    }
 ]
 ```
