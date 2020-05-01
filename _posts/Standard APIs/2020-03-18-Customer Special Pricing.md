@@ -275,3 +275,271 @@ Also, the PartCriteria does NOT have to be fully populated, this is as restricti
     }
 ]
 ```
+
+
+
+
+**Pricing Target is Customer, Pricing Strategy is Cost Matrix Code:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
+        },
+        "PricingStrategy": {
+            "CostMatrixCode": "25abc"
+        },
+        "InternalNote": "This is my note."
+    }
+]
+
+```
+
+
+
+**Pricing Target is Customer Price Type, Pricing Strategy is Cost Matrix Code example:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerPriceType": "234abc"
+        },
+        "PricingStrategy": {
+            "CostMatrixCode": "25abc"
+        },
+        "InternalNote": "This is my note."
+    }
+]
+
+```
+
+
+
+**Pricing Target is Customer, Pricing Strategy is Part Criteria, Price Info is Parts Price Level:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "PartsLevel": "Price 1",
+                    "Multiplier": "1.5"
+                }
+            },
+            "PartCriteria": {
+                "Suppliers": [  //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "SupplierCode": "bc23"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+
+```
+
+
+
+**Pricing Target is Customer, Pricing Strategy is Part Criteria, Price Info is Service Price Level:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "ServiceLevel": "Price 1",
+                    "Multiplier": "1.5"
+                }
+            },
+            "PartCriteria": {
+                "Suppliers": [  //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "SupplierCode": "bc23"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+
+```
+
+
+
+**Pricing Target is Customer, Pricing Strategy is Part Criteria, Price Info is Contract Price:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "Price": "1.00"
+                }
+            },
+            "PartCriteria": {
+                "PriceGroups": [ //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "PriceGroup": "87asdf"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+```
+
+
+
+**Pricing Target is Customer Price Type, Pricing Strategy is Part Criteria, Price Info is Parts Price Level:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerPriceType": "234abc"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "PartsLevel": "Price 1",
+                    "Multiplier": "1.5"
+                }
+            },
+            "PartCriteria": {
+                "PriceGroups": [ //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "PriceGroup": "87asdf"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+
+```
+
+
+
+**Pricing Target is Customer Price Type, Pricing Strategy is Part Criteria, Price Info is Service Price Level:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerPriceType": "234abc"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "ServiceLevel": "Price 1",
+                    "Multiplier": "1.5"
+                }
+            },
+            "PartCriteria": {
+                "Suppliers": [  //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "SupplierCode": "bc23"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+```
+
+
+
+**Pricing Target is Customer Price Type, Pricing Strategy is Part Criteria, Price Info is Contract Price:**
+
+```json
+[
+    {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerPriceType": "234abc"
+        },
+        "PricingStrategy": {
+            "PriceData": {
+                "ServiceUsesPartsPricing": "false",
+                "PriceInfo": {
+                    "Price": "1.00"
+                }
+            },
+            "PartCriteria": {
+                "Suppliers": [  //Only Supplier OR PriceGroup can be used not both
+                    {
+                        "SupplierCode": "bc23"
+                    }
+                ],
+                "PartType": "part",
+                "StockClass": "123abc",
+                "Code1": "456def",
+                "Code2": "ghj789",
+                "PartNumber": "3nva34"  //If PartNumber is used then at least one Supplier is required
+            }
+        },
+        "InternalNote": "This is my note."
+    }
+]
+```
