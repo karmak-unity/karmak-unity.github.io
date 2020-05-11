@@ -148,7 +148,6 @@ When Controlled G/L Accounts are used, the account must be validated against the
     "PaymentTerms": "Net 30th",
     "DueDate": "2019-05-30",
     "PostingDescription": "Vendor 10490 Invoice I1234-lpo",
-    "PostingBranch": "01",
     "ReferenceNumber": "5415",
     "Details": [
       {

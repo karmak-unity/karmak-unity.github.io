@@ -14,7 +14,7 @@ The PUT method will be used to update available quantity on an active Fusion par
 
 ### PUT Method
 ```
-https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/adjustquantity
+https://api.karmak.io/api/unity/{version}/unityapi/partsinventory/udpatepartquantity
 ```
 
 
