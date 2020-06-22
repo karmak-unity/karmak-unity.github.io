@@ -16,7 +16,7 @@ title: "Changelog"
 * AP Vendors (Create / Update)
 * Part Quantity (Update)
 * Technicians (Create / Update)
-* Users (Create / Read / Update)
+* Users (Create / Read / Update)cd
 
 #### Updates
 * Customers (Create / Read / Update)

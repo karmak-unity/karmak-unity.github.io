@@ -113,6 +113,7 @@ To create or update a customer special pricing record by Price Data:
 | CostMatrixCode			|	|
 | VelocityCode				|	|
 
+
 ---
 ---
 
