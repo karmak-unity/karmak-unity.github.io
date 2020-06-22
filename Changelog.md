@@ -5,6 +5,22 @@ title: "Changelog"
 
 ---
 ---
+## 2020-JUN
+* added 'always use contract price' option to Customer special pricing  (v3.59.90)
+* added documentation for View Customers (data reporting)
+
+## 2020-MAY
+
+#### Added Unity Workflow APIs
+* AP Invoice (Create)
+* AP Vendors (Create / Update)
+* Part Quantity (Update)
+* Technicians (Create / Update)
+* Users (Create / Read / Update)
+
+#### Updates
+* Customers (Create / Read / Update)
+
 ## 2020-APR
 ### What's New
 * Field aliasing capabilities for Data Access Views
