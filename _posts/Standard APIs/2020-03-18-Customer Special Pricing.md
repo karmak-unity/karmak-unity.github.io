@@ -89,13 +89,14 @@ To create or update a customer special pricing record by Price Data:
 ---
 ---
 
+
 | **Data Element** | **Business Rules** |
-|----------------------------|---------------------------------------------------------------------------------------------------------------------|
+|---------------------------|---------------------------------------------------------------------------------------------------------------------|
 | PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
 | ServiceUsesPartsPricing 	|                                                                                                                     |
 | ServiceLevel              | Passed only when Service Uses Parts Pricing = False                                                                 |
 | Multiplier      			| If passed, must be greater than 0.                                                                                  |
-| SupplierCode                | If Supplier is passed, Price Group must not be present.                                                             |
+| SupplierCode                | If Supplier is passed, Price Group must not be present.                                                           |
 | PriceGroup          		| If Price Group is passed, Supplier must not be present.                                                             |
 | PartType                  | Must be one of the following: Part, Exchange, Core                                                                  |
 | StockClass                | Must not exceed 10 characters.                                                                                      |
@@ -105,12 +106,14 @@ To create or update a customer special pricing record by Price Data:
 | PartNumber                | Must be valid Fusion part.                                                                                          |
 | Price             		| If Price Level is passed, Contract Price must not be present.                                                       |
 | InternalNote              | Must not exceed 100 characters.                                                                                     |
+| AlwaysUseContractPrice	| When setting a price for a customer, determine whetheror not to always use contract price							  |
 | PricingTarget				|	|
 | CustomerKey				|	|
 | CustomerBaseBranchCode	|	|
 | CustomerPriceType			|	|
 | CostMatrixCode			|	|
 | VelocityCode				|	|
+
 
 ---
 ---
@@ -416,7 +419,8 @@ First determine what type of Pricing Target you are going to use, either Custome
                 "ServiceUsesPartsPricing": "false",
                 "priceInfo": {
                     "Price": "1.00"
-                }
+                    "AlwaysUseContractPrice" : true
+					}
             },
             "partCriteria": {
                 "suppliers": [  //Only Supplier OR PriceGroup can be used not both
