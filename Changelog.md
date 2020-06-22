@@ -9,6 +9,7 @@ title: "Changelog"
 * added 'always use contract price' option to Customer special pricing  (v3.59.90)
 * added documentation for View Customers (data reporting)
 
+
 ## 2020-MAY
 
 #### Added Unity Workflow APIs

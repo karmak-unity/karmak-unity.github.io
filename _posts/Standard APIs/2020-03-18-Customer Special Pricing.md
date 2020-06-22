@@ -89,6 +89,7 @@ To create or update a customer special pricing record by Price Data:
 ---
 ---
 
+
 | **Data Element** | **Business Rules** |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------|
 | PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
