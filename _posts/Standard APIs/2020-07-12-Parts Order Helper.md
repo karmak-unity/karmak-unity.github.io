@@ -10,9 +10,13 @@ description: Helper APIs for Creating Parts Order, Get Avaialble Payments and Pi
 
 The Part Search Helper APIs provide information and details to successfully submit a parts order
 
-### *requires Fusion version 3.60.10*
+***NOTE: Requires Fusion version 3.60.10***
 
-## Available Payment Methods
+---
+---
+
+
+### Available Payment Methods
 -------------------------
 
 When submitting a Parts Order, I need to be able to look up the Available Payment Methods for the customer so I can submit my parts order correctly.
@@ -56,8 +60,10 @@ When submitting a Parts Order, I need to be able to look up the Available Paymen
 ]
 ```
  
+-------------------------
 
-## Pickup / Delivery Methods
+
+### Pickup / Delivery Methods
 -------------------------
 
 When creating a parts order, I need to know which are valid pick up and delivery methods by Branch location.
@@ -69,8 +75,10 @@ GET endpoint to look up and return a list of the delivery methods for parts by b
 | ID | String | This is the Branch ID that will be looked up |
 
 
+---
 
-**REQUEST**
+
+#### Sample Request
 ```json
 [
 	{
@@ -79,7 +87,8 @@ GET endpoint to look up and return a list of the delivery methods for parts by b
 ]
 ```
  
-**RESPONSE**
+
+#### Sample Response
 ```json
 [
 	{

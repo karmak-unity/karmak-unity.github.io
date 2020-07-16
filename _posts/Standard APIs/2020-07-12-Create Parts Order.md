@@ -14,13 +14,17 @@ The Part Order API is used to create a parts order.
 When placing an order the parts and quantities passed to the API are processed as an order on the business system and, if successful, the order number is returned.
 
 
-### *requires Fusion version 3.60.10*
+***NOTE: Requires Fusion version 3.60.10***
  
+---
+---
 
 **Validations for Part Order**
 
 - For customer with “On Hold” status in the business system, the order will be placed only if the “Allow order if On-Hold/Over Credit Limit?” flag is set to “Yes” for the customer in the Admin web site. Customer status is controlled by the business system.
 
+---
+---
 
 
 #### Data Fields

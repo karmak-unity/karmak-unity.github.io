@@ -5,6 +5,9 @@ title: "Changelog"
 
 ---
 ---
+## 2020-JUL
+* Added Create Parts Sales Order and associated Parts search and Helper APis (v3.60.10)
+
 ## 2020-JUN
 * added 'always use contract price' option to Customer special pricing  (v3.59.90)
 * added documentation for View Customers (data reporting)

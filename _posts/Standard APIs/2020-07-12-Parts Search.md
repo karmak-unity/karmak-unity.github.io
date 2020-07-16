@@ -13,8 +13,12 @@ The Part Search API is used to search for parts by part ID, Description and by p
 
 The Search returns detail part information including pricing by customer if requested and quantity available.
 
-### *requires Fusion version 3.60.10*
 
+
+***NOTE: Requires Fusion version 3.60.10***
+
+---
+---
 
 ### Request Fields
 
