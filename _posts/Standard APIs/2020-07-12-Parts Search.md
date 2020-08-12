@@ -70,12 +70,15 @@ The Search returns detail part information including pricing by customer if requ
 /api/unity/{version}/unityapi/partSearch
 ```
 
+
 ### REQUEST
 ```json
-[{
+[
+{
 	"customerID": "bu4999",
 	"locationID": "234234",
-	"parts": [{
+	"parts": [
+		{
 			"number": "F120",
 			"description": "F120",
 			"exactMatch": false,
@@ -88,7 +91,8 @@ The Search returns detail part information including pricing by customer if requ
 			"source": ""
 		}
 	]
-}]
+}
+]
 ```
 
 
