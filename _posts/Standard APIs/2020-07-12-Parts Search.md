@@ -131,7 +131,7 @@ The Search returns detail part information including pricing by customer if requ
 			"Weight": "8",
 			"Available": "12",
 			"Price": {
-				"customerPrice": 9.00",
+				"customerPrice": "9.00",
 				"listPrice": "0.00"
 			},
 			"Core": {
