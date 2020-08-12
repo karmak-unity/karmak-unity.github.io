@@ -72,24 +72,23 @@ The Search returns detail part information including pricing by customer if requ
 
 ### REQUEST
 ```json
-[
-  "customerID": "bu4999",
-  "locationID": "234234", //branch location
-  "parts:" [
-  {
-    "number": "F120",
-    "description": "F120",
-    "exactMatch": false,
-    "source": ""
-  },
-  {
-    "number": "F121",
-    "description": "F121",
-    "exactMatch": false,
-    "source": ""
-  }
-  ]
-]
+[{
+	"customerID": "bu4999",
+	"locationID": "234234",
+	"parts": [{
+			"number": "F120",
+			"description": "F120",
+			"exactMatch": false,
+			"source": ""
+		},
+		{
+			"number": "F121",
+			"description": "F121",
+			"exactMatch": false,
+			"source": ""
+		}
+	]
+}]
 ```
 
 
