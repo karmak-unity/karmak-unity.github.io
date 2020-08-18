@@ -89,6 +89,10 @@ A GET API to query branch department details.
 | "Last Update Date"            | Date/time the branch record was most recently updated.                                                                                                                             | datetime     |
 
  
+#### METHOD GET
+```json
+/frw/Branch
+```
 
 #### Sample Branch API Response
 
