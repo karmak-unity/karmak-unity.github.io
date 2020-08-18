@@ -54,6 +54,13 @@ When placing an order the parts and quantities passed to the API are processed a
 | PaymentMethod  | 30  | Y | PaymentMethod must match a payment method setup on the business system.                                                                                                                                       |
 
 
+
+#### REQUEST POST URL
+```
+.../unityapi/PartOrder
+```
+
+
 #### POST method
 ```json
 {
