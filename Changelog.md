@@ -5,6 +5,10 @@ title: "Changelog"
 
 ---
 ---
+
+## 2020-AUG
+* Added Create General Ledger : Create Journal Entry  (v.3.60.30)
+
 ## 2020-JUL
 * Added Create Parts Sales Order and associated Parts search and Helper APis (v3.60.10)
 
