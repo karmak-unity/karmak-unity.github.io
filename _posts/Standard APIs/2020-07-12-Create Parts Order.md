@@ -92,16 +92,7 @@ When placing an order the parts and quantities passed to the API are processed a
 		},
 	],
 	"Customer": {
-		"ID": "",
-		"firstName": "Business FName",
-		"lastName": "Business LName",
-		"addressLine1": "1 Karmak Plaza",
-		"addressLine2": "",
-		"city": "Carlinville",
-		"region": "ILLINOIS",
-		"postal": "62626",
-		"phone": "222-222-2222",
-		"email": "business\@website.com",
+		"ID": ""
 	},
 	"Shipping": {
 		"ShippingSameAsBilling": "Y",
