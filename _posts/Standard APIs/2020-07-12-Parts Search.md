@@ -67,7 +67,7 @@ The Search returns detail part information including pricing by customer if requ
 
 ### POST 
 ```
-/api/unity/{version}/unityapi/partSearch
+/api/unity/{version}/unityapi/PartsSearch/Search
 ```
 
 
