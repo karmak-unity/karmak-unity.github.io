@@ -73,7 +73,6 @@ The Search returns detail part information including pricing by customer if requ
 
 ### REQUEST
 ```json
-[
 {
 	"customerID": "bu4999",
 	"locationID": "234234",
@@ -92,7 +91,6 @@ The Search returns detail part information including pricing by customer if requ
 		}
 	]
 }
-]
 ```
 
 
