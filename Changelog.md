@@ -5,6 +5,12 @@ title: "Changelog"
 
 ---
 ---
+## 2021-JAN
+* Updated documentation for AP Invoice 
+* Added Process GUID field within responses.  This is a globally unique identifier per API request.  This value should be provided to Karmak support by the API consumer in the event there are questions or issues related to the Unity system.
+
+## 2020-DEC
+* Updated documentation for Create Parts order, Users, and Parts Search
 
 ## 2020-AUG
 * Added Create General Ledger : Create Journal Entry  (v.3.60.30)
