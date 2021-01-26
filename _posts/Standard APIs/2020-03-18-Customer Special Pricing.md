@@ -92,6 +92,7 @@ To create or update a customer special pricing record by Price Data:
 
 | **Data Element** | **Business Rules** |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------|
+| ID                        | ID of Customer Special Record (REQUIRED ONLY when posting an update |
 | PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
 | ServiceUsesPartsPricing 	|                                                                                                                     |
 | ServiceLevel              | Passed only when Service Uses Parts Pricing = False                                                                 |
@@ -125,10 +126,23 @@ To create or update a customer special pricing record by Price Data:
 
 If you call the POST method, an existing record is NOT overridden, if you call PUT method then override occurs
 
-The general structure of the payload is as follows:
+The general structure of the payload is as follows FOR CREATE:
 ```json
 [
     {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {  },
+        "PricingStrategy": {  },
+        "InternalNote": "This is my note."
+    }
+]
+```
+
+The general structure of the payload is as follows FOR UPDATE:
+```json
+[
+	{
+        "ID" : 100256,
         "ExpirationDate": "04/30/2020",
         "PricingTarget": {  },
         "PricingStrategy": {  },
@@ -145,6 +159,25 @@ First determine what type of Pricing Target you are going to use, either Custome
 ```json
 [
     {
+        "ExpirationDate": "04/30/2020",
+        "PricingTarget": {
+            "CustomerKey": "12345",
+            "CustomerBaseBranchCode": "15"
+        },
+        "PricingStrategy": {
+            "VelocityCode": "01adb"
+        },
+        "InternalNote": "This is my note."
+    }
+]
+```
+
+**To UPDATE the above record will appear as follows:**
+
+```json
+[
+    {
+		"ID": 100256,
         "ExpirationDate": "04/30/2020",
         "PricingTarget": {
             "CustomerKey": "12345",
