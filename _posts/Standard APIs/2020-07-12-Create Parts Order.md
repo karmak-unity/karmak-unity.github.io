@@ -54,7 +54,16 @@ When placing an order the parts and quantities passed to the API are processed a
 | DeliveryMethod | 100 | Y | DeliveryMethod must match a delivery method setup on the business system.                                                                                                                                     |
 | PaymentMethod  | 30  | Y | PaymentMethod must match a payment method setup on the business system.                                                                                                                                       |
  
- 
+#### Valid Order Status values
+```json
+{
+	"InProcess",
+    "Quote",
+    "PickingList,
+    "Invoiced",
+    "Voided"
+}
+ ```
 
 
 #### REQUEST POST URL
@@ -115,7 +124,6 @@ When placing an order the parts and quantities passed to the API are processed a
 		"PaymentMethod": "VISA"
 	}
 }
-```
 
 #### Sample Response
 ```json
