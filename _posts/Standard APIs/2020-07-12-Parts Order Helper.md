@@ -19,7 +19,7 @@ The Part Search Helper APIs provide information and details to successfully subm
 ### Available Payment Methods
 -------------------------
 
-When submitting a Parts Order, I need to be able to look up the Available Payment Methods for the customer so I can submit my parts order correctly.
+Provides a list of available payment methods to submit with a Parts Sales Order.
 
 1 submitted field: “customerID”
 
@@ -73,7 +73,8 @@ When submitting a Parts Order, I need to be able to look up the Available Paymen
 ### Pickup / Delivery Methods
 -------------------------
 
-When creating a parts order, I need to know which are valid pick up and delivery methods by Branch location.
+Provides a list of available valid pick up and delivery methods by Branch location to submit with a Parts Sales Order.
+
 
 POST endpoint to look up and return a list of the delivery methods for parts by branchID
 
@@ -132,9 +133,9 @@ POST endpoint to look up and return a list of the delivery methods for parts by 
 ### Department Lookup
 -------------------------
 
-When creating a parts order, I need to specify a department.
 
 This is the GET Endpoint to look up and return a list of the Department IDs by Branch(Location) ID.
+
 | Field | Field Type | Description |
 |----|--------|----------------------------------------------|
 | BranchID | Integer | The id of the location you’d like to find departments for.|
