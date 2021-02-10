@@ -1,182 +1,155 @@
 ---
-layout: post  
-title: "Parts Order Helpers"  
+layout: post
+title: "Create Parts Order"
 category: "Parts Sales Order"  
-icon: "icon-gear"  
-type: "api"  
-comments: false  
-description: Helper APIs for Creating Parts Order, Get Avaialble Payments and Pickup / Delivery Methods 
+icon: "icon-gear"
+type: "api" 
+comments: false
+description:  Create a parts order within Fusion and return an Order Number
 ---
 
-The Part Search Helper APIs provide information and details to successfully submit a parts order
+
+The Part Order API is used to create a parts order.
+
+When placing an order the parts and quantities passed to the API are processed as an order on the business system and, if successful, the order number is returned.
+
 
 ***NOTE: Requires Fusion version 3.60.10***
-
----
----
-
-
-### Available Payment Methods
--------------------------
-
-Provides a list of available payment methods to submit with a Parts Sales Order.
-
-1 submitted field: “customerID”
-
-#### Fields
-
-| Field Name  | Size | Description                                                              |
-|-------------|------|--------------------------------------------------------------------------|
-| ID          |      | ID Associated with the Payment Method                                    |
-| Method      | 30   | Payment Method must match a payment method setup on the business system. |
-| Description |      |                                                                          |
-
-
-#### REQUEST POST URL
-```
-.../unityapi/AvailablePaymentMethods
-```
  
+---
+---
 
-#### Sample Request
+**Validations for Part Order**
+
+- For customer with “On Hold” status in the business system, the order will be placed only if the “Allow order if On-Hold/Over Credit Limit?” flag is set to “Yes” for the customer in the Admin web site. Customer status is controlled by the business system.
+
+---
+---
+
+
+#### Data Fields
+
+| **Name**              | **Max Length** | **Required** | **Description**                                              |
+| --------------------- | -------------- | ------------ | ------------------------------------------------------------ |
+| LocationID     |     | Y | Branch or Location ID                                                                                                                                                                                         |
+| DepartmentID   |     | Y | DepartmentID                                                                                                                                                                                                  |
+| ID (Part)      | 50  | Y | PartsInventoryID as defined in the business system.                                                                                                                                                           |
+| ID (Customer)  | 50  | Y | CustomerID as defined in the business system. Currently required to create a PartsSalesOrder, in the future it may be possible to find or create a customer by providing contact info in place of this field. |
+| Quantity       | 11  | Y | Quantity to be ordered as a whole number.                                                                                                                                                                     |
+| Price          | 11  | Y | Price that was collected for the part/charge.                                                                                                                                                                 |
+| Name           | 50  | Y | Miscellaneous Charge name exactly as defined in the business system.                                                                                                                                          |
+| CompanyName    | 50  |   |                                                                                                                                                                                                               |
+| FirstName      | 50  |   |                                                                                                                                                                                                               |
+| LastName       | 50  |   |                                                                                                                                                                                                               |
+| AddressLine1   | 50  |   |                                                                                                                                                                                                               |
+| AddressLine2   | 50  |   |                                                                                                                                                                                                               |
+| City           | 35  |   |                                                                                                                                                                                                               |
+| region         | 50  |   |                                                                                                                                                                                                               |
+| Postal         | 15  |   |                                                                                                                                                                                                               |
+| Phone          | 20  |   |                                                                                                                                                                                                               |
+| Email          | 50  |   | May allow the DMS to send a copy of the invoice in the future.                                                                                                                                                |
+| Comments       | 200 |   | Comments/Shipping Instructions                                                                                                                                                                                |
+| OrderStatus    | 20  | Y | The Order Status generated by the API user. This provides a status to store in the FUSION system for the order  |
+| PONumber       | 20  | Y | The Purchase Order number generated by the API user. This provides a reference to the invoice                                                                                                                 |
+| DeliveryMethod | 100 | Y | DeliveryMethod must match a delivery method setup on the business system.                                                                                                                                     |
+| PaymentMethod  | 30  | Y | PaymentMethod must match a payment method setup on the business system.                                                                                                                                       |
+ 
+#### Valid Order Status values
 ```json
 {
-	"customerID": "8827892"
+	"In Process",
+    "Quote"
 }
-```
- 
-
-#### Sample Response
-```json
-[
-	{
-		"ID": "01",
-		"Method": "Credit Card",
-		"Description": ""
-	},
-	{
-		"ID": "02",
-		"Method": "Store Credit"
-		"Description": ""
-	},
-	{
-		"ID": "03",
-		"Method": "C.O.D."
-		"Description": ""
-	},
-]
-```
- 
--------------------------
-
-
-### Pickup / Delivery Methods
--------------------------
-
-Provides a list of available valid pick up and delivery methods by Branch location to submit with a Parts Sales Order.
-
-
-POST endpoint to look up and return a list of the delivery methods for parts by branchID
-
-| Field | Field Type | Description |
-|----|--------|----------------------------------------------|
-| ID | String | This is the Branch ID that will be looked up |
-
-
----
-
-#### REQUEST POST URL
-```
-.../unityapi/PickupDelivery
-```
-
-#### Sample Request
-```json
-[
-	{
-		"ID": "1234"
-	}
-]
-```
- 
-
-#### Sample Response
-```json
-[
-	{
-		"criteria": {
-			"ID": "1234"
-		},
-	"deliveryMethods": [
-		{
-			"deliveryMethod": "PickUp"
-		},
-		{
-			"deliveryMethod": "Delivery to Shop"
-		},
-		{
-			"deliveryMethod": "Pick Up main Branch"
-		},
-		{
-			"deliveryMethod": "Delivery to Remote"
-		},
-	]
-
-	}
-]
-```
-
-
--------------------------
-
-
-### Department Lookup
--------------------------
-
-
-This is the GET Endpoint to look up and return a list of the Department IDs by Branch(Location) ID.
-
-| Field | Field Type | Description |
-|----|--------|----------------------------------------------|
-| BranchID | Integer | The id of the location you’d like to find departments for.|
-
-
----
-
-
-#### REQUEST POST URL
-```
-.../unityapi/Departments?BranchID=x
-```
+ ```
  
+**OrderStatus Notations:**
 
-#### RESPONSE
+•	An “InProcess” status means when you add a part onto a Parts Order it will remove the Quantity from On Hand and it will go to a Committed Status where it will sit until you invoice it.
+
+•	A “Quote” won't remove quantity from the Available and by default it sets the Action Type of the Part to Force Fill and doesn't let that be changed until you turn the Quote into an Open Order in Fusion.
+
+
+#### REQUEST POST URL
+```
+.../unityapi/PartOrder
+```
+
+
+#### POST method
 ```json
 {
-    "Departments": [
+	"locationID": "2345644",
+	"departmentID": "4",
+	"comments": "DELIVER TOMORROW",
+	"Parts": [
+		{
+			"ID": "7RPEF120",
+			"quantity": "10",
+			"price": "25.00"
+		},
+		{
+			"ID": "7RPEF120100",
+			"Quantity": "1",
+			"Price": "0.50"
+		}
+	],
+	"miscCharges": [
+		{
+			"Name": "EPS/ShopM",
+			"Quantity": "1",
+			"Price": "20.00"
+		},
+		{
+			"Name": "Shipping",
+			"Quantity": "2",
+			"Price": "5.00"
+		},
+	],
+	"Customer": {
+		"ID": ""
+	},
+	"Shipping": {
+		"ShippingSameAsBilling": "Y",
+		"companyName": "ABC Distributors",
+		"firstName": "Business FName",
+		"lastName": "Business LName",
+		"addressLine1": "1 Karmak Plaza",
+		"addressLine2": "",
+		"city": "Carlinville",
+		"region": "IL",
+		"postal": "62626",
+		"phone": "222-222-2222",
+		"DeliveryMethod": "USPS",
+	},
+	"Payment": {
+		"OrderStatus": "In Process",
+		"PONumber": "13DB876973",
+		"PaymentMethod": "VISA"
+	}
+}
+
+#### Sample Response
+```json
+{
+    "locationID": "1",
+    "departmentID": "1",
+    "orderNumber": "200645",
+    "customerID": "1487",
+    "orderTotal": "-4.2900",
+    "lineItems": [
         {
-            "Name": "Admin",
-            "Type": "Accounting",
-            "ID": 0
-        },
-        {
-            "Name": "Body Shop",
-            "Type": "Service",
-            "ID": 0
-        },
-        {
-            "Name": "Bus",
-            "Type": "Sales",
-            "ID": 0
-        },
-        {
-            "Name": "Equipment",
-            "Type": "Parts",
-            "ID": 0
-        },
+            "partNumber": "0218GG151-C",
+            "supplier": "Bendix",
+            "description": "Exchange Part -Core",
+            "type": "RET",
+            "action": "Sale",
+            "quantity": "-1",
+            "price": "4.2940",
+            "extendedPrice": "-4.2900"
+        }
     ],
-    "Messages": [
-        "Success!"
+    "messages": [
+        "success"
     ]
 }
 ```
