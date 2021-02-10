@@ -57,12 +57,15 @@ When placing an order the parts and quantities passed to the API are processed a
 #### Valid Order Status values
 ```json
 {
-	"InProcess",
-    "Quote",
+	"In Process",
+    "Quote"
 }
  ```
+ 
 **OrderStatus Notations:**
+
 •	An “InProcess” status means when you add a part onto a Parts Order it will remove the Quantity from On Hand and it will go to a Committed Status where it will sit until you invoice it.
+
 •	A “Quote” won't remove quantity from the Available and by default it sets the Action Type of the Part to Force Fill and doesn't let that be changed until you turn the Quote into an Open Order in Fusion.
 
 
@@ -119,7 +122,7 @@ When placing an order the parts and quantities passed to the API are processed a
 		"DeliveryMethod": "USPS",
 	},
 	"Payment": {
-		"OrderStatus": "InProcess",
+		"OrderStatus": "In Process",
 		"PONumber": "13DB876973",
 		"PaymentMethod": "VISA"
 	}

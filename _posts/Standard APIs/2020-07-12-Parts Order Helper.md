@@ -41,7 +41,8 @@ Provides a list of available payment methods to submit with a Parts Sales Order.
 #### Sample Request
 ```json
 {
-	"customerID": "8827892"
+	"customerID": "8827892",
+	"locationID": "1"
 }
 ```
  
@@ -94,7 +95,7 @@ POST endpoint to look up and return a list of the delivery methods for parts by 
 ```json
 [
 	{
-		"ID": "1234"
+		"branchID": "1234"
 	}
 ]
 ```
@@ -105,7 +106,7 @@ POST endpoint to look up and return a list of the delivery methods for parts by 
 [
 	{
 		"criteria": {
-			"ID": "1234"
+			"branchID": "1234"
 		},
 	"deliveryMethods": [
 		{

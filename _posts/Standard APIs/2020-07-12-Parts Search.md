@@ -117,12 +117,12 @@ The Search returns detail part information including pricing by customer if requ
 				"customerPrice": "8.00",
 				"listPrice": "12.00"
 			},
-			"Core": {
-				"Number": "",
-				"Description": "",
-				"Price": "",
-				"EHCCharge": ""
-				}
+			"EHCCharge": {
+                    "percentage": null,
+                    "flatRate": null
+                },
+            "core": null
+
 		},
 		{
 			"ID": "4387hffs9",
@@ -135,12 +135,11 @@ The Search returns detail part information including pricing by customer if requ
 				"customerPrice": "9.00",
 				"listPrice": "0.00"
 			},
-			"Core": {
-				"Number": "",
-				"Description": "",
-				"Price": "",
-				"EHCCharge": ""
-				}
+			"EHCCharge": {
+                    "percentage": null,
+                    "flatRate": null
+                },
+            "core": null
 		}],
 	"message" : ""
 	},
@@ -163,12 +162,11 @@ The Search returns detail part information including pricing by customer if requ
 				"customerPrice": "676.00",
 				"listPrice": "714.00"
 			},
-			"Core": {
-				"Number": "",
-				"Description": "",
-				"Price": "",
-				"EHCCharge": ""
-			}
+			"EHCCharge": {
+                    "percentage": null,
+                    "flatRate": null
+                },
+            "core": null
 		}
 		],
 		"message" : ""
