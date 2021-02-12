@@ -34,9 +34,9 @@ http://api.karmak.io/api/unity/{version}/unityapi/unit/characteristics
 
 |Field|Description|Possible Values|
 |---|---|---|
-|Unit Identity|Allows the request to reference the Unit in 1 of 3 ways, and the resolver processes the model to validate the Unit. (Hierarchy and rules for Unit identifiers described in Rules section below.)|<b>Customer Key</b><BR>Unit’s owning customer number; must be used with Customer Branch Code and Unit Number<BR><b>Customer Branch Code</b><BR>Branch Code of Unit owning Customer; must be used with Customer Key and Unit Number<BR><b>Unit Number</b><br>Number assigned to specified Unit; must be used with Customer Branch Code and Customer Key<BR><b>Unit ID</b><br>Unique database ID for the specified Unit record<BR><b>Unit Inventory ID</b><br>Unit database ID for the specified Unit Inventory record |
-|Characteristic Identity|Allows the request to reference the Characteristic in 1 of 2 ways, and the resolver processes the model to validate the Unit. (Rules for Characteristic identifiers described in Rules section below.)|<b>ID</b><BR>the database ID for the Characteristic being passed<BR><b>Characteristic</b><br>the Characteristic Name for the Characteristic being passed.|
-|Value|The value used to update the specified characteristic prompt. (Rules for values described in Rules section below.)|The value must meet the data type requirements of the characteristic as set in the miscellaneous prompt in Fusion.|
+|Unit Identifier				|	Allows the request to reference the Unit in 1 of 3 ways, and the resolver processes the model to validate the Unit. (Hierarchy and rules for Unit identifiers described in Rules section below.)|<b>Customer Key</b><BR>Unit’s owning customer number; must be used with Customer Branch Code and Unit Number<BR><b>Customer Branch Code</b><BR>Branch Code of Unit owning Customer; must be used with Customer Key and Unit Number<BR><b>Unit Number</b><br>Number assigned to specified Unit; must be used with Customer Branch Code and Customer Key<BR><b>Unit ID</b><br>Unique database ID for the specified Unit record<BR><b>Unit Inventory ID</b><br>Unit database ID for the specified Unit Inventory record |
+|characteristic Identifier	|	Allows the request to reference the Characteristic in 1 of 2 ways, and the resolver processes the model to validate the Unit. (Rules for Characteristic identifiers described in Rules section below.)|<b>ID</b><BR>the database ID for the Characteristic being passed<BR><b>Characteristic</b><br>the Characteristic Name for the Characteristic being passed.|
+|Value						|	The value used to update the specified characteristic prompt. (Rules for values described in Rules section below.)|The value must meet the data type requirements of the characteristic as set in the miscellaneous prompt in Fusion.|
 
 
 #### Rules for Unit Identifier Resolution
@@ -140,11 +140,11 @@ A PUT request to using the following identifiers
 ```json
 [
 	{
-		"unitIdentity":
+		"unitIdentifier":
 		{
 			"unitInventoryId" : "22490"
 		},
-		"characteristicIdentity":
+		"characteristicIdentifier":
 		{
 			"characteristic": "Interior Color"
 		},
@@ -158,7 +158,7 @@ A PUT request to using the following identifiers
 ```json
 [
 	{
-		"UnitIdentifier": 
+		"unitIdentifier": 
 		{
 			"CustomerKey": "95082",
 			"CustomerBranchCode": "01",
@@ -166,7 +166,7 @@ A PUT request to using the following identifiers
 			"UnitId": "9788",
 			"UnitInventoryId": "22490"
 		},
-		"CharacteristicIdentity":
+		"characteristicIdentifier":
 		{
 			"Id": "75",
 			"Characteristic": "Interior Color"
