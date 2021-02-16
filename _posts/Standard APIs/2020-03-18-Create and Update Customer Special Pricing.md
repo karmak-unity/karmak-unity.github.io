@@ -94,7 +94,7 @@ To create or update a customer special pricing record by Price Data:
 |---------------------------|---------------------------------------------------------------------------------------------------------------------|
 | ID                        | ID of Customer Special Record (REQUIRED ONLY when posting an update |
 | PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
-| ServiceUsesPartsPricing 	|                                                                                                                     |
+| ServiceUsesPartsPricing 	|   |
 | ServiceLevel              | Passed only when Service Uses Parts Pricing = False                                                                 |
 | Multiplier      			| If passed, must be greater than 0.                                                                                  |
 | SupplierCode                | If Supplier is passed, Price Group must not be present.                                                           |
@@ -103,14 +103,14 @@ To create or update a customer special pricing record by Price Data:
 | StockClass                | Must not exceed 10 characters.                                                                                      |
 | Code1                     | Must not exceed 10 characters.                                                                                      |
 | Code2                     | Must not exceed 10 characters.                                                                                      |
-| ExpirationDate            |                                                                                                                     |
+| ExpirationDate            |   |
 | PartNumber                | Must be valid Fusion part.                                                                                          |
 | Price             		| If Price Level is passed, Contract Price must not be present.                                                       |
 | InternalNote              | Must not exceed 100 characters.                                                                                     |
 | AlwaysUseContractPrice	| When setting a price for a customer, determine whetheror not to always use contract price							  |
 | PricingTarget				|	|
-| CustomerKey				|	|
-| CustomerBaseBranchCode	|	|
+| CustomerKey				| This is the Fusion Customer Number that the CSP applies to.	|
+| CustomerBaseBranchCode	| Base branch of the customer  	|
 | CustomerPriceType			|	|
 | CostMatrixCode			|	|
 | VelocityCode				|	|

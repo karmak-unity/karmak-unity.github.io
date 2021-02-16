@@ -70,8 +70,8 @@ The below data can be gathered using the Quick List API, and used when necessary
 | UpdateUserID           | Last update user ID of the record                                                      |
 | UpdateUser             | Last update user name of the record                                                    |
 | LastUpdate             | Last update date of the record                                                         |
-| IsSystem               |                                                                                        |
-| AliasedQuickListItemID |                                                                                        |
+| IsSystem               | Determines if this list is a system wide item  |
+| AliasedQuickListItemID | Displays the ID of the Alias for the item (if exists) |
 | IsImpactTotalLostSales | Does QuickList item impact total lost sales? (Parts Lost Sales Reasons QuickList only) |
 | LeaseRentalFleetType   | Fleet Type (L/R Fleet Type QuickList only)                                             |
 
