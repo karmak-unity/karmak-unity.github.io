@@ -74,14 +74,15 @@ After a valid Identifier has been passed, the following properties can be update
 
 The response will include the Identifier information specified in the request, as well as a Status field and a message to indicate the outcome of the update request.
 
-|Name|DataType|
-|CustomerKey|string|
-|CustomerBranchCode|string|
-|UnitNumber|string|
-|UnitID|string|
-|UnitInventoryID|string|
-|Status|string|
-|Message|string|
+|Name|DataType| DEscription |
+|---|---|---|
+|CustomerKey|string| This is the Fusion Customer Number |
+|CustomerBranchCode|string| This is the branch of the customer  |
+|UnitNumber|string| This is used in conjunction with the "CustomerKey" and "CustomerBranchCode" fields |
+|UnitID|string|   This is the unique database id for the Unit |
+|UnitInventoryID|string| This is the unique database id for the Unit Inventory, the API will find the corresponding Unit record for the specified Unit Inventory.  |
+|Status|string| |
+|Message|string| ||
 
 ---
 ---

@@ -72,9 +72,9 @@ Field Details...
 | OriginalUnit                           | This field displays the unit number that the given unit is being substituted for.                                                             |
 | OutDate                                | This field displays the date on which a contract began.                                                                                       |
 | ParentUnitNumber                       | This field displays the number(s) attached to any parents units.                                                                              |
-| PhysicalDamangeInsuranceExpirationDate |                                                                                                                                               |
+| PhysicalDamangeInsuranceExpirationDate | This field displays the customer's physical damage insurance expiration date   |
 | PhysicalDamageInsurancePolicyNumber    | This field displays the customer's physical damage insurance policy number.                                                                   |
-| PhysicalDamageInsuranceProvider        |                                                                                                                                               |
+| PhysicalDamageInsuranceProvider        | This field displays the customer's physical damage insurance provider     |
 | PreviouslyBilledMeter                  | This field displays the meter reading at the time billing last occurred for the given unit.                                                   |
 | ReturnBranch                           | This field displays the branch where a unit will be returned.                                                                                 |
 | ReturnDate                             | This field displays the time when a unit on a contract is due back.                                                                           |

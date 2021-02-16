@@ -66,10 +66,10 @@ After a valid Identifier has been passed, the following Meter properties can be 
 | Meter Type           | varchar(50) | Unit’s meter type                                            | Valid options are: (blank), Gallons, Hours, Kilometers, Liters, Miles, None, Other; will remain unchanged if Meter Type is not passed |
 | Meter Reading        | decimal     | New meter reading of the Unit                                | Will remain unchanged if Meter Reading is not passed                                                                                  |
 | Meter Reading Date   | datetime    | Date meter reading was updated                               | Will default to current date if not passed                                                                                            |
-| Update Meter Average | bit         | When TRUE, the current meter average per day will be updated |                                                                                                                                       |
+| Update Meter Average | bit         | When TRUE, the current meter average per day will be updated |   |
 | ECM Reading          | decimal     | New ECM reading of the Unit                                  | Will remain unchanged if Meter Reading is not passed                                                                                  |
 | ECM Reading Date     | datetime    | Date ECM reading was updated                                 | Will default to current date if not passed                                                                                            |
-| VIN                  | varchar(20) | Vehicle Identification Number of the Unit.                   |                                                                                                                                       |
+| VIN                  | varchar(20) | Vehicle Identification Number of the Unit.                   |   |
 
 
 ---

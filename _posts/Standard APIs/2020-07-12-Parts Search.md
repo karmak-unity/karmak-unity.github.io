@@ -22,9 +22,9 @@ The Search returns detail part information including pricing by customer if requ
 
 ### Request Fields
 
-| Name            |  Length  | Required |      | Description                                                             |
+| Name            |  Length  | Required |      | Description   |
 | ----------- | -------- | ---- | ------------------------------------------------------------ |
-| locationID  |          | Y    | Location or Branch ID                                        |
+| locationID  |    | Y    | Location or Branch ID                                        |
 | customerID  | 20       |      | unique customer Identifier within Fusion system              |
 | region      | 6        |      | State / region / area                                        |
 | number      | 30       | O*   | Part Number to be searched for. *If Part Description field is set then this is optional. |

@@ -29,7 +29,7 @@ Provides a list of available payment methods to submit with a Parts Sales Order.
 |-------------|------|--------------------------------------------------------------------------|
 | ID          |      | ID Associated with the Payment Method                                    |
 | Method      | 30   | Payment Method must match a payment method setup on the business system. |
-| Description |      |                                                                          |
+| Description |      | Description assoicated with the Payment Method stored within Fusion |
 
 
 #### REQUEST POST URL
