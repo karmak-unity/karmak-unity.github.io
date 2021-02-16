@@ -113,7 +113,7 @@ To create or update a customer special pricing record by Price Data:
 | CustomerBaseBranchCode	| Base branch of the customer  	|
 | CustomerPriceType			|	|
 | CostMatrixCode			|	|
-| VelocityCode				|	|
+| VelocityCode				| ID for the velocity code associated with the given part.	|
 
 
 ---

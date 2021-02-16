@@ -18,48 +18,47 @@ description: Access special prices for defined customers in the Fusion system.
 
 A GET API to Access special prices for defined customers in the Fusion system
 
-| Field | Type |
-|---|---|
-|	CustomerSpecialPricingID		|		int				|
-|	CustomerID						|		int				|
-|	CustomerKey						|		varchar(10)		|
-|	CompanyName						|		varchar(100)	|
-|	QLCustomerPriceTypeID			|		int				|
-|	PartsInventoryID				|		int				|
-|	PartNumber						| 		varchar(50)		|
-|	SupplierID						| 		int				|
-|	SupplierCode					| 		varchar(20)		|
-|	PartDescription					| 		varchar(50)		|
-|	PartTypeID						| 		int				|
-|	StockClass						| 		varchar(10)		|
-|	Code1							| 		varchar(10)		|
-|	Code2							| 		varchar(10)		|
-|	CurrentPrice					| 		decimal			|
-|	CalculatedPrice					| 		decimal			|
-|	QLPriceLevelIDOfParts			| 		int				|
-|	AdditionalMultiplierOfParts		| 		decimal			|
-|	QLPriceLevelIDOfService			| 		int				|
-|	AdditionalMultiplierOfService	| 		decimal			|
-|	UsePartsPricing					| 		bit				|
-|	ContractPrice					| 		decimal			|
-|	ExpirationDate					| 		datetime		|
-|	InternalNote					| 		varchar(100)	|
-|	PricingSuppliers				| 		varchar(8000)	|
-|	PricingPriceGroups				| 		varchar(8000)	|
-|	AddUserID						| 		int				|
-|	AddUser							| 		varchar(20)		|
-|	AddDate							| 		datetime		|
-|	AddDateTimeZone					| 		decimal			|
-|	UpdateUserID					| 		int				|
-|	UpdateUser						| 		varchar(20)		|
-|	LastUpdate						| 		datetime		|
-|	LastUpdateTimeZone				| 		decimal			|
-|	QLCostMatrixCodeID				| 		int				|
-|	AlwaysUseContractPrice			| 		bit				|
-|	IsNoChargeCores					| 		bit				|
-|	PartsInventoryTypeID			| 		int				|
-|	VelocityCodeTypeID				| 		int				|
-
+| Field | Type | Description
+|---|---|---|
+|	CustomerSpecialPricingID		|		int				| ID of Customer Special Record	|
+|	CustomerID						|		int				| Unique database ID of customer	|
+|	CustomerKey						|		varchar(10)		| This is the Fusion Customer Number that the CSP applies to.|
+|	CompanyName						|		varchar(100)	|  	Company name	|
+|	QLCustomerPriceTypeID			|		int				|	|
+|	PartsInventoryID				|		int				| Inventory database ID of the part	|
+|	PartNumber						| 		varchar(50)		| part number of the given part	|
+|	SupplierID						| 		int				| database Identifier of the supplier	|
+|	SupplierCode					| 		varchar(20)		| supplier code of the supplier 	|
+|	PartDescription					| 		varchar(50)		| description of the given parts inventory record.	|
+|	PartTypeID						| 		int				| ID of the part type of the given parts inventory record.	|
+|	StockClass						| 		varchar(10)		|  stock class of the given part.	|
+|	Code1							| 		varchar(10)		| code 1 associated with the given part.	|
+|	Code2							| 		varchar(10)		| code 2 associated with the given part.	|
+|	CurrentPrice					| 		decimal			|	|
+|	CalculatedPrice					| 		decimal			|	|
+|	QLPriceLevelIDOfParts			| 		int				|	|
+|	AdditionalMultiplierOfParts		| 		decimal			|	|
+|	QLPriceLevelIDOfService			| 		int				|	|
+|	AdditionalMultiplierOfService	| 		decimal			|	|
+|	UsePartsPricing					| 		bit				| Yes or no boolean field for to use parts pricing	|
+|	ContractPrice					| 		decimal			| the contracted price for the part of a given customer	|
+|	ExpirationDate					| 		datetime		| expiration date of the special pricing	|
+|	InternalNote					| 		varchar(100)	|	|
+|	PricingSuppliers				| 		varchar(8000)	|	|
+|	PricingPriceGroups				| 		varchar(8000)	|	|
+|	AddUserID						| 		int				| ID of the user that created the CSP record	|
+|	AddUser							| 		varchar(20)		| Username of the user that created the CSP record	 	|
+|	AddDate							| 		datetime		| Date record was created|
+|	AddDateTimeZone					| 		decimal			| Timezone record was created in	|
+|	UpdateUserID					| 		int				| ID of the user that updated the CSP record	|
+|	UpdateUser						| 		varchar(20)		| Username of the user that updated the CSP record	|
+|	LastUpdate						| 		datetime		| Date time Record was last updated	|
+|	LastUpdateTimeZone				| 		decimal			| Timezone record was last updated in	|
+|	QLCostMatrixCodeID				| 		int				|	|
+|	AlwaysUseContractPrice			| 		bit				| boolean flag for always using contract pricing	|
+|	IsNoChargeCores					| 		bit				| boolean flag to determine charges around cores	|
+|	PartsInventoryTypeID			| 		int				|	|
+|	VelocityCodeTypeID				| 		int				| ID for the velocity code associated with the given part.	|
 
 #### Sample Customer Special Pricing Response
 ```json
