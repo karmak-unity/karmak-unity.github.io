@@ -94,7 +94,7 @@ To create or update a customer special pricing record by Price Data:
 |---------------------------|---------------------------------------------------------------------------------------------------------------------|
 | ID                        | ID of Customer Special Record (REQUIRED ONLY when posting an update |
 | PartsLevel                | Must be one of the following: Replacement Cost, Price 7, Price 6, Price 5, Price 4, Price 3, Price 2, Price 1, List |
-| ServiceUsesPartsPricing 	|   |
+| ServiceUsesPartsPricing 	| This field indicates whether the Customer Special Pricing record using the Part Pricing setup for pricing of Parts in the Service Module.    |
 | ServiceLevel              | Passed only when Service Uses Parts Pricing = False                                                                 |
 | Multiplier      			| If passed, must be greater than 0.                                                                                  |
 | SupplierCode                | If Supplier is passed, Price Group must not be present.                                                           |
@@ -103,7 +103,7 @@ To create or update a customer special pricing record by Price Data:
 | StockClass                | Must not exceed 10 characters.                                                                                      |
 | Code1                     | Must not exceed 10 characters.                                                                                      |
 | Code2                     | Must not exceed 10 characters.                                                                                      |
-| ExpirationDate            |   |
+| ExpirationDate            | Date the CSP setting expires  |
 | PartNumber                | Must be valid Fusion part.                                                                                          |
 | Price             		| If Price Level is passed, Contract Price must not be present.                                                       |
 | InternalNote              | Must not exceed 100 characters.                                                                                     |
@@ -111,8 +111,8 @@ To create or update a customer special pricing record by Price Data:
 | PricingTarget				|	|
 | CustomerKey				| This is the Fusion Customer Number that the CSP applies to.	|
 | CustomerBaseBranchCode	| Base branch of the customer  	|
-| CustomerPriceType			|	|
-| CostMatrixCode			|	|
+| CustomerPriceType			| Customer Price Type associated with the Customer Special Price record	|
+| CostMatrixCode			| Cost Matrix Code associated with the Customer Special Price record|
 | VelocityCode				| ID for the velocity code associated with the given part.	|
 
 

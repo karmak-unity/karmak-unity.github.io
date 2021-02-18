@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create Parts Order"
+title: "Create Parts Sales Order"
 category: "Parts Sales Order"  
 icon: "icon-gear"
 type: "api" 
@@ -9,7 +9,7 @@ description:  Create a parts order within Fusion and return an Order Number
 ---
 
 
-The Part Order API is used to create a parts order.
+The Part Order API is used to create a Parts Sales Order.
 
 When placing an order the parts and quantities passed to the API are processed as an order on the business system and, if successful, the order number is returned.
 
@@ -67,6 +67,14 @@ When placing an order the parts and quantities passed to the API are processed a
 •	An “InProcess” status means when you add a part onto a Parts Order it will remove the Quantity from On Hand and it will go to a Committed Status where it will sit until you invoice it.
 
 •	A “Quote” won't remove quantity from the Available and by default it sets the Action Type of the Part to Force Fill and doesn't let that be changed until you turn the Quote into an Open Order in Fusion.
+
+
+
+**Note for Misc charges**
+The Misc charges array is required. if you do not have any misc charges, submit the following: 
+```
+	"miscCharges": [],
+```
 
 
 #### REQUEST POST URL
