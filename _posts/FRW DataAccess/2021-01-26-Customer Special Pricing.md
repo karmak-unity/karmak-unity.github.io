@@ -24,7 +24,7 @@ A GET API to Access special prices for defined customers in the Fusion system
 |	CustomerID						|		int				| Unique database ID of customer	|
 |	CustomerKey						|		varchar(10)		| This is the Fusion Customer Number that the CSP applies to.|
 |	CompanyName						|		varchar(100)	|  	Company name	|
-|	QLCustomerPriceTypeID			|		int				|	|
+|	QLCustomerPriceTypeID			|		int				| This is the Fusion database ID for the Customer Price Type value on the Customer Special Pricing record.  	|
 |	PartsInventoryID				|		int				| Inventory database ID of the part	|
 |	PartNumber						| 		varchar(50)		| part number of the given part	|
 |	SupplierID						| 		int				| database Identifier of the supplier	|
@@ -36,16 +36,16 @@ A GET API to Access special prices for defined customers in the Fusion system
 |	Code2							| 		varchar(10)		| code 2 associated with the given part.	|
 |	CurrentPrice					| 		decimal			|	|
 |	CalculatedPrice					| 		decimal			|	|
-|	QLPriceLevelIDOfParts			| 		int				|	|
-|	AdditionalMultiplierOfParts		| 		decimal			|	|
-|	QLPriceLevelIDOfService			| 		int				|	|
-|	AdditionalMultiplierOfService	| 		decimal			|	|
+|	QLPriceLevelIDOfParts			| 		int				| This is the Fusion database ID for the Price Level used for the Parts Module Customer Special Pricing record	|
+|	AdditionalMultiplierOfParts		| 		decimal			| This is the multiplier applied against the Price Level selected for the Parts Module Customer Special Pricing record.   	|
+|	QLPriceLevelIDOfService			| 		int				| This is the Fusion database ID for the Price Level used for the Service Module Customer Special Pricing record	|
+|	AdditionalMultiplierOfService	| 		decimal			| This is the multiplier applied against the Price Level selected for the Service Module Customer Special Pricing record.     	|
 |	UsePartsPricing					| 		bit				| Yes or no boolean field for to use parts pricing	|
 |	ContractPrice					| 		decimal			| the contracted price for the part of a given customer	|
 |	ExpirationDate					| 		datetime		| expiration date of the special pricing	|
-|	InternalNote					| 		varchar(100)	|	|
-|	PricingSuppliers				| 		varchar(8000)	|	|
-|	PricingPriceGroups				| 		varchar(8000)	|	|
+|	InternalNote					| 		varchar(100)	| This is an internal note associated with the Customer Special Pricing record.  	|
+|	PricingSuppliers				| 		varchar(8000)	| This is a list of Suppliers that the Customer Special Pricing record is setup for.  	|
+|	PricingPriceGroups				| 		varchar(8000)	| This is a list of Price Groups that the Customer Special Pricing record is setup for.  	|
 |	AddUserID						| 		int				| ID of the user that created the CSP record	|
 |	AddUser							| 		varchar(20)		| Username of the user that created the CSP record	 	|
 |	AddDate							| 		datetime		| Date record was created|
@@ -54,10 +54,10 @@ A GET API to Access special prices for defined customers in the Fusion system
 |	UpdateUser						| 		varchar(20)		| Username of the user that updated the CSP record	|
 |	LastUpdate						| 		datetime		| Date time Record was last updated	|
 |	LastUpdateTimeZone				| 		decimal			| Timezone record was last updated in	|
-|	QLCostMatrixCodeID				| 		int				|	|
+|	QLCostMatrixCodeID				| 		int				| This is the Fusion database ID for the Cost Matrix value on the Customer Special Pricing record.  	|
 |	AlwaysUseContractPrice			| 		bit				| boolean flag for always using contract pricing	|
 |	IsNoChargeCores					| 		bit				| boolean flag to determine charges around cores	|
-|	PartsInventoryTypeID			| 		int				|	|
+|	PartsInventoryTypeID			| 		int				| This is the Fusion database ID for the Parts Inventory Part Type associated with the Customer Special Price Record.  	|
 |	VelocityCodeTypeID				| 		int				| ID for the velocity code associated with the given part.	|
 
 #### Sample Customer Special Pricing Response
