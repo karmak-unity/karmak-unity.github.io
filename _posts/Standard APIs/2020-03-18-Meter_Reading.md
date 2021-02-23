@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Meter Reading"
-category: "Parts" 
-icon: "icon-gear"
+category: "Inventory" 
+icon: "icon-truck"
 type: "api" 
 comments: false
 description:   Allow users to create, update or get information about Fusion Parts Inventory Suppliers.
