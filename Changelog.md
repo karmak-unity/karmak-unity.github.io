@@ -5,6 +5,9 @@ title: "Changelog"
 
 ---
 ---
+## 2021-APR
+* Bug fix to ensure ProcessGUID returned with every response (including blank FRW)
+
 ## 2021-JAN
 * Updated documentation for AP Invoice 
 * Added Process GUID field within responses.  This is a globally unique identifier per API request.  This value should be provided to Karmak support by the API consumer in the event there are questions or issues related to the Unity system.
