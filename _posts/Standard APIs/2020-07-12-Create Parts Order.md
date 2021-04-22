@@ -35,6 +35,7 @@ When placing an order the parts and quantities passed to the API are processed a
 | DepartmentID   |     | Y | DepartmentID                                                                                                                                                                                                  |
 | ID (Part)      | 50  | Y | PartsInventoryID as defined in the business system.                                                                                                                                                           |
 | ID (Customer)  | 50  | Y | CustomerID as defined in the business system. Currently required to create a PartsSalesOrder, in the future it may be possible to find or create a customer by providing contact info in place of this field. |
+| Type           | 11  | N | This is the Part Type for the part (Default is "Part" other acceptible values are "Exchange" and "Return")                                                                                                    |
 | Quantity       | 11  | Y | Quantity to be ordered as a whole number.                                                                                                                                                                     |
 | Price          | 11  | Y | Price that was collected for the part/charge.                                                                                                                                                                 |
 | Name           | 50  | Y | Miscellaneous Charge name exactly as defined in the business system.                                                                                                                                          |
@@ -93,12 +94,14 @@ The Misc charges array is required. if you do not have any misc charges, submit 
 		{
 			"ID": "7RPEF120",
 			"quantity": "10",
-			"price": "25.00"
+			"price": "25.00",
+			"type": "Part"
 		},
 		{
 			"ID": "7RPEF120100",
 			"Quantity": "1",
-			"Price": "0.50"
+			"Price": "0.50",
+			"type": "Exchange"
 		}
 	],
 	"miscCharges": [
