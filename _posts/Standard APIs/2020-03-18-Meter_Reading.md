@@ -5,7 +5,7 @@ category: "Inventory"
 icon: "icon-truck"
 type: "api" 
 comments: false
-description:   Allow users to create, update or get information about Fusion Parts Inventory Suppliers.
+description:   Allow users to update the Meter Reading of an Active unit.
 ---
 
 ---
