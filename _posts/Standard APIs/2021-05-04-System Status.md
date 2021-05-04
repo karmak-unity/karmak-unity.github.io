@@ -23,10 +23,11 @@ https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
 
 
 ### Response Fields
-| FIELD	 |  TYPE	 | 	Description | 
+
+| FIELD	 |  TYPE	 | 	DESCRIPTION | 
 |---|---|---|
-| IsOnline	 | boolean	 | 	Indicates the system is online and accessible | 
-| BridgeVersion	 | string	 | Version of communication system | 
+| IsOnline	 | boolean	 | 	Indicates the system is online and accessible |  
+| BridgeVersion	 | string	 | Version of communication system |  
 | FusionVersion	 | string	 | Version of Fusion system | 
 | Account	  | string	 | Account resolved from request | 
 | User	  | string	 | User resolved from request | 
