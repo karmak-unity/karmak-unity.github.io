@@ -65,3 +65,6 @@ This information comes from the 12 Month History tab in the Parts Inventory appl
 | Year                          | This field displays the year in which the picks and usage displayed in the given record occurred.                                                                                  |
 | YTDPicks                      | This field displays the number of picks for the given part through the given month in the given year.                                                                              |
 | YTDSales                      | This field displays the number of sales for the given part through the given month in the given year.                                                                              |
+| PriceBreakCost                | This field represents the cost of the part that the user can order it at when placing a purchase order for a specific quantity. This quantity is usually a larger or package quantity so the cost is lower for ordering in bulk.                                                                            |
+| PriceBreakQuantity            | This field represents the quantity of the part that the user should order to receive the Price Break Cost when purchasing parts from a vendor.                                                                             
+

@@ -86,3 +86,4 @@ Field Details...
 | TotalUnitFinanced            | This field displays the total amount of financing associated with particular units remaining on the deal.                                    |
 | TotalUnitPrice               | This field displays the total price of all units remaining on the deal.                                                                      |
 | IsWorksheet                  | This field displays whether the given deal is marked as a worksheet in Fusion.                                                               |
+| IsExternalFAndI				| This field will display whether or not the deal was generated through the F and I integration.  				|

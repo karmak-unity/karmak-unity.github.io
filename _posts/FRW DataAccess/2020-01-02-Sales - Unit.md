@@ -127,3 +127,7 @@ Field Details...
 | WarrantyMeter                      | This field displays the meter reading through which the warranty on the given unit is open.                                                                                                                                                         |
 | WarrantyPeriod                     | This field displays the time period through which the warranty on the given unit is open.                                                                                                                                                           |
 | Year                               | This field displays the year of the given unit.                                                                                                                                                                                                     |
+| IsAttachedUnit					| This field displays whether or not the unit has any unit records attached to it in Fusion.					|
+| AttachmentType					| This field displays the value of the type of relationship/attachment that the unit has, parent or child.					|
+| AttachmentUnitID					| This field displays the Attached Unit ID of the given unit.					|
+| ConvertedCost					| This field displays the converted cost of the given unit.					|

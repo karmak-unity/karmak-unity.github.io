@@ -65,6 +65,8 @@ If not using UnitInventoryID or UnitID, then CustomerKey, CustomerBranchCode, an
         -   Status: 'ERR'
         -   Message: ‘No matching Unit could be found using UnitNumber = {UnitNumber} and CustomerKey = {Customer Key} and CustomerBranchCode = {CustomerBranchCode}.’
 
+**PLEASE NOTE:**
+If the Unit Characteristic or CharacteristicID is not assoicated with the CharacteristicType set to the specified Unit in Fusion.in Fusion, the system will return an error. 
 
 ---
 ---
