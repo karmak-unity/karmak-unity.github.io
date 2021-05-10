@@ -60,3 +60,4 @@ Field Details...
 | TransactionDescription     | This field displays the description of a transaction.                                                                                                  |
 | User                       | This field displays the user name of the user who posted a transaction.                                                                                |
 | Vendor                     | This field displays the vendor attached to a given A/P invoice.                                                                                        |
+| AccountingTransactionID	 | This field displays the Internal ID of the GL Transaction 																							  |

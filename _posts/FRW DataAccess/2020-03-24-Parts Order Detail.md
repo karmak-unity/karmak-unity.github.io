@@ -79,5 +79,6 @@ Field Details...
 | Supplier                | This field displays the supplier of the given part detail record.                                                                                              |
 | UnitOfMeasure           | This field displays the units in which the given part is sold.                                                                                                 |
 
+
 ---
 ---
