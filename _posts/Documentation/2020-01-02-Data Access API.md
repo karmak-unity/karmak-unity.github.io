@@ -69,6 +69,10 @@ Filters (WHERE criteria) are specified as querystring parameters.
 |filter=invoice_id[LTE]123456,invoice_status[EQ]open | for results where Invoice ID \< 123456, and Invoice Status  Open|
 |filter=invoice_date[GT]01-01-2019,invoice_status[IN]paid\|posted |for results where Invoice Date \> 01/01/2019, and Invoice Status is either Paid or Posted|
 
+**Filtering NULL values**
+The operations [EQ] and [NE] support the keyword "NULL"
+|filter=invoice_id[EQ]NULL | for results where Invoice ID contains a NULL  |
+|filter=invoice_id[NE]NULL | for results where Invoice ID contains some data |
 
 ---
 ---
