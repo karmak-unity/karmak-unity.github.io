@@ -18,7 +18,7 @@ The System Status allows API Consumers to check and validate the status and vers
 
 ### GET
 ```
-https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
+https://api.karmak.io/api/unity/{version}/unityapi/System/Status
 ```
 
 
@@ -37,7 +37,7 @@ https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
 
 ### GET Request and Response 
 ```
-https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
+https://api.karmak.io/api/unity/{version}/unityapi/System/Status
 ```
 
 ```json
