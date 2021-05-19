@@ -5,7 +5,7 @@ category: "System"
 icon: "icon-gear"  
 type: "api"  
 comments: false  
-description: Allow API Consumers to check and validate the status and version of the Fusion instance they are interating with.
+description: Allow API Consumers to check and validate the status and version of the Fusion instance and Bridge they are integrating with.
 ---
 
 
@@ -18,8 +18,9 @@ The System Status allows API Consumers to check and validate the status and vers
 
 ### GET
 ```
-https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
+https://api.karmak.io/api/unity/{version}/unityapi/System/Status
 ```
+
 
 
 ### Response Fields
@@ -35,9 +36,10 @@ https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
 
 
 
+
 ### GET Request and Response 
 ```
-https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
+https://api.karmak.io/api/unity/{version}/unityapi/System/Status
 ```
 
 ```json
@@ -51,3 +53,4 @@ https://api.karmak.io/api/unity/{version}/unityapi/System/System/Status
     "ProcessGUID": "5358182b338c6744a946ed588c4e66e2"
 }
 ```
+
