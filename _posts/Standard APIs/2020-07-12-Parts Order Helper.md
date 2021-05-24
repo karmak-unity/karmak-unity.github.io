@@ -93,11 +93,9 @@ POST endpoint to look up and return a list of the delivery methods for parts by 
 
 #### Sample Request
 ```json
-[
-	{
-		"branchID": "1234"
-	}
-]
+{
+	"branchID": "1234"
+}
 ```
  
 
