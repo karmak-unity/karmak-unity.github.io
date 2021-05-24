@@ -22,7 +22,7 @@ This information can be found in the repair order application in Fusion.
 <hr>
 Field Details...
 
-| **SQL Field Name**           | **Column Description**               |  **Fusion Version (or later)**
+| **SQL Field Name**           | **Column Description**               |  **Fusion Version (or later)** |
 |---|---|---|
 | AddDate                      | This field displays the date on which the given repair order was added to the system.                                                                                                                 | |
 | ROServiceWriter              | This field displays, if available, the username of the user who created the given repair order or the username of the user who invoiced the given repair order.                                       | |
