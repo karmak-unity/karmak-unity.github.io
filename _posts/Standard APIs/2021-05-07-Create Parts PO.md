@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create Parts PO"  
-category: "System"  
+category: "Parts PO"  
 icon: "icon-gear"  
 type: "api"  
 comments: false  
