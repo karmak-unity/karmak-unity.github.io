@@ -5,6 +5,19 @@ title: "Changelog"
 
 ---
 ---
+## 2021-JUN
+* Added Get Part Supplier     (Requires Fusion Version >3.62)
+* Added Get Available Branches    (Requires Fusion Version >3.62)
+* Added Get Available AP Vendors    (Requires Fusion Version >3.62)
+* Added Create Parts Purchase Order    (Requires Fusion Version >3.62)
+* Added GET Parts Purchase Order Details    (Requires Fusion Version >3.62)
+* Added GET Parts Purchase Order Search    (Requires Fusion Version >3.62)
+
+
+## 2021-MAY
+* Added System Status API (System Online validation)
+* Updated Unit Characteristics :  update validation to ensure Characteristic value is allowed to be changed (Fusion logic validation) 
+
 ## 2021-APR
 * Bug fix to ensure ProcessGUID returned with every response (including blank FRW)
 
