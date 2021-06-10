@@ -98,7 +98,7 @@ The following fields will be allowed to be passed in on the Request to serve as 
 
 #### REQUEST
 
-```json
+```
 /PartsPurchaseOrder/Search?LocationID=7&POStartDate=10/13/2014
 ```
  
