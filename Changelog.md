@@ -5,6 +5,15 @@ title: "Changelog"
 
 ---
 ---
+## 2021-JUL
+The following require: Fusion Version of **3.62.1** or greater
+* Added 11 optional fields to Create / Update Part Inventory  
+* Added 2 feields to Create / Update AP vendor
+* Bug fix in Price search to ensure Fusion returns contract price fir customer special pricing
+* Enhanced validations for Delete / Update Supersession
+* AP Invoice create limits the number of characters that can be submitted for the company name to matches Fusion Logic
+
+
 ## 2021-JUN
 * Added Get Part Supplier     (Requires Fusion Version >3.62)
 * Added Get Available Branches    (Requires Fusion Version >3.62)

@@ -87,6 +87,20 @@ https://unity.karmak.io/AP-Vendor.html
 | Cell Phone           | string     | No       | 30       | This is the Cell Phone of the Contact on the AP Vendor                                                                                                                                                                                                                                                                                                                                                                                                                                                    | This is the Cell Phone of the Contact on the AP Vendor that will be updated.                                                                                                                                            |
 | Fax                  | string     | No       | 30       | This is the Fax of the Contact on the AP Vendor                                                                                                                                                                                                                                                                                                                                                                                                                                                           | This is the Fax of the Contact on the AP Vendor that will be updated.                                                                                                                                                   |
 | EMail                | string     | No       | 100      | This is the Email Address of the Contact on the AP Vendor.  This must be in a valid Email format.                                                                                                                                                                                                                                                                                                                                                                                                         | This is the Email Address of the Contact on the AP Vendor that will be updated.  This must be in a valid Email format.                                                                                                  |
+| Is1099Required       | boolean    | No       |        | (Requires Fusion v3.62.1 or later) This sets the flag is 1099 is required for the vendor                                                                                                                                                                                                                                                                                                                                                                                                                                                         | This is the Fax of the Contact on the AP Vendor that will be updated.                                                                                                                                                   |
+| IncomeTypeID         | integer    | No       |       | (Requires Fusion v3.62.1 or later) This is the income type of the vendor, please see the list below                                                                                                                                                                                                                                                                                                                                                                                                         | This is the Email Address of the Contact on the AP Vendor that will be updated.  This must be in a valid Email format.                                                                                                  |
+
+**IncomeTypeID is a universal table**
+ (1, 'Cancellation of Debt (1099C)')
+ (2, 'Federal income tax withheld')
+ (3, 'Medical and health care payments')
+ (4, 'Gross proceeds paid to an attorney')
+ (5, 'Interest (1099INT)')
+ (6, 'Nonemployee compensation')
+ (7, 'Other income')
+ (8, 'Rents')
+ (9, 'Royalties')
+ (10, 'Nonqualified deferred compensation')
 
 
 ### POST Request
@@ -109,6 +123,8 @@ https://unity.karmak.io/AP-Vendor.html
                "CellPhone":"2178551212",
                "Fax":"2178551212",
                "Email":"testsp@outlook.com"                  
+			   "Is1099Required":true,
+               "IncomeTypeID": "3"
                 }
 ```
 
@@ -140,6 +156,8 @@ https://unity.karmak.io/AP-Vendor.html
                "CellPhone":"8002527788",
                "Fax":"8002527788",
                "Email":"test@outlook.com"
+			   "Is1099Required":true,
+               "IncomeTypeID": "8" 
                 }
 ```
 
