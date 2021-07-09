@@ -89,7 +89,6 @@ The Misc charges array is required. if you do not have any misc charges, submit 
 {
 	"locationID": "2345644",
 	"departmentID": "4",
-	"comments": "DELIVER TOMORROW",
 	"Parts": [
 		{
 			"ID": "7RPEF120",
@@ -131,6 +130,7 @@ The Misc charges array is required. if you do not have any misc charges, submit 
 		"postal": "62626",
 		"phone": "222-222-2222",
 		"DeliveryMethod": "USPS",
+		"comments": "DELIVER TOMORROW"
 	},
 	"Payment": {
 		"OrderStatus": "In Process",
