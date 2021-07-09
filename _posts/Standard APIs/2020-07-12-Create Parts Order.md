@@ -138,6 +138,7 @@ The Misc charges array is required. if you do not have any misc charges, submit 
 		"PaymentMethod": "VISA"
 	}
 }
+```
 
 #### Sample Response
 ```json
