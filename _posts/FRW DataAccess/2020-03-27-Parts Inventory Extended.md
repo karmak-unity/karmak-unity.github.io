@@ -21,7 +21,6 @@ Field Details...
 
  | Name | Type | Description |
  | --- | --- | --- |
- 
  | PartsInventoryDetailID | int | ID of the Part Inventory Detail | 
  | PartNumber | varchar(50) | This field displays the part number of the given part. | 
  | SupplierCode | varchar(20) | Supplier Code | 
