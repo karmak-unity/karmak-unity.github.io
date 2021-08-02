@@ -53,17 +53,27 @@ Provides a list of available payment methods to submit with a Parts Sales Order.
 	{
 		"ID": "01",
 		"Method": "Credit Card",
-		"Description": ""
+		"Description": "Business Credit CARD"
 	},
 	{
 		"ID": "02",
+		"Method": "Credit Card",
+		"Description": "Personal Credit card - VISA"
+	},
+	{
+		"ID": "03",
+		"Method": "Credit Card",
+		"Description": "Personal Credit card - MC"
+	},
+	{
+		"ID": "04",
 		"Method": "Store Credit"
 		"Description": ""
 	},
 	{
-		"ID": "03",
-		"Method": "C.O.D."
-		"Description": ""
+		"ID": "05",
+		"Method": "CASH"
+		"Description": "Cash On Devlivery"
 	},
 ]
 ```
