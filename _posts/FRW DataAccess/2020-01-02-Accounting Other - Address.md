@@ -36,3 +36,5 @@ This data object is used to display all addresses stored within the Fusion busin
 | Street2            | This field displays address line two of the given address.                             |
 | TaxBody            | This field displays the tax body associated with the given address.                    |
 | Territory          | This field displays the territory in which the given customer address is located.      |
+| OverrideTaxStatus		|This field displays the Override tax status for the address.	 REQ: Fusion Version 3.62.3	|
+| Verified		| This field indicates if an addrtes has been verified		 REQ: Fusion Version 3.62.3 |
