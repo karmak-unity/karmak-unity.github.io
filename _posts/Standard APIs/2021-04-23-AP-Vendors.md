@@ -21,7 +21,6 @@ Notes:
 
 | Field Name | Size |			Description		|
 |-----------------|-----|--------------------------------------------------------------------------------|
-
 | ID              |     | Unique ID associated with the AP Vendor from the Fusion database               |
 | APVendor        | 10  | AP Vendor                                                                      |
 | CompanyName     | 100 | Company Name of the AP Vendor                                                  |
