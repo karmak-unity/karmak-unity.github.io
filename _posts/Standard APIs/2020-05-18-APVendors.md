@@ -90,7 +90,10 @@ https://unity.karmak.io/AP-Vendor.html
 | Is1099Required       | boolean    | No       |        | (Requires Fusion v3.62.1 or later) This sets the flag is 1099 is required for the vendor                                                                                                                                                                                                                                                                                                                                                                                                                                                         | This is the Fax of the Contact on the AP Vendor that will be updated.                                                                                                                                                   |
 | IncomeTypeID         | integer    | No       |       | (Requires Fusion v3.62.1 or later) This is the income type of the vendor, please see the list below                                                                                                                                                                                                                                                                                                                                                                                                         | This is the Email Address of the Contact on the AP Vendor that will be updated.  This must be in a valid Email format.                                                                                                  |
 
+
 **IncomeTypeID is a universal table**
+
+```
  (1, 'Cancellation of Debt (1099C)')
  (2, 'Federal income tax withheld')
  (3, 'Medical and health care payments')
@@ -101,7 +104,7 @@ https://unity.karmak.io/AP-Vendor.html
  (8, 'Rents')
  (9, 'Royalties')
  (10, 'Nonqualified deferred compensation')
-
+```
 
 ### POST Request
 ```json
