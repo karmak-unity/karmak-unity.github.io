@@ -32,7 +32,7 @@ Notes:
 /api/unity/{version}/unityapi/APVendor
 ```
 
-###Response:
+### Response:
 
 ```json
 [
