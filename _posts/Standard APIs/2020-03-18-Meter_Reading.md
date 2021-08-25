@@ -61,8 +61,8 @@ https://api.karmak.io/api/unity/v1/unityapi/meterreading/update
 
 After a valid Identifier has been passed, the following Meter properties can be updated on the specified Unit/Unit Inventory record.
 
-| Data Type | Definition | Validation Rules/Comments |
-|----------------------|-------------|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Name | Data Type | Description | Validation Rules/Comments |
+|------|-----------|------------|---------------------------|
 | Meter Type           | varchar(50) | Unit’s meter type                                            | Valid options are: Gallons, Hours, Kilometers, Liters, Miles, None, Billing, Other; will remain unchanged if Meter Type is not passed; Billing is used for LR Billing entries if configured in Fusion |
 | Meter Reading        | decimal     | New meter reading of the Unit                                | Will remain unchanged if Meter Reading is not passed                                                                                  |
 | Meter Reading Date   | datetime    | Date meter reading was updated                               | Will default to current date if not passed                                                                                            |
