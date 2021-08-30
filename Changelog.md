@@ -5,6 +5,11 @@ title: "Changelog"
 
 ---
 ---
+## 2021-AUG
+The following additions to Report Data Access require: Fusion Version of **3.62.3** or greater
+* Added 2 new fields to /frw/Address
+
+
 ## 2021-JUL
 The following require: Fusion Version of **3.62.1** or greater
 * Added 11 optional fields to Create / Update Part Inventory  
