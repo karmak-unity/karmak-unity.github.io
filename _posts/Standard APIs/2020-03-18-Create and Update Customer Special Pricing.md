@@ -114,7 +114,7 @@ To create or update a customer special pricing record by Price Data:
 | CustomerPriceType			| Customer Price Type associated with the Customer Special Price record	|
 | CostMatrixCode			| Cost Matrix Code associated with the Customer Special Price record|
 | VelocityCode				| ID for the velocity code associated with the given part.	|
-
+| IsNoChargeCores			| This is a flag that indicates if the customer has a core charge ( false indicates there are charges for cores ) v.3.63.3.4 or later |
 
 ---
 ---
