@@ -200,7 +200,7 @@ This allows a consumer to look up the Available Misc Charge Types for the custom
 
 #### Fields
 | Field Name	| 	Size	| Description| 
-| --- | --- | --- | 
+| -------- | -------- | -------- | 
 | ID			| 			| ID Associated with the Charge Type | 
 | ChargeType 	| string	| Charge Type name : This is submitted with the Parts Order being created | 
 | Description 	| string	| Description of the Charge Type | 
@@ -240,7 +240,7 @@ This allows a consumer to look up the Available Parts Sales Order Status for the
 
 #### Fields
 | Field Name	|  Size		| Description | 
-| --- | --- | --- | 
+| -------- | -------- | -------- | 
 | ID			| 			| ID Associated with the Order Status | 
 | Status		| string: 30	| Order Status Description / name : This is submitted with the Parts Order being created | 
 
