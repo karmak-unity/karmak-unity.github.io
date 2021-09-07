@@ -189,3 +189,81 @@ This is the GET Endpoint to look up and return a list of the Department IDs by B
     ]
 }
 ```
+
+### Available Miscellaneous Charge Type
+-------------------------
+This allows a consumer to look up the Available Misc Charge Types for the customer to ensure parts orders are submitted correctly.
+
+1 submitted field: “customerID”
+
+
+
+#### Fields
+| Field Name	| 	Size	| Description| 
+| ID			| 			| ID Associated with the Charge Type | 
+| ChargeType 	| string	| Charge Type name : This is submitted with the Parts Order being created | 
+| Description 	| string	| Description of the Charge Type | 
+
+
+
+#### Sample Request
+```json
+{
+     "customerID": "8827892"
+}
+```
+
+
+### Sample Response
+```json
+[
+  {
+    "ID": "01",
+    "Status": "EHC",
+    "Description": "EHC",
+  },
+  {
+    "ID": "03",
+    "Status": "CORE"
+    "Description": "CORE part Charge",
+  },
+]
+```
+
+---------------
+
+### Available Parts Sales Order Status
+This allows a consumer to look up the Available Parts Sales Order Status for the customer so I can submit my parts order correctly.
+
+1 submitted field: “customerID”
+
+#### Fields
+| Field Name	|  Size		| Description | 
+| ID			| 			| ID Associated with the Order Status | 
+| Status		| string: 30	| Order Status Description / name : This is submitted with the Parts Order being created | 
+
+
+#### Sample Request
+```json
+{
+     "customerID": "8827892"
+}
+```
+
+#### Sample Response
+```json
+[
+  {
+    "ID": "01",
+    "Status": "Voided",
+  },
+  {
+    "ID": "02",
+    "Status": "Sold"
+  },
+  {
+    "ID": "03",
+    "Status": "UNavailable"
+  },
+]
+```
