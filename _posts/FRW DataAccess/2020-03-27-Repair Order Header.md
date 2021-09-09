@@ -135,12 +135,15 @@ Field Details...
 | UnitYear                     | This field displays the year of the unit on the given repair order.                                                                                                                                   | |
 | VIN                          | This field displays the Vehicle Identification Number associated with the unit on the given repair order.                                                                                             | |
 | IsVoided                     | This field displays whether the given repair order has been voided.                                                                                                                                   | |
-| AssessmentCompletedUser      |  This field will display the username of the person who completed the assessment.| TBD |
-| AssessmentCompletedDate      |  This field will display the date and time that the assessment of the unit was completed.| TBD|
-| CustomerContactedUser        |  This field will display the username of the person who contacted the customer.   | TBD|
-| CustomerContactedDate        |  This field will display the date and time that the customer was contacted for the repair order.                  | TBD |
-| CustomerServiceBeginDate     |  This field will display the date and time that the customer requested that the service work begin for the unit.| TBD|
-| DealerServiceBeginDate       |  This field will display the date and time that the dealer scheduled for the work to begin for the unit.| TBD|
-| RepairTypeCode               |  This field will display the Repair Type Code that was used for the Allison Transmission Integration.| TBD |
-| ROEstimatedAmount            |  This field will display the total RO Estimated Amount -  This field is used by the Wheeltime integration and can be updated from Decisiv. | TBD|
-| SendROUpdates                |  This field will display whether or not the customer is being sent RO updates when the RO status changes for the Wheeltime integration.| TBD|
+| AssessmentCompletedByUser      |  This field will display the username of the person who completed the assessment.| 3.62.3.1 |
+| AssessmentCompletedDate      |  This field will display the date and time that the assessment of the unit was completed.| 3.62.3.1|
+| CustomerContactedByUser        |  This field will display the username of the person who contacted the customer.   | 3.62.3.1|
+| CustomerContactedDate        |  This field will display the date and time that the customer was contacted for the repair order.                  | 3.62.3.1 |
+| CustomerRequestedServiceToBeginDate     |  This field will display the date and time that the customer requested that the service work begin for the unit.| 3.62.3.1|
+| DealerScheduledServiceToBeginDate       |  This field will display the date and time that the dealer scheduled for the work to begin for the unit.| 3.62.3.1|
+| RepairTypeCode               |  This field will display the Repair Type Code that was used for the Allison Transmission Integration.| 3.62.3.1 |
+| ROEstimatedAmount            |  This field will display the total RO Estimated Amount -  This field is used by the Wheeltime integration and can be updated from Decisiv. | 3.62.3.1 |
+| SendCustomerROUpdates                |  This field will display whether or not the customer is being sent RO updates when the RO status changes for the Wheeltime integration.| 3.62.3.1 |
+| AllisonRepairCode				|  This field will display the Repair Type Code that was used for the Allison Transmission Integration.| 3.62.3.1 |
+| KeyTag						|  This field displays the key tag number for the Unit of the Repair Order.| 3.62.3.1 |
+| CommentTablesID				|  CommentTablesID Identifier field. | 3.62.3.1 |
