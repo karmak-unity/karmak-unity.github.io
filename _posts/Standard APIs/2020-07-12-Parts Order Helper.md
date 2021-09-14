@@ -239,6 +239,12 @@ This allows a consumer to look up the Available Parts Sales Order Status for the
 
 1 submitted field: “customerID”
 
+#### REQUEST POST URL
+```
+.../AvailablePaymentMethods
+```
+ 
+
 #### Fields
 
 | Field Name  | Size | Description                                                              |
