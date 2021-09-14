@@ -5,6 +5,13 @@ title: "Changelog"
 
 ---
 ---
+## 2021-SEP
+* Added new fields to FRW Repair Order Header: Fusion Version of **3.62.4** or greater
+* Added two new Parts Order Helpers
+	* Available Payment Methods
+	* Available Charge Types
+* Added Payment Method ID to Create Parts Sales Order : Fusion Version of **3.62.5** or greater
+
 ## 2021-AUG
 The following additions to Report Data Access require: Fusion Version of **3.62.3** or greater
 * Added 2 new fields to /frw/Address
