@@ -23,6 +23,7 @@ When placing an order the parts and quantities passed to the API are processed a
 
 - For customer with “On Hold” status in the business system, the order will be placed only if the “Allow order if On-Hold/Over Credit Limit?” flag is set to “Yes” for the customer in the Admin web site. Customer status is controlled by the business system.
 
+- **NOTE**: If you do NOT submit a part Type and the type of part is "Exchange" or "Return", the system will fail the part order as the system will attempt to set the part as an invalid type. Best practice is to send the Type field every time. 
 ---
 ---
 
@@ -57,6 +58,7 @@ When placing an order the parts and quantities passed to the API are processed a
 | PaymentMethodID |  | Y¹ |This is the PaymentMethodID and must match a payment method setup on the business system. (from the Get Available Payment Mthods Endpoint      (available in Fusion 3.62.5)                                     |
  
 **NOTE**: Either PaymentMethod or PaymentMethodID is required. If both are sent, PaymentMethodID takes priority
+
 
 #### Valid Order Status values
 ```json
