@@ -25,7 +25,7 @@ When placing an order the parts and quantities passed to the API are processed a
 
 **NOTE**
 
-If you do NOT submit a part Type and the type of part is "Exchange" or "Return", the system will fail the part order as the system will attempt to set the part as an invalid type. Best practice is to send the Type field every time. 
+- If you do NOT submit a part Type and the type of part is "Exchange" or "Return", the system will fail the part order as the system will attempt to set the part as an invalid type. Best practice is to send the Type field every time. 
 ---
 ---
 
