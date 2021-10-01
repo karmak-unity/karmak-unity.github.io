@@ -23,7 +23,7 @@ When placing an order the parts and quantities passed to the API are processed a
 
 - For customer with “On Hold” status in the business system, the order will be placed only if the “Allow order if On-Hold/Over Credit Limit?” flag is set to “Yes” for the customer in the Admin web site. Customer status is controlled by the business system.
 
-- **NOTE**: 
+**NOTE**
 
 If you do NOT submit a part Type and the type of part is "Exchange" or "Return", the system will fail the part order as the system will attempt to set the part as an invalid type. Best practice is to send the Type field every time. 
 ---
