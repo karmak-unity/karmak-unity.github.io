@@ -109,6 +109,20 @@ td {
 	background-color: #FFF;	
 }
 
+table.announcement {
+  margin:20px;
+  width: 80%;
+  height: 150px;
+  border-collapse:separate;
+  border:solid black 1px;
+  border-radius:6px;
+  -moz-border-radius:6px;
+  vertical-align: top;
+  -moz-box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
 table.apis {
   margin:20px;
   width: 240px;
