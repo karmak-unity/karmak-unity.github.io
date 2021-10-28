@@ -5,6 +5,12 @@ title: "Changelog"
 
 ---
 ---
+## 2021-OCT
+* **NEW** API Management (APIM) Portal launched. <a href="https://portal.karmak.io" target="_blank">Go To APIM portal</a>
+	* All new APIs and functionality will be available within the new APIM portal.
+	* Bug fixes will occur in both systems for the forseeable future. 
+
+
 ## 2021-SEP
 * Added new fields to FRW Repair Order Header: Fusion Version of **3.62.4** or greater
 * Added two new Parts Order Helpers
