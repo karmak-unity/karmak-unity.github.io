@@ -73,7 +73,7 @@ The following require: Fusion Version of **3.62.1** or greater
 * AP Vendors (Create / Update)
 * Part Quantity (Update)
 * Technicians (Create / Update)
-* Users (Create / Read / Update)cd
+* Users (Create / Read / Update)
 
 #### Updates
 * Customers (Create / Read / Update)
