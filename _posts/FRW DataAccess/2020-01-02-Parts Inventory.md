@@ -24,23 +24,22 @@ business system.
 
 | **SQL Field Name**      | **Column Description**                                                                                                                                                              |
 |---|---|
-| AddDate | This field displays the date on which the given parts inventory record was added. | 
-| AddUser | This field displays the username of the user who added the given parts inventory record. | 
-| AlternateBin |  | 
-| AverageCost | This field displays the average cost or, if average cost is zero, the replacement cost of the given part. | 
-| BarCode | This field displays the bar code for the given parts inventory record. | 
-| BinLocation | This field displays the bin location for the given parts inventory record. | 
-| BranchCode | This field displays the branch code of the branch that the given parts inventory record is associated with. | 
-| CharacteristicType | This field displays the Characteristic Type that is associated with a Master Parts Inventory Record. The Characteristic Types are setup INV91110 Parts Inventory Characteristic Type and controls which characteristics can be tracked for specific parts. | 
-| Description | This field displays the description of the given parts inventory record. | 
-| ExcessQuantityAvailable | This field will display the amount of excess quantity available of the part.  Excess Quantity Available is any Quantity Available above the part’s Order Point if it is a Buy Time Purchase Method or above the part’s Maximum Quantity if it is a Min/Max Purchase Method and the Stock Status is “Stock”.  If the Part is not a Stock Status of “Stock” then any quantity available is considered excess. | 
-| Inactive | This field displays whether the given parts inventory record is set to inactive. | 
-| InherentCoreAverageCost | This field displays the inherent core average cost of the given part's inherent core or, if inherent core average cost is zero, displays the replacement cost of the inherent core. | 
-| LastUpdateDate | This field displays the date on which the given parts inventory record was last updated. | 
-| LastUpdateUser | This field displays the username of the user who last updated the given parts inventory record. | 
-| ListPrice | This field displays the manufacturer's list price for the given parts inventory record. | 
+| PartsInventoryDetailID | PartsInventoryDetailID Identifier field. | 
 | PartNumber | This field displays the part number of the given parts inventory record. | 
 | PartType | This field displays the part type of the given parts inventory record. | 
+| SupplierCode | This field displays the supplier of the given parts inventory record. | 
+| SupplierID | SupplierID Identifier field. | 
+| Description | This field displays the description of the given parts inventory record. | 
+| CorePartsInventoryID | CorePartsInventoryID Identifier field. | 
+| PartsInventoryID | PartsInventoryID Identifier field. | 
+| BranchCode | This field displays the branch code of the branch that the given parts inventory record is associated with. | 
+| BranchID | BranchID Identifier field. | 
+| QuantityAvailable | This field displays the quantity available for the given parts inventory record. | 
+| QuantityCommitted | This field displays the quantity that has been committed to open orders for the given parts inventory record. | 
+| QuantityOnOrder | This field displays the quantity that has been requested on open orders to vendors for the given parts inventory record. | 
+| QuantityOnBackOrder | This field displays the quantity that has been committed to open orders, but is not currently available in stock, for the given parts inventory record. | 
+| AverageCost | This field displays the average cost or, if average cost is zero, the replacement cost of the given part. | 
+| ReplacementCost | This field displays the replacement cost of the given part. | 
 | Price1 | This field displays the level 1, or highest, resale price for the given part. | 
 | Price2 | This field displays the level 2 resale price for the given part. | 
 | Price3 | This field displays the level 3 resale price for the given part. | 
@@ -48,15 +47,25 @@ business system.
 | Price5 | This field displays the level 5 resale price for the given part. | 
 | Price6 | This field displays the level 6 resale price for the given part. | 
 | Price7 | This field displays the level 7, or lowest, resale price for the given part. | 
+| ListPrice | This field displays the manufacturer’s list price for the given parts inventory record. | 
+| CorePartsInventoryDetailID | CorePartsInventoryDetailID Identifier field. | 
+| InherentCoreAverageCost | This field displays the inherent core average cost of the given part’s inherent core or, if inherent core average cost is zero, displays the replacement cost of the inherent core. | 
+| BinLocation | This field displays the bin location for the given parts inventory record. | 
+| Inactive | This field displays whether the given parts inventory record is set to inactive. | 
+| StockStatusID | StockStatusID Identifier field. | 
+| BarCode | This field displays the bar code for the given parts inventory record. | 
+| AlternateSupplierID | AlternateSupplierID Identifier field. | 
+| SellPackage | This field displays the package size in which the given part is sold to customers. | 
+| IsInventory | IsInventory Identifier field. | 
+| AddUser | This field displays the username of the user who added the given parts inventory record. | 
+| AddDate | This field displays the date on which the given parts inventory record was added. | 
+| LastUpdateUser | This field displays the username of the user who last updated the given parts inventory record. | 
+| LastUpdateDate | This field displays the date on which the given parts inventory record was last updated. | 
+| AlternateBin | This field displays the alternate bin location of the part. | 
+| CharacteristicType | This field displays the Characteristic Type that is associated with a Master Parts Inventory Record. The Characteristic Types are setup INV91110 Parts Inventory Characteristic Type and controls which characteristics can be tracked for specific parts. | 
 | PriceBreakCost | This field represents the cost of the part that the user can order it at when placing a purchase order for a specific quantity. This quantity is usually a larger or package quantity so the cost is lower for ordering in bulk. | 
 | PriceBreakQuantity | This field represents the quantity of the part that the user should order to receive the Price Break Cost when purchasing parts from a vendor. | 
-| QuantityAvailable | This field displays the quantity available for the given parts inventory record. | 
-| QuantityCommitted | This field displays the quantity that has been committed to open orders for the given parts inventory record. | 
-| QuantityOnBackOrder | This field displays the quantity that has been committed to open orders, but is not currently available in stock, for the given parts inventory record. | 
-| QuantityOnOrder | This field displays the quantity that has been requested on open orders to vendors for the given parts inventory record. | 
-| ReplacementCost | This field displays the replacement cost of the given part. | 
-| SellPackage | This field displays the package size in which the given part is sold to customers. | 
-| SupplierCode | This field displays the supplier of the given parts inventory record. | 
+| ExcessQuantityAvailable | This field will display the amount of excess quantity available of the part. Excess Quantity Available is any Quantity Available above the part?s Order Point if it is a Buy Time Purchase Method or above the part?s Maximum Quantity if it is a Min/Max Purchase Method and the Stock Status is ?Stock?. If the Part is not a Stock Status of ?Stock? then any quantity available is considered excess. | 
 
 ---
 ---
