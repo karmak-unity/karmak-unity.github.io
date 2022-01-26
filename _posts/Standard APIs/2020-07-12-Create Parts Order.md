@@ -83,7 +83,14 @@ The Misc charges array is required. if you do not have any misc charges, submit 
 ```
 	"miscCharges": [],
 ```
-
+Misc charge with values: 
+```
+	"MiscCharges": [{
+        "Name": "string",
+        "Quantity": "string",
+        "Price": "string"
+    }],
+```
 
 #### REQUEST POST URL
 ```
