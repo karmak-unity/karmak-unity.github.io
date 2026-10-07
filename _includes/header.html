@@ -22,6 +22,21 @@
   gtag('config', 'G-FEQPGC9KP3');
 </script>
 
+<!-- Unity retirement banner: pick the phase by date before the page renders -->
+<script>
+  (function () {
+    var phase = 1;
+    var now = new Date();
+    // Switch dates are fixed to midnight US Central time (CST, UTC-6) for every visitor.
+    // Central is still on standard time on both dates (DST starts March 14, 2027).
+    if (now >= new Date(Date.UTC(2027, 2, 1, 6))) { phase = 3; }       // March 1, 2027 00:00 CST
+    else if (now >= new Date(Date.UTC(2027, 0, 1, 6))) { phase = 2; }  // January 1, 2027 00:00 CST
+    var m = /[?&]bannerPhase=([123])/.exec(window.location.search);
+    if (m) { phase = parseInt(m[1], 10); }
+    document.documentElement.setAttribute('data-unity-phase', phase);
+  })();
+</script>
+
 </head>
 
 <body>
@@ -59,3 +74,5 @@
         </div>
     </div>
 </div>
+
+{% include retirement-banner.html %}

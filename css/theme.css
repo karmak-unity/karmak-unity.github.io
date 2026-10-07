@@ -276,3 +276,63 @@ pre.highlight {
 	overflow:  auto;
 	max-height: 1000px;
 }
+
+
+/* ---------- Unity retirement banner and callout ---------- */
+.unity-phase { display: none; }
+html:not([data-unity-phase]) .unity-phase-1,
+html[data-unity-phase="1"] .unity-phase-1,
+html[data-unity-phase="2"] .unity-phase-2,
+html[data-unity-phase="3"] .unity-phase-3 { display: block; }
+
+.unity-retirement-banner {
+	width: 100%;
+	margin: -10px 0 20px 0;
+	padding: 14px 20px;
+	border-top: 1px solid;
+	border-bottom: 4px solid;
+}
+.unity-retirement-inner { max-width: 1170px; margin: 0 auto; }
+.unity-retirement-banner p { margin: 0 0 6px 0; }
+.unity-retirement-banner p:last-child { margin-bottom: 0; }
+.unity-retirement-title { margin: 0 0 8px 0; font-weight: bold; }
+.unity-retirement-link { font-weight: bold; text-decoration: underline; }
+.unity-retirement-button { margin-top: 4px; font-weight: bold; }
+
+.unity-callout {
+	clear: both;
+	margin: 0 0 20px 0;
+	padding: 16px 20px;
+	border: 1px solid;
+	border-left-width: 6px;
+	border-radius: 4px;
+}
+.unity-callout h3 { margin-top: 0; font-weight: bold; }
+.unity-callout p:last-child { margin-bottom: 0; }
+.unity-callout a { text-decoration: underline; }
+
+/* Phase 1 - amber warning */
+html:not([data-unity-phase]) .unity-retirement-banner, html:not([data-unity-phase]) .unity-callout,
+html[data-unity-phase="1"] .unity-retirement-banner, html[data-unity-phase="1"] .unity-callout {
+	background-color: #fff3cd;
+	border-color: #f0ad4e;
+	color: #664d03;
+}
+html:not([data-unity-phase]) .unity-retirement-banner a.unity-retirement-link, html:not([data-unity-phase]) .unity-callout a,
+html[data-unity-phase="1"] .unity-retirement-banner a.unity-retirement-link, html[data-unity-phase="1"] .unity-callout a,
+html:not([data-unity-phase]) .unity-callout h3, html[data-unity-phase="1"] .unity-callout h3 {
+	color: #664d03;
+}
+
+/* Phases 2 and 3 - red */
+html[data-unity-phase="2"] .unity-retirement-banner, html[data-unity-phase="2"] .unity-callout,
+html[data-unity-phase="3"] .unity-retirement-banner, html[data-unity-phase="3"] .unity-callout {
+	background-color: #f8d7da;
+	border-color: #d9534f;
+	color: #721c24;
+}
+html[data-unity-phase="2"] .unity-callout a, html[data-unity-phase="3"] .unity-callout a,
+html[data-unity-phase="2"] .unity-callout h3, html[data-unity-phase="3"] .unity-callout h3 {
+	color: #721c24;
+}
+.unity-retirement-banner a.btn-danger, .unity-retirement-banner a.btn-danger:hover { color: #fff; }

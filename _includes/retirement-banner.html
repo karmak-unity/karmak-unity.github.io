@@ -1,0 +1,29 @@
+{% comment %}
+  Unity retirement banner (sitewide, not dismissible).
+  The active phase is chosen in the browser by today's date (see the script in header.html):
+    Phase 1: go-live through Dec 31, 2026  (amber)
+    Phase 2: Jan 1 - Feb 28, 2027          (red)
+    Phase 3: Mar 1, 2027 onward            (red)
+  Preview a phase with ?bannerPhase=1, 2 or 3 on any page URL.
+{% endcomment %}
+<div class="unity-retirement-banner" role="region" aria-label="Unity retirement notice">
+    <div class="unity-retirement-inner">
+        <div class="unity-phase unity-phase-1">
+            <h4 class="unity-retirement-title">Unity is being retired March 31, 2027</h4>
+            <p>Access to Unity will end on March 31, 2027. All integrations must be migrated to Unity Pro before this date to avoid disruption.</p>
+            <p><strong>Action required:</strong> Complete your migration to Unity Pro before March 31, 2027.</p>
+            <p><a class="unity-retirement-link" href="https://portal.karmak.io/migration" target="_blank" rel="noopener">Learn About Migrating to Unity Pro</a></p>
+        </div>
+        <div class="unity-phase unity-phase-2">
+            <h4 class="unity-retirement-title">Unity access ends in less than 90 days</h4>
+            <p>Access to Unity will end on March 31, 2027. All integrations must be migrated to Unity Pro before this date to avoid disruption.</p>
+            <p><strong>Action required:</strong> Complete your migration to Unity Pro before March 31, 2027.</p>
+            <p><a class="btn btn-danger unity-retirement-button" href="https://portal.karmak.io/migration" target="_blank" rel="noopener">Learn About Migrating to Unity Pro</a></p>
+        </div>
+        <div class="unity-phase unity-phase-3">
+            <h4 class="unity-retirement-title">Unity access ends March 31</h4>
+            <p>Migration is required to prevent integration disruption. Integrations that have not been migrated to Unity Pro will no longer function after March 31, 2027.</p>
+            <p><a class="btn btn-danger unity-retirement-button" href="https://portal.karmak.io/migration" target="_blank" rel="noopener">Learn About Migrating to Unity Pro</a></p>
+        </div>
+    </div>
+</div>
