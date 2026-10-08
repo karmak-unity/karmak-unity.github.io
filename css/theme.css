@@ -307,7 +307,7 @@ html[data-unity-phase="3"] .unity-phase-3 { display: block; }
 	border-left-width: 6px;
 	border-radius: 4px;
 }
-.unity-callout h3 { margin-top: 0; font-weight: bold; }
+.unity-callout h3, .well .unity-callout h3 { margin-top: 0; font-weight: bold; font-size: 24px; }
 .unity-callout p:last-child { margin-bottom: 0; }
 .unity-callout a { text-decoration: underline; }
 
